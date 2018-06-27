@@ -16,7 +16,7 @@
         <!-- Horizontal borders -->
         <div class="panel panel-flat border-left-info">
             <div class="panel-heading">
-                <h5 class="panel-title">فرصت ها</h5>
+                <h5 class="panel-title">فاکتور ها</h5>
                 <div class="heading-elements">
                     <ul class="icons-list">
                         <li><a data-action="collapse"></a></li>
