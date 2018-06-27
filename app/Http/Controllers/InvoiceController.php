@@ -53,6 +53,11 @@ class InvoiceController extends Controller
             'product_id' => $request->product_id,
 
         ]);
+        $product_id = $request->input('product_id');
+        if ($request->has('product_id2')) {
+            //
+        }
+
         return redirect('admin/invoices/' . $invoices->id);
     }
 
