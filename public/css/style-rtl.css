@@ -1,0 +1,29 @@
+/*================================================================================
+	Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
+	Version: 1.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+A FILE FOR RTL SUPPORT RELATED ONLY
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+/*ّFarshad Costum css*/
+@font-face {
+    font-family: 'BYekan';
+    src: url('../fonts/byekan/BYekan.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/byekan/BYekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/byekan/BYekan.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/byekan/BYekan.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/byekan/BYekan.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/byekan/BYekan.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+body {
+    font-family: 'Byekan' !important;
+}
+
+.breadcrumb {
+    font-family: 'Byekan' !important;
+}
