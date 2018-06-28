@@ -47,6 +47,9 @@
                             <td>{{$invoice->id}}</td>
                             <td>{{$invoice->title}}</td>
                             <td><a href="/admin/invoices/{{$invoice->id}}">{{$invoice->description}}</a></td>
+                            @foreach($clients as $client)
+                                <td>{{ $client->user->title ?? 'No Title' }}</td>
+                            @endforeach
                             @foreach($invoices->products as $product)
                                 <td>
                                     {{$product->name}}

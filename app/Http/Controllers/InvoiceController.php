@@ -50,14 +50,18 @@ class InvoiceController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'client_id' => $request->client_id,
-            'product_id' => $request->product_id,
 
         ]);
-        $product_id = $request->input('product_id');
-        if ($request->has('product_id2')) {
-            //
-        }
-
+        $product_id1 = $request->input('product_id1');
+        $product_id2 = $request->input('product_id2');
+        $product_id3 = $request->input('product_id3');
+        $product_id4 = $request->input('product_id4');
+        $product_id5 = $request->input('product_id5');
+        $invoices->products()->attach($product_id1);
+        $invoices->products()->attach($product_id2);
+        $invoices->products()->attach($product_id3);
+        $invoices->products()->attach($product_id4);
+        $invoices->products()->attach($product_id5);
         return redirect('admin/invoices/' . $invoices->id);
     }
 
@@ -71,7 +75,6 @@ class InvoiceController extends Controller
     {
         $invoice_id = $invoice->id;
         $clients = Invoice::with('user')->where('id','=',$invoice_id)->get();
-
         $invoices = Invoice::with('products')->where('id', '=', $invoice_id)->firstOrFail();
         return view('admin.invoices.show', compact('invoice','invoices'),compact('clients'));
 
