@@ -1,6 +1,3 @@
-<?php
-        ?>
-
 <!-- Main sidebar -->
 <div class="sidebar sidebar-main">
     <div class="sidebar-content">
