@@ -38,10 +38,10 @@
     {{--SELECT 2--}}
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/core/libraries/jquery_ui/interactions.min.js"></script>
 
-    {{--<script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/forms/selects/select2.min.js"></script>--}}
-    {{--<script type="text/javascript" src="{{{url('/')}}}/assets/js/pages/form_select2.js"></script>--}}
+    <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="{{{url('/')}}}/assets/js/pages/form_select2.js"></script>
 
-    {{--<script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/ui/ripple.min.js"></script>--}}
+    <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
     <script type="text/javascript" src="{{{url('/')}}}/js/core/dashboard.js"></script>
 

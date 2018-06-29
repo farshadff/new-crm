@@ -53,15 +53,22 @@ class InvoiceController extends Controller
 
         ]);
         $product_id1 = $request->input('product_id1');
+        $product_qa1 = $request->input('product_qa1');
         $product_id2 = $request->input('product_id2');
+        $product_qa2 = $request->input('product_qa2');
         $product_id3 = $request->input('product_id3');
+        $product_qa3 = $request->input('product_qa3');
         $product_id4 = $request->input('product_id4');
+        $product_qa4 = $request->input('product_qa4');
         $product_id5 = $request->input('product_id5');
-        $invoices->products()->attach($product_id1);
-        $invoices->products()->attach($product_id2);
-        $invoices->products()->attach($product_id3);
-        $invoices->products()->attach($product_id4);
-        $invoices->products()->attach($product_id5);
+        $product_qa5 = $request->input('product_qa5');
+
+        $invoices->products()->attach($product_id1,['product_quantity' =>$product_qa1]);
+//        $invoices->products()->quantity()->attach($product_qa1);
+        $invoices->products()->attach($product_id2,['product_quantity' =>$product_qa2]);
+        $invoices->products()->attach($product_id3,['product_quantity' =>$product_qa3]);
+        $invoices->products()->attach($product_id4,['product_quantity' =>$product_qa4]);
+        $invoices->products()->attach($product_id5,['product_quantity' =>$product_qa5]);
         return redirect('admin/invoices/' . $invoices->id);
     }
 
@@ -77,8 +84,7 @@ class InvoiceController extends Controller
         $clients = Invoice::with('user')->where('id','=',$invoice_id)->get();
         $invoices = Invoice::with('products')->where('id', '=', $invoice_id)->firstOrFail();
         return view('admin.invoices.show', compact('invoice','invoices'),compact('clients'));
-
-        return view('admin.invoices.show', compact('invoice', $invoice),compact('clients',$clients));
+//        return view('admin.invoices.show', compact('invoice', $invoice),compact('clients',$clients));
     }
 
     /**

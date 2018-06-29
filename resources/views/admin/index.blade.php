@@ -126,7 +126,7 @@
 
                             <div class="col-md-4">
                                 <div class="content-group">
-                                    <h5 class="text-semibold no-margin"><i class="icon-cash3 position-left text-slate"></i> 20000000 تومان</h5>
+                                    <h5 class="text-semibold no-margin"><i class="icon-cash3 position-left text-slate"></i> 200000 تومان</h5>
                                     <span class="text-muted text-size-small">میانگین فروش</span>
                                 </div>
                             </div>

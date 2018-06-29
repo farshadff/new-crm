@@ -13,9 +13,10 @@ class Invoice extends Model
     }
     public function products()
     {
-        return $this->belongsToMany('App\Product', 'invoice_product', 'invoice_id');
-//            ->withPivot('product_quantity')
-//            ->as('invoice_products_pivot');
+        return $this->belongsToMany('App\Product', 'invoice_product', 'invoice_id')
+            ->as('quantity')
+            ->withPivot('product_quantity')
+            ;
 
     }
 }
