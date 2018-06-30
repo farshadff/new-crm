@@ -118,7 +118,9 @@ class InvoiceController extends Controller
      */
     public function destroy(Invoice $invoice)
     {
-        //
+        $invoice->delete();
+        $request->session()->flash('message', 'Successfully deleted the task!');
+        return redirect('admin.invoice.show');
     }
     public function downloadPDF($id){
         $clients = Invoice::with('user')->where('id','=',$id)->get();

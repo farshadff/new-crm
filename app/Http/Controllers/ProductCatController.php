@@ -70,7 +70,9 @@ class ProductCatController extends Controller
      */
     public function edit(ProductCat $productCat)
     {
-        //
+//        $product_cats = ProductCat::all();
+////        $products = Product::all();
+        return view('admin.product_cats.edit',compact('productCat'));
     }
 
     /**
@@ -82,7 +84,17 @@ class ProductCatController extends Controller
      */
     public function update(Request $request, ProductCat $productCat)
     {
-        //
+        //Validate
+        $request->validate([
+            'title' => 'required|min:3',
+            'description' => 'required',
+        ]);
+
+        $productCat->title = $request->title;
+        $productCat->description = $request->description;
+        $productCat->save();
+        $request->session()->flash('message', 'Successfully modified the task!');
+        return redirect('admin/product_cats');
     }
 
     /**
@@ -93,6 +105,7 @@ class ProductCatController extends Controller
      */
     public function destroy(ProductCat $productCat)
     {
-        //
+        $productCat->delete();
+        return redirect('admin/product_cats');
     }
 }

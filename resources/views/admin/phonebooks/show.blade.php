@@ -44,14 +44,17 @@
                         <tbody>
 
                         <tr>
+                            @php(
+                   dd($phonebook)
+                   )
                             <th scope="row">{{$phonebook->id}}</th>
                             <th scope="row">{{$phonebook->title}}</th>
                             <td><a href="/admin/phonebooks/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
                             <td>{{new Verta($phonebook->calldate)}}</td>
                             <td>{{new Verta($phonebook->remember_date)}}</td>
 
-                            <td>{{ $phonebook->client->first()->title }}</td>
-                            <td>{{ $phonebook->client->first()->client_type }}</td>
+                            <td>{{ $phonebook->client->first()->title ?? 'مشتری وجود ندارد' }}</td>
+                            <td>{{ $phonebook->client->first()->client_type ?? 'مشتری وجود ندارد' }}</td>
                             <td>
                                 <div class="btn-group inline-display" role="group" aria-label="Basic example">
                                     <a href="{{ URL::to('admin/phonebooks/' . $phonebook->id . '/edit') }}">
@@ -109,8 +112,8 @@
                             <td>{{new Verta($phonebook->calldate)}}</td>
                             <td>{{new Verta($phonebook->remember_date)}}</td>
 
-                            <td>{{ $phonebook->client->first()->title }}</td>
-                            <td>{{ $phonebook->client->first()->client_type }}</td>
+                            <td>{{ $phonebook->client->first()->title  ?? 'مشتری وجود ندارد' }}</td>
+                            <td>{{ $phonebook->client->first()->client_type ?? 'مشتری وجود ندارد' }}</td>
                             <td>
                                 <div class="btn-group inline-display" role="group" aria-label="Basic example">
                                     <a href="{{ URL::to('admin/phonebooks/' . $phonebook->id . '/edit') }}">

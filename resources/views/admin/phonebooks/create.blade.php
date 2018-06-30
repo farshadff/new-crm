@@ -27,7 +27,7 @@
             </div>
 
             <div class="panel-body">
-                <form action="/admin/phonebooks" method="post">
+                <form action="/admin/opportunities" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">نام</label>

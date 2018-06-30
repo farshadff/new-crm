@@ -95,9 +95,9 @@
             </div>
 
             <div class="table-responsive">
-                <table class="table ">
+                <table class="table table-framed table-xl">
                     <thead>
-                    <tr class="border-double">
+                    <tr class="border-double bg-blue">
                         <th>ردیف</th>
                         <th>نام مخاطب</th>
                         <th>توضیحات</th>
@@ -115,18 +115,18 @@
                         <tr>
                             <th scope="row">{{$phonebook->id}}</th>
                             <th scope="row">{{$phonebook->title}}</th>
-                            <td><a href="/admin/phonebooks/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
+                            <td width="10%"><a href="/admin/opportunities/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
                             <td>{{new Verta($phonebook->calldate)}}</td>
                             <td>{{new Verta($phonebook->rememberdate)}}</td>
 
                             <td>{{ $phonebook->client->first()->title ??'مشتری برای این فرصت وجود ندارد' }}</td>
                             <td>{{ $phonebook->client->first()->client_type ?? 'مشتری برای این فرصت وجود ندارد' }}</td>
                             <td>
-                                <div class="btn-group inline-display" role="group" aria-label="Basic example">
-                                    <a href="{{ URL::to('admin/phonebooks/' . $phonebook->id . '/edit') }}">
-                                        <button type="button" class="btn btn-success legitRipple">ویراییش</button>
+                                <div class="btn-group inline-display" role="group">
+                                    <a href="{{ URL::to('admin/opportunities/' . $phonebook->id . '/edit') }}">
+                                        <button type="button" class="btn btn-primary legitRipple">ویراییش</button>
                                     </a>&nbsp;
-                                    <form class="inline-display" action="{{url('admin/phonebooks', [$phonebook->id])}}"
+                                    <form class="inline-display" action="{{url('admin/opportunities', [$phonebook->id])}}"
                                           method="POST">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

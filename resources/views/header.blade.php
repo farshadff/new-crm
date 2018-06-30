@@ -1,7 +1,7 @@
 <?php
 
-        ?>
-    <!DOCTYPE html>
+?>
+        <!DOCTYPE html>
 <html lang="en" dir="rtl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -11,7 +11,8 @@
 
     <!-- Global stylesheets -->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+          type="text/css">
     <link href="{{{url('/')}}}/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
     <link href="{{{url('/')}}}/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="{{{url('/')}}}/assets/css/core.css" rel="stylesheet" type="text/css">
@@ -31,7 +32,8 @@
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/forms/styling/switchery.min.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/forms/styling/uniform.min.js"></script>
-    <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script type="text/javascript"
+            src="{{{url('/')}}}/assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/ui/moment/moment.min.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/pickers/daterangepicker.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/core/app.js"></script>
@@ -48,7 +50,6 @@
 </head>
 
 <body>
-
 <!-- Main navbar -->
 <div class="navbar navbar-default header-highlight">
     <div class="navbar-header">
@@ -59,18 +60,16 @@
             <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
         </ul>
     </div>
-
     <div class="navbar-collapse collapse" id="navbar-mobile">
         <ul class="nav navbar-nav">
-            <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
-
+            <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a>
+            </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="icon-puzzle3"></i>
                     <span class="visible-xs-inline-block position-right">Git updates</span>
                     <span class="status-mark border-pink-300"></span>
                 </a>
-
                 <div class="dropdown-menu dropdown-content">
                     <div class="dropdown-content-heading">
                         Git updates
@@ -82,7 +81,9 @@
                     <ul class="media-list dropdown-content-body width-350">
                         <li class="media">
                             <div class="media-left">
-                                <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
+                                <a href="#"
+                                   class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i
+                                            class="icon-git-pull-request"></i></a>
                             </div>
 
                             <div class="media-body">
@@ -93,7 +94,9 @@
 
                         <li class="media">
                             <div class="media-left">
-                                <a href="#" class="btn border-warning text-warning btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-commit"></i></a>
+                                <a href="#"
+                                   class="btn border-warning text-warning btn-flat btn-rounded btn-icon btn-sm"><i
+                                            class="icon-git-commit"></i></a>
                             </div>
 
                             <div class="media-body">
@@ -104,29 +107,36 @@
 
                         <li class="media">
                             <div class="media-left">
-                                <a href="#" class="btn border-info text-info btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-branch"></i></a>
+                                <a href="#" class="btn border-info text-info btn-flat btn-rounded btn-icon btn-sm"><i
+                                            class="icon-git-branch"></i></a>
                             </div>
 
                             <div class="media-body">
-                                <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span> branch
+                                <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span>
+                                branch
                                 <div class="media-annotation">2 hours ago</div>
                             </div>
                         </li>
 
                         <li class="media">
                             <div class="media-left">
-                                <a href="#" class="btn border-success text-success btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-merge"></i></a>
+                                <a href="#"
+                                   class="btn border-success text-success btn-flat btn-rounded btn-icon btn-sm"><i
+                                            class="icon-git-merge"></i></a>
                             </div>
 
                             <div class="media-body">
-                                <a href="#">Eugene Kopyov</a> merged <span class="text-semibold">Master</span> and <span class="text-semibold">Dev</span> branches
+                                <a href="#">Eugene Kopyov</a> merged <span class="text-semibold">Master</span> and <span
+                                        class="text-semibold">Dev</span> branches
                                 <div class="media-annotation">Dec 18, 18:36</div>
                             </div>
                         </li>
 
                         <li class="media">
                             <div class="media-left">
-                                <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
+                                <a href="#"
+                                   class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i
+                                            class="icon-git-pull-request"></i></a>
                             </div>
 
                             <div class="media-body">
@@ -137,16 +147,15 @@
                     </ul>
 
                     <div class="dropdown-content-footer">
-                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
+                        <a href="#" data-popup="tooltip" title="All activity"><i
+                                    class="icon-menu display-block"></i></a>
                     </div>
                 </div>
             </li>
         </ul>
-
         <div class="navbar-right">
-            <p class="navbar-text">Morning, Victoria!</p>
-            <p class="navbar-text"><span class="label bg-success">Online</span></p>
-
+            <p class="navbar-text">صبح بخیر فرشاد</p>
+            <p class="navbar-text"><span class="label bg-success">آنلاین</span></p>
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -166,7 +175,8 @@
                         <ul class="media-list dropdown-content-body width-350">
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs"><i class="icon-mention"></i></a>
+                                    <a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs"><i
+                                                class="icon-mention"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -178,7 +188,8 @@
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-xs"><i class="icon-paperplane"></i></a>
+                                    <a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-xs"><i
+                                                class="icon-paperplane"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -189,18 +200,21 @@
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-blue btn-rounded btn-icon btn-xs"><i class="icon-plus3"></i></a>
+                                    <a href="#" class="btn bg-blue btn-rounded btn-icon btn-xs"><i
+                                                class="icon-plus3"></i></a>
                                 </div>
 
                                 <div class="media-body">
-                                    <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span> branch in <span class="text-semibold">Limitless</span> repository
+                                    <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span>
+                                    branch in <span class="text-semibold">Limitless</span> repository
                                     <div class="media-annotation">2 hours ago</div>
                                 </div>
                             </li>
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-purple-300 btn-rounded btn-icon btn-xs"><i class="icon-truck"></i></a>
+                                    <a href="#" class="btn bg-purple-300 btn-rounded btn-icon btn-xs"><i
+                                                class="icon-truck"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -211,7 +225,8 @@
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-warning-400 btn-rounded btn-icon btn-xs"><i class="icon-bubble8"></i></a>
+                                    <a href="#" class="btn bg-warning-400 btn-rounded btn-icon btn-xs"><i
+                                                class="icon-bubble8"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -222,7 +237,8 @@
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-teal-400 btn-rounded btn-icon btn-xs"><i class="icon-spinner11"></i></a>
+                                    <a href="#" class="btn bg-teal-400 btn-rounded btn-icon btn-xs"><i
+                                                class="icon-spinner11"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -283,7 +299,8 @@
                             </li>
 
                             <li class="media">
-                                <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                <div class="media-left"><img src="assets/images/placeholder.jpg"
+                                                             class="img-circle img-sm" alt=""></div>
                                 <div class="media-body">
                                     <a href="#" class="media-heading">
                                         <span class="text-semibold">Jeremy Victorino</span>
@@ -295,7 +312,8 @@
                             </li>
 
                             <li class="media">
-                                <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                <div class="media-left"><img src="assets/images/placeholder.jpg"
+                                                             class="img-circle img-sm" alt=""></div>
                                 <div class="media-body">
                                     <a href="#" class="media-heading">
                                         <span class="text-semibold">Beatrix Diaz</span>
@@ -307,7 +325,8 @@
                             </li>
 
                             <li class="media">
-                                <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                <div class="media-left"><img src="assets/images/placeholder.jpg"
+                                                             class="img-circle img-sm" alt=""></div>
                                 <div class="media-body">
                                     <a href="#" class="media-heading">
                                         <span class="text-semibold">Richard Vango</span>
@@ -320,7 +339,8 @@
                         </ul>
 
                         <div class="dropdown-content-footer">
-                            <a href="#" data-popup="tooltip" title="All messages"><i class="icon-menu display-block"></i></a>
+                            <a href="#" data-popup="tooltip" title="All messages"><i
+                                        class="icon-menu display-block"></i></a>
                         </div>
                     </div>
                 </li>

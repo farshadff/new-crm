@@ -62,7 +62,7 @@ class PhonebookController extends Controller
             'calldate' => $request->calldate,
             'rememberdate' => $request->rememberdate
         ]);
-        return redirect('admin/phonebooks/' . $phonebook->id);
+        return redirect('admin/opportunities/' . $phonebook->id);
     }
 
     /**
@@ -109,7 +109,7 @@ class PhonebookController extends Controller
         $phonebook->rememberdate = $request->rememberdate;
         $phonebook->save();
         $request->session()->flash('message', 'Successfully modified the task!');
-        return redirect('admin/phonebooks');
+        return redirect('admin/opportunities');
     }
 
     /**
@@ -121,6 +121,6 @@ class PhonebookController extends Controller
     public function destroy(Phonebook $phonebook)
     {
         $phonebook->delete();
-        return redirect('admin/phonebooks/');
+        return redirect('admin/opportunities/');
     }
 }

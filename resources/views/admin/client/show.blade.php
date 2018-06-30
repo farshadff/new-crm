@@ -45,8 +45,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($clients as $client)
-                        @if($client->client_type === 'بالقوه')
+
                         <tr>
                             <th scope="row">{{$client->id}}</th>
                             <td><a href="/admin/client/{{$client->id}}">{{$client->title}}</a></td>
@@ -67,8 +66,7 @@
                                 </div>
                             </td>
                         </tr>
-                        @endif
-                    @endforeach
+
                     </tbody>
                 </table>
 
