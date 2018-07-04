@@ -16,6 +16,7 @@ class Client extends Model
             'title',
             'description',
             'client_type',
+            'sellman',
             'fax',
             'adrress1',
             'adrress2',
@@ -28,4 +29,7 @@ class Client extends Model
             'telephone4',
             'telephone5',
         ];
+    public function sellmanlist(){
+        return $this->belongsToMany('App\User' , 'client_user','client_id');
+    }
 }

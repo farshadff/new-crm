@@ -62,7 +62,6 @@
                                         <td><a href="/admin/phonebooks/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
                                         <td>{{new Verta($phonebook->calldate)}}</td>
                                         <td>{{new Verta($phonebook->rememberdate)}}</td>
-
                                         <td>{{ $phonebook->client->first()->title ?? 'مشتری برای این فرصت وجود ندارد' }}</td>
                                         <td>{{ $phonebook->client->first()->client_type ?? 'مشتری برای این فرصت وجود ندارد' }}</td>
 
@@ -111,7 +110,6 @@
                     </thead>
                     <tbody>
                     @foreach($phonebooks as $phonebook)
-
                         <tr>
                             <th scope="row">{{$phonebook->id}}</th>
                             <th scope="row">{{$phonebook->title}}</th>

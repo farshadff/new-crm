@@ -6,6 +6,7 @@ use App\Client;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
+use App\User;
 use Session;
 use Excel;
 use Input;
@@ -20,7 +21,11 @@ class ClientController extends Controller
     public function index()
     {
         $clients = Client::all();
-        return view('admin.client.index',compact('clients',$clients));
+        $clients_for_id = Client::all('id');
+        $sellman = Client::with('sellmanlist')->firstOrFail();
+        return view('admin.client.index',compact('clients','sellman'));
+
+
     }
     public  function showcostumers(){
         $clients = Client::all();
