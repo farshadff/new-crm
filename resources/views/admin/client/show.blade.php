@@ -41,6 +41,9 @@
                         <th scope="col">نام مشتری</th>
                         <th scope="col">توضیحات مشتری</th>
                         <th scope="col">ساخته شده در</th>
+                        @foreach($sellman->sellmanlist as $sellmans)
+                            <th scope="col">مسولین فروش</th>
+                        @endforeach
                         <th scope="col">عملیات ها</th>
                     </tr>
                     </thead>
@@ -53,6 +56,14 @@
                             <td>
                                 {{new Verta($client->created_at)}}
                             </td>
+                            @foreach($sellman->sellmanlist as $sellmans)
+                                <td>
+                                    {{$sellmans->name}}
+                                </td>
+                                {{--<td>--}}
+                                {{--{{$product->pivot->product_quantity}}--}}
+                                {{--</td>--}}
+                            @endforeach
                             <td>
                                 <div class="btn-group inline-display" role="group" aria-label="Basic example">
                                     <a href="{{ URL::to('admin/client/' . $client->id . '/edit') }}">

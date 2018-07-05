@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Invoice;
 use Illuminate\Http\Request;
 use PDF;
+use Carbon;
 use App\Client;
 use App\Product;
 
@@ -135,6 +136,12 @@ class InvoiceController extends Controller
         $lg['a_meta_dir'] = 'rtl';
         $lg['a_meta_language'] = 'fa';
         $lg['w_page'] = 'page';
+//        $this->SetFillColor(255, 0, 0);
+//        $this->SetTextColor(255);
+//        $this->SetDrawColor(128, 0, 0);
+//        $this->SetLineWidth(0.3);
+//        $fontname = TCPDF_FONTS::addTTFfont('/path-to-font/FreeSerifItalic.ttf', 'TrueTypeUnicode', '', 96);
+//        $fontname = $pdf->addTTFfont('C://wamp/www/projectname/...path to .ttf file', 'TrueTypeUnicode', '', 32);
         PDF::SetFont('dejavusans', '', 12);
         PDF::setRTL(true);
         PDF::Ln();

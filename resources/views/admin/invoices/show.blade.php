@@ -38,7 +38,7 @@
                             @foreach($invoices->products as $product)
                                 <th>نام محصول</th>
                             @endforeach
-                            <th>دانلود PDF</th>
+                            <th>عملیات ها</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -53,12 +53,20 @@
                             @foreach($invoices->products as $product)
                                 <td>
                                     {{$product->name}}
+                                    <span class="btn btn-success">
+                                    {{$product->quantity['product_quantity']}}
+                                    عدد
+                                        </span>
+                                    <span class="btn btn-primary">
+                                        به قیمت
+                                         {{$product->price}}
+                                    </span>
                                 </td>
                                 {{--<td>--}}
                                 {{--{{$product->pivot->product_quantity}}--}}
                                 {{--</td>--}}
                             @endforeach
-                            <td><a href="{{action('InvoiceController@downloadPDF', $invoice->id)}}">PDF</a></td>
+                            <td><a class="btn btn-primary" href="{{action('InvoiceController@downloadPDF', $invoice->id)}}">صدور فاکتور</a></td>
 
                         </tr>
                         </tbody>

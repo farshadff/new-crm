@@ -21,7 +21,6 @@ class ClientController extends Controller
     public function index()
     {
         $clients = Client::all();
-        $clients_for_id = Client::all('id');
         $sellman = Client::with('sellmanlist')->firstOrFail();
         return view('admin.client.index',compact('clients','sellman'));
 
@@ -84,7 +83,8 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        return view('admin.client.show',compact('client',$client));
+        $sellman = Client::with('sellmanlist')->where('id','=',$client->id)->firstOrFail();
+        return view('admin.client.show',compact('client','sellman'));
 
     }
 
