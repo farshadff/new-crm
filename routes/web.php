@@ -29,6 +29,7 @@ Route::get('admin/client/import', 'ClientController@showimport');
 // Route for export/download tabledata to .csv, .xls or .xlsx
 Route::get('downloadExcel/{type}', 'ClientController@downloadExcel');
 // Route for import excel data to database.
+Route::post('admin/client/assign','ClientController@assignsellman');
 Route::get('admin/client/costumers', 'ClientController@showcostumers');
 Route::post('admin/client/importExcel', 'ClientController@importExcel');
 Route::resource('admin/client', 'ClientController');

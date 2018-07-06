@@ -191,4 +191,17 @@ class ClientController extends Controller
 
         return back();
     }
+    public function assignsellman(Request $request){
+//        $request->validate([
+//            'sellman' => 'required',
+//            'client' => 'required',
+//        ]);
+        $user = User::all();
+        $client_list = Client::all();
+        $client = Client::with('sellmanlist')->firstOrFail();
+        $sellman = $request->input('sellman');
+        $client->sellmanlist()->attach($sellman);
+        return view('admin.client.assign',compact('client_list','user'));
+
+    }
 }

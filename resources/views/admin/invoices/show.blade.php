@@ -36,7 +36,7 @@
                             <th>توضیحات</th>
                             <th>نام مشتری</th>
                             @foreach($invoices->products as $product)
-                                <th>نام محصول</th>
+                                <th>نام محصول-تعداد-قیمت</th>
                             @endforeach
                             <th>عملیات ها</th>
                         </tr>

@@ -96,7 +96,7 @@
                             <form class="heading-form" action="#">
                                 <div class="form-group">
                                     <select class="change-date select-sm" id="select_date">
-                                        <optgroup label="<i class='icon-watch pull-right'></i> Time period">
+                                        <optgroup label="<i class='icon-watch pull-right'></i> بازه زمانی">
                                             <option value="val1">خرداد 28 98</option>
                                             <option value="val2">خرداد 28 98</option>
                                             <option value="val3" selected="selected">خرداد 28 98</option>
@@ -238,7 +238,7 @@
                             <tr>
                                 <td>
                                     <div class="media-left media-middle">
-                                        <a href="#"><img src="assets/images/brands/facebook.png" class="img-circle img-xs" alt=""></a>
+                                        <a href="#"><img src="{{{url('/')}}}/assets/images/brands/facebook.png" class="img-circle img-xs" alt=""></a>
                                     </div>
                                     <div class="media-left">
                                         <div class=""><a href="#" class="text-default text-semibold">Facebook</a></div>
@@ -270,7 +270,7 @@
                             <tr>
                                 <td>
                                     <div class="media-left media-middle">
-                                        <a href="#"><img src="assets/images/brands/youtube.png" class="img-circle img-xs" alt=""></a>
+                                        <a href="#"><img src="{{{url('/')}}}/assets/images/brands/youtube.png" class="img-circle img-xs" alt=""></a>
                                     </div>
                                     <div class="media-left">
                                         <div class=""><a href="#" class="text-default text-semibold">Youtube videos</a></div>
@@ -302,7 +302,7 @@
                             <tr>
                                 <td>
                                     <div class="media-left media-middle">
-                                        <a href="#"><img src="assets/images/brands/spotify.png" class="img-circle img-xs" alt=""></a>
+                                        <a href="#"><img src="{{{url('/')}}}/assets/images/brands/spotify.png" class="img-circle img-xs" alt=""></a>
                                     </div>
                                     <div class="media-left">
                                         <div class=""><a href="#" class="text-default text-semibold">Spotify ads</a></div>
@@ -334,7 +334,7 @@
                             <tr>
                                 <td>
                                     <div class="media-left media-middle">
-                                        <a href="#"><img src="assets/images/brands/twitter.png" class="img-circle img-xs" alt=""></a>
+                                        <a href="#"><img src="{{{url('/')}}}/assets/images/brands/twitter.png" class="img-circle img-xs" alt=""></a>
                                     </div>
                                     <div class="media-left">
                                         <div class=""><a href="#" class="text-default text-semibold">تبلیغات</a></div>
@@ -373,7 +373,7 @@
                             <tr>
                                 <td>
                                     <div class="media-left media-middle">
-                                        <a href="#"><img src="assets/images/brands/bing.png" class="img-circle img-xs" alt=""></a>
+                                        <a href="#"><img src="{{{url('/')}}}/assets/images/brands/bing.png" class="img-circle img-xs" alt=""></a>
                                     </div>
                                     <div class="media-left">
                                         <div class=""><a href="#" class="text-default text-semibold">Bing campaign</a></div>
@@ -405,7 +405,7 @@
                             <tr>
                                 <td>
                                     <div class="media-left media-middle">
-                                        <a href="#"><img src="assets/images/brands/amazon.png" class="img-circle img-xs" alt=""></a>
+                                        <a href="#"><img src="{{{url('/')}}}/assets/images/brands/amazon.png" class="img-circle img-xs" alt=""></a>
                                     </div>
                                     <div class="media-left">
                                         <div class=""><a href="#" class="text-default text-semibold">Amazon ads</a></div>
@@ -437,7 +437,7 @@
                             <tr>
                                 <td>
                                     <div class="media-left media-middle">
-                                        <a href="#"><img src="assets/images/brands/dribbble.png" class="img-circle img-xs" alt=""></a>
+                                        <a href="#"><img src="{{{url('/')}}}/assets/images/brands/dribbble.png" class="img-circle img-xs" alt=""></a>
                                     </div>
                                     <div class="media-left">
                                         <div class=""><a href="#" class="text-default text-semibold">Dribbble ads</a></div>

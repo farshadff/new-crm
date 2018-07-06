@@ -1003,7 +1003,7 @@ var Dashboard = function () {
             // Load data
             // ------------------------------
 
-            d3.json('../../../../global_assets/demo_data/dashboard/monthly_sales.json', function (error, data) {
+            d3.json('/js/core/monthly_sales.json', function (error, data) {
 
                 // Show what's wrong if error
                 if (error) return console.error(error);
@@ -1597,7 +1597,7 @@ var Dashboard = function () {
             // Load data
             // ------------------------------
 
-            d3.json('../../../../global_assets/demo_data/dashboard/monthly_sales.json', function (error, data) {
+            d3.json('/js/core/monthly_sales.json', function (error, data) {
 
                 // Show what's wrong if error
                 if (error) return console.error(error);
@@ -3604,7 +3604,7 @@ var Dashboard = function () {
             // Load data
             // ------------------------------
 
-            d3.json('../../../../global_assets/demo_data/dashboard/bullets.json', function(error, data) {
+            d3.json('/js/core/bullets.json', function(error, data) {
 
                 // Show what's wrong if error
                 if (error) return console.error(error);

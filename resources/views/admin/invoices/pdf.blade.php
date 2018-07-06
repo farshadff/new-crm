@@ -27,13 +27,18 @@
     <div class="col-sm-4" style="color: #ccc; margin-right: 200px;">
         تاریخ صدور : <span>{{{new Verta()}}}</span>
     </div>
+    <h4 style="background-color: #004D40; color:#fff; line-height: 30px;">
+        شماره فاکتور {{$invoice_spec->id}}
+    </h4>
 </div>
 <h4>مشخصات فروشنده:</h4>
 <table>
     <thead>
     <tr>
-        <th style="background-color: #303F9F; color:#fff; line-height: 30px;"><h3> شركت توسعه فناوری سیمرغ سیالان </h3></th>
-        <th style="background-color: #303F9F; color:#fff; line-height: 30px;"><h4>واحد : واحد فروش اینترنتی </h4></th>
+        <th style="background-color: #004D40; color:#fff; line-height: 30px;"><h3> شركت توسعه فناوری سیمرغ سیالان </h3>
+        </th>
+        <th style="background-color: #004D40; color:#fff; line-height: 30px;"><h4>واحد : واحد فروش اینترنتی </h4></th>
+
     </tr>
     </thead>
 </table>
@@ -45,12 +50,19 @@
 <br>
 <h4>نشانی : همون جا پلاک 5 </h4>
 <br>
-<h3>مشخصات خریدار:  </h3>
+<h3>مشخصات خریدار: </h3>
 <table>
     <thead>
     <tr>
-        <th style="background-color: #303F9F; color:#fff; line-height: 30px;"><h3> آقای یلی </h3></th>
-        <th style="background-color: #303F9F; color:#fff; line-height: 30px;"><h4>واحد : واحد فروش اینترنتی </h4></th>
+        @foreach($clients as $client)
+            <th style="background-color: #004D40; color:#fff; ">
+                <h4>{{ $client->user->title ?? 'بدون مشتری' }} </h4></th>
+
+
+            <th style="background-color: #004D40; color:#fff; ">
+                <h4> شماره تلفن
+                    : {{$client->user->telephone1 ?? 'شماره تلفن موجود نمیباشد'}}</h4></th>
+        @endforeach
     </tr>
     </thead>
 </table>
@@ -58,52 +70,44 @@
 
 
 <br>
-<h3>شماره تلفن : </h3>
+<h3></h3>
 <h4>محصولات</h4>
 <table>
     <table class="table bordered border-red">
         <thead>
         <tr>
-            <th>ردیف</th>
+            {{--@foreach($invoices->products as $product)--}}
+            <th style="width: 10%;">ردیف</th>
             <th>نام</th>
-            <th>توضیحات</th>
-            <th>نام مشتری</th>
-            @foreach($invoices->products as $product)
-                <th>نام محصول</th>
-            @endforeach
+            <th>قیمت</th>
+            <th>تعداد</th>
+            {{--@endforeach--}}
+            <th>قیمت کل</th>
         </tr>
         </thead>
         <tbody>
 
-        <tr>
-            <td style="border: 1px solid #ccc; margin-right:5px">{{$invoice_spec->id}}</td>
-            <td style="border: 1px solid #ccc; margin-right:5px">{{$invoice_spec->title}}</td>
-            <td style="border: 1px solid #ccc; margin-right:5px">{{$invoice_spec->description}}</td>
-            @foreach($clients as $client)
-                <td style="border: 1px solid #ccc; margin-right:5px">{{ $client->user->title ?? 'بدون مشتری' }}</td>
-            @endforeach
-            @foreach($invoices->products as $product)
-                {{--<td style="border: 1px solid #ccc; margin-right:5px">--}}
-                    {{--{{$product->name}}--}}
-                {{--</td>--}}
-                <td  style="border: 1px solid #ccc; margin-right:5px">
-                    {{$product->name}}
-                    <span class="btn btn-success">
-                                    (به تعداد)
 
-                        {{$product->quantity['product_quantity']}}
-                        عدد
-                                        </span>
-                    <span class="btn btn-primary">
-                                        به قیمت
-                        {{$product->price}}
-                                    </span>
+        @foreach($invoices->products as $product)
+            <tr>
+                <td style="border: 1px solid #ccc; width: 10%;">1</td>
+
+
+                <td style="border: 1px solid #ccc; margin-right:5px">
+                    {{$product->name}}
                 </td>
-                {{--<td>--}}
-                {{--{{$product->pivot->product_quantity}}--}}
-                {{--</td>--}}
-            @endforeach
-        </tr>
+                <td style="border: 1px solid #ccc; margin-right:5px"> {{{number_format($product->price)}}} تومان</td>
+                <td style="border: 1px solid #ccc; margin-right:5px">{{$product->quantity['product_quantity']}}</td>
+
+
+                <td style="border: 1px solid #ccc; margin-right:5px; width: 30%;">
+                    @php(
+                    $sumprice = $product->price * $product->quantity['product_quantity']
+                    )
+                    {{{number_format($sumprice)}}} تومان
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 </table>
