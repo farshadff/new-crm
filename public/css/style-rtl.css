@@ -15,10 +15,9 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
     font-family: 'BYekan';
     src: url('../fonts/byekan/BYekan.eot'); /* IE9 Compat Modes */
     src: url('../fonts/byekan/BYekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/byekan/BYekan.woff2') format('woff2'), /* Super Modern Browsers */
     url('../fonts/byekan/BYekan.woff') format('woff'), /* Pretty Modern Browsers */
-    url('../fonts/byekan/BYekan.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/byekan/BYekan.svg#svgFontName') format('svg'); /* Legacy iOS */
+    url('../fonts/byekan/BYekan.ttf')  format('truetype') /* Safari, Android, iOS */
+    ; /* Legacy iOS */
 }
 body {
     font-family: 'Byekan' !important;
@@ -26,4 +25,16 @@ body {
 
 .breadcrumb {
     font-family: 'Byekan' !important;
+}
+.handshake {
+    background:
+        /* top, transparent red, faked with gradient */
+            linear-gradient(
+                    rgba(249, 255, 243, 0.45),
+                    rgba(40, 223, 255, 0.45)
+            ),
+                /* bottom, image */
+            url("../images/handshake.jpg");
+    background-size: cover;
+
 }
