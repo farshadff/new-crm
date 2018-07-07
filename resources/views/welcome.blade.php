@@ -75,21 +75,24 @@
             سامانه مدیریت مشتری باران
         </h5>
     </div>
-    <div class="row">
-    <div class="col-sm-12 text-center">
-        <h4 class="text-center">
-        @if (Route::has('login'))
-            <div class="links">
-                @auth
-                   <h4 class="text-center"> <a href="{{ url('/home') }}">Home</a></h4>
-                @else
-                    <a class="text-center" href="{{ route('login') }}">ورود به سامانه</a>
-                    <a class="text-center" href="{{ route('register') }}">اضافه کردن کارشناس</a>
-                @endauth
-            </div>
-        @endif
-        </h4>
-    </div>
+    <div class="row back-bar">
+        <div class="col-sm-12 text-center">
+            <h4 class="text-center">
+                @if (Route::has('login'))
+
+                        @auth
+                            <h4 class="text-center"><a href="{{ url('/home') }}">Home</a></h4>
+                        @else
+                            <div class="col-xs-12 links">
+                                <a class="text-center" href="{{ route('login') }}">ورود به سامانه</a>
+                                <a class="text-center" href="{{ route('register') }}">
+                                    اضافه کردن کارشناس</a>
+                            </div>
+                        @endauth
+                    </div>
+                @endif
+            </h4>
+
     </div>
 
 </div>
