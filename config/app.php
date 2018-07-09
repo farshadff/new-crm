@@ -147,6 +147,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Elibyy\TCPDF\ServiceProvider::class,
+        phplusir\smsir\SmsirServiceProvider::class,
+        Silber\Bouncer\BouncerServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -213,7 +215,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Verta' => Hekmatinasser\Verta\Verta::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        'PDF' => Elibyy\TCPDF\Facades\TCPDF::class
+        'PDF' => Elibyy\TCPDF\Facades\TCPDF::class,
+        'Smsir' => phplusir\smsir\SmsirFacade::class,
+        'Bouncer' => Silber\Bouncer\BouncerFacade::class,
 
     ],
 

@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
 use App\User;
+use Auth;
 use Session;
 use Excel;
+use Bouncer;
 use Input;
 
 class ClientController extends Controller
@@ -22,8 +24,8 @@ class ClientController extends Controller
     {
         $clients = Client::all();
         $sellman = Client::with('sellmanlist')->firstOrFail();
+        $user_id = Auth::user()->id;
         return view('admin.client.index',compact('clients','sellman'));
-
 
     }
     public  function showcostumers(){
@@ -191,17 +193,31 @@ class ClientController extends Controller
 
         return back();
     }
-    public function assignsellman(Request $request){
-//        $request->validate([
-//            'sellman' => 'required',
-//            'client' => 'required',
-//        ]);
+//    public function assignsellman(Request $request){
+//        $user = User::all();
+//        $client_list = Client::all();
+//        $client = Client::with('sellmanlist')->firstOrFail();
+//        $sellman = $request->input('sellman');
+//        $client_name = $request->input('client');
+//        $client->sellmanlist()->attach($sellman);
+//        $client->sellmanlist()->attach($client_name);
+//        $client->save();
+//        return view('admin.client.assign',compact('client_list','user'));
+//    }
+    public function assignsellman(Client $client)
+    {
+        $user = User::all();
+        $client_list = Client::all();
+        return view('admin.client.assign',compact('client_list','user'));
+    }
+    public function assignsellmanSave(Request $request)
+    {
         $user = User::all();
         $client_list = Client::all();
         $client = Client::with('sellmanlist')->firstOrFail();
         $sellman = $request->input('sellman');
-        $client->sellmanlist()->attach($sellman);
+        $client_name = $request->input('client');
+        $client->sellmanlist()->attach($sellman,['client_id' =>$client_name]);
         return view('admin.client.assign',compact('client_list','user'));
-
     }
 }

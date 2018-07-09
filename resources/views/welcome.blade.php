@@ -80,18 +80,46 @@
             <h4 class="text-center">
                 @if (Route::has('login'))
 
-                        @auth
-                            <h4 class="text-center"><a href="{{ url('/home') }}">Home</a></h4>
-                        @else
-                            <div class="col-xs-12 links">
-                                <a class="text-center" href="{{ route('login') }}">ورود به سامانه</a>
-                                <a class="text-center" href="{{ route('register') }}">
-                                    اضافه کردن کارشناس</a>
-                            </div>
-                        @endauth
-                    </div>
-                @endif
-            </h4>
+                    @auth
+                        <div class="col-xs-12 links">
+                            <a class="nav-link text-success btn btn-outline-success" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();                                                 document.getElementById('logout-form').submit();">
+                                خروج از سیستم
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: one;">
+                                {{ csrf_field() }}
+                            </form>
+
+                            <a href="{{ url('/admin') }}">ورود به داشبورد مدیریت</a>
+                        </div>
+                    @else
+                        <div class="col-xs-12 links">
+                            <a class="text-center" href="{{ route('login') }}">ورود به سامانه</a>
+                            <a class="text-center" href="{{ route('register') }}">
+                                اضافه کردن کارشناس</a>
+                        </div>
+            @endauth
+        </div>
+        @endif
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h4 class="text-center">
+                @if (Route::has('login'))
+
+                    @auth
+
+                    @else
+                        <div class="col-xs-12 links">
+                            <a class="text-center" href="{{ route('sms-admin') }}">مانیتورینگ پیامک ها</a>
+                            <a class="text-center" href="{{ route('sms-admin') }}">
+                                ورود به پنل ادمین</a>
+                        </div>
+            @endauth
+        </div>
+        @endif
+    </div>
+        </h4>
 
     </div>
 

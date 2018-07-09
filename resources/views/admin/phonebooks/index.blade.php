@@ -39,6 +39,9 @@
                @endphp
 
                     @if($diffrence_days === 0)
+                        @php(
+                         Smsir::send(['تماس بگیرید' .$phonebook->client->first()->title.'شما امروز باید با آقای/خانوم '],['09192244689'])
+                        )
                         <div class="table-responsive">
                             <table class="table ">
                                 <thead>

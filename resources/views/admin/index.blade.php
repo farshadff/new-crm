@@ -7,7 +7,6 @@
 
     <!-- Content area -->
     <div class="content">
-
         <!-- Main charts -->
         <div class="row">
             <div class="col-lg-7">
@@ -94,11 +93,11 @@
                         <h6 class="panel-title">آمار مشتریان</h6>
                         <div class="header-elements">
                             <div class="multiselect-native-select"><select class="form-control" id="select_date" data-fouc="">
-                                    <option value="val1">June, 29 - July, 5</option>
-                                    <option value="val2">June, 22 - June 28</option>
-                                    <option value="val3" selected="">June, 15 - June, 21</option>
-                                    <option value="val4">June, 8 - June, 14</option>
-                                </select><div class="btn-group" style="width: 100%;"><button type="button" class="multiselect dropdown-toggle text-default font-weight-semibold bg-transparent border-0 cursor-pointer outline-0 py-0 pl-0" data-toggle="dropdown" title="June, 15 - June, 21" style="width: 100%; overflow: hidden; text-overflow: ellipsis;" aria-expanded="false"><span class="multiselect-selected-text"><span class="badge badge-mark border-warning mr-2"></span>June, 15 - June, 21</span></button><div class="multiselect-container dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -165px, 0px); top: 0px; left: 0px; will-change: transform;"><div class="multiselect-item dropdown-item form-check" tabindex="0"><label class="form-check-label"><input type="radio" value="val1"> June, 29 - July, 5<span class="form-check-control-indicator"></span></label></div><div class="multiselect-item dropdown-item form-check" tabindex="0"><label class="form-check-label"><input type="radio" value="val2"> June, 22 - June 28<span class="form-check-control-indicator"></span></label></div><div class="multiselect-item dropdown-item form-check active" tabindex="0"><label class="form-check-label"><input type="radio" value="val3"> June, 15 - June, 21<span class="form-check-control-indicator"></span></label></div><div class="multiselect-item dropdown-item form-check" tabindex="0"><label class="form-check-label"><input type="radio" value="val4"> June, 8 - June, 14<span class="form-check-control-indicator"></span></label></div></div></div></div>
+                                    <option value="val1">22 تیر 97</option>
+                                    <option value="val2">22 تیر </option>
+                                    <option value="val3" selected="">22 تیر </option>
+                                    <option value="val4">22 تیر </option>
+                                </select>
                         </div>
                     </div>
 

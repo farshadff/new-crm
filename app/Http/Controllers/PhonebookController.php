@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Client;
 use Carbon\Carbon;
 use App\Phonebook;
+use function GuzzleHttp\Promise\all;
+use Smsir;
 use Hekmatinasser\Verta\Verta;
 use Illuminate\Http\Request;
 
@@ -22,11 +24,13 @@ class PhonebookController extends Controller
 //        foreach($phonebooks as $phonebook){
 //            $remember = new Verta($phonebook->remember_date);
 //        }
+
         $current_time = Carbon::now();
 //        making if for the compare time together
         return view('admin.phonebooks.index',
             compact('phonebooks'))
             ->with('current_time',$current_time);
+
 
     }
 

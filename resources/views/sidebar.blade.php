@@ -52,6 +52,7 @@
                             <li><a href="{{{url('/admin/client')}}}">مخاطبین</a></li>
                             <li><a href="{{{url('/admin/client/costumers')}}}">مشتریان</a></li>
                             <li><a href="{{{url('/admin/client/create')}}}">اضافه کردن مشتری</a></li>
+                            <li><a href="{{{url('/admin/client/assign')}}}">ارجاع مشتری</a></li>
                             <li><a href="{{{url('/admin/client/import')}}}">درون ریزی</a></li>
                         </ul>
                     </li>
@@ -79,15 +80,14 @@
                         <ul>
                             <li><a href="{{{url('/admin/invoices/create')}}}">صدور فاکتور</a></li>
                             <li><a href="{{{url('/admin/invoices/')}}}">فاکتور ها</a></li>
-
                         </ul>
                     </li>
                     <!-- Page kits -->
-                    <li class="navigation-header"><span>Page kits</span> <i class="icon-menu" title="Page kits"></i></li>
+                    <li class="navigation-header"><span>اطلاع رسانی ها</span> <i class="icon-menu" title="Page kits"></i></li>
                     <li>
-                        <a href="#"><i class="icon-grid6"></i> <span>General pages</span></a>
+                        <a href="{{{url('/sms-admin/')}}}"><i class="icon-grid6"></i><span>پیامک ها</span> </a>
                         <ul>
-                            <li><a href="general_feed.html">Feed</a></li>
+                            <li><a href="{{{url('/sms-admin/')}}}"><span>پیامک ها</span></a></li>
                             <li><a href="general_widgets_content.html">Content widgets</a></li>
                             <li><a href="general_widgets_stats.html">Statistics widgets</a></li>
                             <li><a href="general_embeds.html">Embeds</a></li>

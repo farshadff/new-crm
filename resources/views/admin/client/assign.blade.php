@@ -6,12 +6,8 @@
  * Time: 12:26 AM
  */
 ?>
-
-
 @include('header');
 @include('sidebar');
-
-
 <div class="content-wrapper">
 
     <!-- Content area -->
@@ -31,7 +27,6 @@
 
             <div class="panel-body">
                 <form action="/admin/client/assign" method="post">
-                    <input type="hidden" name="_method" value="PUT">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-xs-4">
@@ -40,7 +35,7 @@
                                 <select class="select-search select2-hidden-accessible" tabindex="-1" aria-hidden="true"
                                         name="client">
                                     @foreach($client_list as $client_lists)
-                                        <option value="">{{$client_lists->title}}</option>
+                                        <option value="{{$client_lists->id}}">{{$client_lists->title}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -58,7 +53,7 @@
                                     <select class="select-search select2-hidden-accessible" tabindex="-1"
                                             aria-hidden="true" name="sellman">
                                         @foreach($user as $users)
-                                            <option value="1">{{$users->name}}</option>
+                                            <option value="{{$users->id}}">{{$users->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>

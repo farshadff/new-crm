@@ -77,7 +77,6 @@
                             <li><a href="#"><i class="icon-sync"></i></a></li>
                         </ul>
                     </div>
-
                     <ul class="media-list dropdown-content-body width-350">
                         <li class="media">
                             <div class="media-left">
@@ -146,16 +145,28 @@
                         </li>
                     </ul>
 
+
                     <div class="dropdown-content-footer">
                         <a href="#" data-popup="tooltip" title="All activity"><i
                                     class="icon-menu display-block"></i></a>
                     </div>
+
                 </div>
             </li>
         </ul>
+
         <div class="navbar-right">
+            <a class="nav-link text-success btn btn-outline-success" href="{{ route('logout') }}"
+               onclick="event.preventDefault();                                                 document.getElementById('logout-form').submit();">
+                خروج از سیستم
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
             <p class="navbar-text">صبح بخیر فرشاد</p>
+
             <p class="navbar-text"><span class="label bg-success">آنلاین</span></p>
+
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -163,7 +174,6 @@
                         <span class="visible-xs-inline-block position-right">Activity</span>
                         <span class="status-mark border-pink-300"></span>
                     </a>
-
                     <div class="dropdown-menu dropdown-content">
                         <div class="dropdown-content-heading">
                             Activity

@@ -37,7 +37,7 @@
                         <th scope="col">نام مشتری</th>
                         <th scope="col">توضیحات مشتری</th>
                         <th scope="col">ساخته شده در</th>
-                        <th scope="col">مسول فروش</th>
+                        {{--<th scope="col">مسول فروش</th>--}}
                         <th scope="col">عملیات ها</th>
                     </tr>
                     </thead>
@@ -54,14 +54,14 @@
                                 {{--@php(--}}
                                 {{--dd($client)--}}
                                 {{--)--}}
-                                @foreach($sellman->sellmanlist as $sellmans)
-                                    <td>
-                                        {{$sellmans->name}}
-                                    </td>
+                                {{--@foreach($sellman->sellmanlist as $sellmans)--}}
+                                    {{--<td>--}}
+                                        {{--{{$sellmans->name}}--}}
+                                    {{--</td>--}}
                                     {{--<td>--}}
                                     {{--{{$product->pivot->product_quantity}}--}}
                                     {{--</td>--}}
-                                @endforeach
+                                {{--@endforeach--}}
                                 {{--@foreach($sellman as $sellmans)--}}
                                     {{--@foreach($sellmans->sellmanList as $key=>$user)--}}
                                         {{--<td>--}}
@@ -74,6 +74,9 @@
                                         <a href="{{ URL::to('admin/client/' . $client->id . '/edit') }}">
                                             <button type="button" class="btn btn-info">ویراییش</button>
                                         </a>&nbsp;
+                                        <a href="{{ URL::to('admin/client/assign/' . $client->id )}}">
+                                            <button type="button" class="btn btn-info">ارجاع</button>
+                                        </a>
                                         <form class="inline-display" action="{{url('admin/client', [$client->id])}}"
                                               method="POST">
                                             <input type="hidden" name="_method" value="DELETE">

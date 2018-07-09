@@ -17,51 +17,53 @@
     <!-- Content area -->
     <div class="content">
         {{--members to call  STart--}}
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h5 class="panel-title">فاکتور ها</h5>
+        @if (Auth::user())
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h5 class="panel-title">فاکتور ها</h5>
 
-                <div class="heading-elements">
-                    <ul class="icons-list">
-                        <li><a data-action="collapse"></a></li>
-                        <li><a data-action="reload"></a></li>
-                        <li><a data-action="close"></a></li>
-                    </ul>
+                    <div class="heading-elements">
+                        <ul class="icons-list">
+                            <li><a data-action="collapse"></a></li>
+                            <li><a data-action="reload"></a></li>
+                            <li><a data-action="close"></a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="panel-body">
-                {{--{{{new Verta($current_time)}}}--}}
+                <div class="panel-body">
+                    {{--{{{new Verta($current_time)}}}--}}
 
-                        <div class="table-responsive">
-                            <table class="table ">
-                                <thead>
+                    <div class="table-responsive">
+                        <table class="table ">
+                            <thead>
 
-                                <tr class="border-double">
-                                    <th>ردیف</th>
-                                    <th>نام مخاطب</th>
-                                    <th>توضیحات</th>
+                            <tr class="border-double">
+                                <th>ردیف</th>
+                                <th>نام مخاطب</th>
+                                <th>توضیحات</th>
 
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($invoices as $invoice)
+                                <tr>
+                                    <td scope="row">{{$invoice->id}}</td>
+                                    <td><a href="/admin/invoices/{{$invoice->id}}">{{$invoice->title}}</a></td>
+                                    <td scope="row">{{$invoice->description}}</td>
                                 </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($invoices as $invoice)
-                                    <tr>
-                                        <td scope="row">{{$invoice->id}}</td>
-                                        <td><a href="/admin/invoices/{{$invoice->id}}">{{$invoice->title}}</a></td>
-                                        <td scope="row">{{$invoice->description}}</td>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                            @endforeach
+                            </tbody>
+                        </table>
 
+
+                    </div>
+                </div>
+                {{--members to call end--}}
 
             </div>
-        </div>
-    {{--members to call end--}}
-
+        @endif
     </div>
-</div>
-@include('footer');
+    @include('footer');
 
 </div>
