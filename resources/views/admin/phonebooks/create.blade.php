@@ -43,7 +43,7 @@
                               <label for="description">تاریخ یادآوری</label>
                               <fieldset class="form-group">
                                   <input type="datetime-local" class="form-control" name="rememberdate" id="rememberdate"
-                                         value="2011-08-19T13:45:00">
+                                         value="">
                               </fieldset>
                           </div>
                       </div>
@@ -52,7 +52,7 @@
                               <label for="description">زمان تماس</label>
                               <fieldset class="form-group">
                                   <input type="datetime-local" class="form-control" name="calldate" id="calldate"
-                                         value="2011-08-19T13:45:00">
+                                         value="">
                               </fieldset>
                           </div>
 
@@ -62,7 +62,6 @@
                               <label>انتخاب مشتری</label>
                               <select class="select-search select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="client_id">
                                   @foreach($clients as $client)
-
                                       <option value="{{{$client->id}}}">{{{$client->title}}}</option>
                                   @endforeach
                               </select>

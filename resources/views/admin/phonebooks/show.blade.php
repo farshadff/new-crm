@@ -44,9 +44,8 @@
                         <tbody>
 
                         <tr>
-                            @php(
-                   dd($phonebook)
-                   )
+
+
                             <th scope="row">{{$phonebook->id}}</th>
                             <th scope="row">{{$phonebook->title}}</th>
                             <td><a href="/admin/phonebooks/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
@@ -57,7 +56,7 @@
                             <td>{{ $phonebook->client->first()->client_type ?? 'مشتری وجود ندارد' }}</td>
                             <td>
                                 <div class="btn-group inline-display" role="group" aria-label="Basic example">
-                                    <a href="{{ URL::to('admin/phonebooks/' . $phonebook->id . '/edit') }}">
+                                    <a href="{{ URL::to('admin/phonebook/' . $phonebook->id . '/edit') }}">
                                         <button type="button" class="btn btn-success legitRipple">ویراییش</button>
                                     </a>&nbsp;
                                     <form class="inline-display"  action="{{url('admin/phonebooks', [$phonebook->id])}}" method="POST">

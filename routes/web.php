@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('admin/tasks', 'TaskController');
 Route::resource('admin/products', 'ProductController');
-Route::resource('admin/opportunities', 'PhonebookController');
+Route::resource('admin/phonebook', 'PhonebookController');
 Route::resource('admin/product_cats', 'ProductCatController');
 // Route for view/blade file.
 Route::get('admin/client/import', 'ClientController@showimport');
@@ -37,6 +37,8 @@ Route::post('admin/client/importExcel', 'ClientController@importExcel');
 Route::resource('admin/client', 'ClientController');
 //invoices routes
 //Route::get('admin/invoices/pdf', 'InvoicesController@pdfview')->name('generate-pdf');
+//profile route
+Route::get('admin/profile', 'ProfileController@index');
 
 Route::resource('admin/invoices','InvoiceController');
 Route::get('admin/invoices/pdf/{id}','InvoiceController@downloadPDF');

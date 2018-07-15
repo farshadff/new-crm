@@ -116,7 +116,7 @@
                         <tr>
                             <th scope="row">{{$phonebook->id}}</th>
                             <th scope="row">{{$phonebook->title}}</th>
-                            <td width="10%"><a href="/admin/opportunities/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
+                            <td width="10%"><a href="/admin/phonebook/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
                             <td>{{new Verta($phonebook->calldate)}}</td>
                             <td>{{new Verta($phonebook->rememberdate)}}</td>
 
@@ -124,7 +124,7 @@
                             <td>{{ $phonebook->client->first()->client_type ?? 'مشتری برای این فرصت وجود ندارد' }}</td>
                             <td>
                                 <div class="btn-group inline-display" role="group">
-                                    <a href="{{ URL::to('admin/opportunities/' . $phonebook->id . '/edit') }}">
+                                    <a href="{{ URL::to('admin/phonebook/' . $phonebook->id . '/edit') }}">
                                         <button type="button" class="btn btn-primary legitRipple">ویراییش</button>
                                     </a>&nbsp;
                                     <form class="inline-display" action="{{url('admin/opportunities', [$phonebook->id])}}"
