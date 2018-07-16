@@ -163,7 +163,7 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}
             </form>
-            <p class="navbar-text">صبح بخیر فرشاد</p>
+            <p class="navbar-text">صبح بخیر <span> {{{  isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span></p>
 
             <p class="navbar-text"><span class="label bg-success">آنلاین</span></p>
 

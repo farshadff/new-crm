@@ -6,7 +6,7 @@
         <div class="sidebar-user-material">
             <div class="category-content">
                 <div class="sidebar-user-material-content">
-                    <a href="#"><img src="assets/images/placeholder.jpg" class="img-circle img-responsive" alt=""></a>
+                    <a href="#"><img src="{{{url('/')}}}/assets/images/user-image.jpg" class="img-circle img-responsive" alt=""></a>
                     <h6>فرشاد بدیعی</h6>
                     <span class="text-size-small">مدیر فروش</span>
                 </div>
@@ -18,7 +18,7 @@
 
             <div class="navigation-wrapper collapse" id="user-nav">
                 <ul class="navigation">
-                    <li><a href="#"><i class="icon-user-plus"></i> <span>پروفایل من</span></a></li>
+                    <li><a href="{{{url('/')}}}/admin/profile"><i class="icon-user-plus"></i> <span>پروفایل من</span></a></li>
                     <li><a href="#"><i class="icon-coins"></i> <span>اعتبار</span></a></li>
                     <li><a href="#"><i class="icon-comment-discussion"></i> <span><span class="badge bg-teal-400 pull-right">58</span> پیام ها</span></a></li>
                     <li class="divider"></li>
