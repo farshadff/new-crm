@@ -30,6 +30,7 @@ Route::get('admin/client/import', 'ClientController@showimport');
 Route::get('downloadExcel/{type}', 'ClientController@downloadExcel');
 // Route for import excel data to database.
 //Route for sell man assign
+Route::get('admin/client/myclient', 'ClientController@myclient');
 Route::get('admin/client/assign','ClientController@assignsellman');
 Route::post('admin/client/assign','ClientController@assignsellmanSave');
 Route::get('admin/client/costumers', 'ClientController@showcostumers');

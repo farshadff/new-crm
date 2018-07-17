@@ -24,7 +24,7 @@ class ClientController extends Controller
     {
         $clients = Client::all();
         $sellman = Client::with('sellmanlist')->firstOrFail();
-        $user_id = Auth::user()->id;
+//        $user_id = Auth::user()->id;
         return view('admin.client.index',compact('clients','sellman'));
 
     }
@@ -219,5 +219,10 @@ class ClientController extends Controller
         $client_name = $request->input('client');
         $client->sellmanlist()->attach($sellman,['client_id' =>$client_name]);
         return view('admin.client.assign',compact('client_list','user'));
+    }
+    public function myclient(Client $client){
+        $user_id =Auth::user()->id;
+        $client = Client::with('sellmanlist')->firstOrFail();
+        return view('admin.client.myclient',compact('user_id','client'));
     }
 }

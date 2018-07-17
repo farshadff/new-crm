@@ -9,7 +9,6 @@
 @include('header');
 @include('sidebar');
 <div class="content-wrapper">
-
     <!-- Content area -->
     <div class="content">
         <!-- Horizontal borders -->
@@ -24,20 +23,18 @@
                     </ul>
                 </div>
             </div>
-
             <div class="panel-body">
                 <div class="table-responsive">
                     <table class="table ">
-                        <thead >
+                        <thead>
                         <tr class="border-double">
                             <th>ردیف</th>
                             <th>نام دسته</th>
                             <th>توضیحات</th>
-                            <th >عملیات ها</th>
+                            <th>عملیات ها</th>
                         </tr>
                         </thead>
                         <tbody>
-
                         <tr>
                             <th scope="row">{{$productCat->id}}</th>
                             <th scope="row">{{$productCat->title}}</th>
@@ -47,7 +44,8 @@
                                     <a href="{{ URL::to('admin/phonebooks/' . $productCat->id . '/edit') }}">
                                         <button type="button" class="btn btn-success legitRipple">ویراییش</button>
                                     </a>&nbsp;
-                                    <form class="inline-display"  action="{{url('admin/phonebooks', [$productCat->id])}}" method="POST">
+                                    <form class="inline-display" action="{{url('admin/phonebooks', [$productCat->id])}}"
+                                          method="POST">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-success legitRipple" value="حذف"/>
@@ -59,18 +57,7 @@
                     </table>
                 </div>
             </div>
-
-
-            <ul class="inline-list">
-                <li><a href=""><img src="http://atrisa-c0.ir/images/telegram.png" alt=""></a></li>
-                <li><a href=""><img src="http://atrisa-c0.ir/images/google.png" alt=""></a></li>
-                <li><a href=""><img src="http://atrisa-c0.ir/images/faceook.png" alt=""></a></li>
-                <li><a href=""><img src="http://atrisa-c0.ir/images/tiwtter.png" alt=""></a></li>
-            </ul>
-
-
-                </div>
-
+        </div>
     </div>
 </div>
 @include('footer');
