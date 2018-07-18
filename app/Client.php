@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use App\Notifications\ClientAdded;
 
 class Client extends Model
 {
@@ -32,4 +34,5 @@ class Client extends Model
     public function sellmanlist(){
         return $this->belongsToMany('App\User' , 'client_user','client_id');
     }
+
 }

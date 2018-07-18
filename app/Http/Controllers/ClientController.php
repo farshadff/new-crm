@@ -218,11 +218,16 @@ class ClientController extends Controller
         $sellman = $request->input('sellman');
         $client_name = $request->input('client');
         $client->sellmanlist()->attach($sellman,['client_id' =>$client_name]);
+        $user_notification = Auth::user();
+        $user_notification->sendClientAddedNotification($client);
         return view('admin.client.assign',compact('client_list','user'));
     }
     public function myclient(Client $client){
-        $user_id =Auth::user()->id;
-        $client = Client::with('sellmanlist')->firstOrFail();
-        return view('admin.client.myclient',compact('user_id','client'));
+//        $user_id =Auth::user()->id;
+//        $client = Client::with('sellmanlist')->firstOrFail();
+//        return view('admin.client.myclient',compact('user_id','client'));
+        $user = Auth::user();
+        $user->load('clients'); //lazy-eager loading
+        return view('admin.client.myclient',compact('user','client'));
     }
 }

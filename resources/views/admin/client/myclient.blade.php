@@ -16,14 +16,7 @@
         {{--@php(--}}
         {{--dd($client)--}}
         {{--)--}}
-            @foreach($client->sellmanlist as $sellman )
-                @php(
-                $sell_id = $sellman->pivot->client_id
-                )
-                @if($user_id === $sell_id)
-                    {{$client->name}}
-                    @endif
-                @endforeach
+
         <!-- Horizontal borders -->
         <div class="panel panel-flat">
             <div class="panel-heading">
@@ -37,6 +30,57 @@
                 </div>
             </div>
             <div class="panel-body">
+
+                    {{$client->id}}
+                    {{$client->title}}
+                    {{$client->adress1}}
+                    {{$client->telephone1}}
+                    <br>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="thead-dark">
+                            <tr class="border-double">
+                                <th scope="col">ردیف</th>
+                                <th scope="col">نام مشتری</th>
+                                <th scope="col">توضیحات مشتری</th>
+                                <th scope="col">ساخته شده در</th>
+                                {{--<th scope="col">مسول فروش</th>--}}
+                                <th scope="col">عملیات ها</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                                    <tr>
+                                        @foreach($user->clients as $client )
+                                        <th scope="row">{{$client->id}}</th>
+                                        <td><a href="/admin/client/{{$client->id}}">{{$client->title}}</a></td>
+                                        <td>{{$client->description}}</td>
+                                        <td>
+                                            {{new Verta($client->created_at)}}
+                                        </td>
+                                        <td>
+                                            <div class="btn-group inline-display" role="group" aria-label="Basic example">
+                                                <a href="{{ URL::to('admin/client/' . $client->id . '/edit') }}">
+                                                    <button type="button" class="btn btn-info">ویراییش</button>
+                                                </a>&nbsp;
+                                                <a href="{{ URL::to('admin/client/assign/')}}">
+                                                    <button type="button" class="btn btn-info">ارجاع</button>
+                                                </a>
+                                                <form class="inline-display" action="{{url('admin/client', [$client->id])}}"
+                                                      method="POST">
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                    <input type="submit" class="btn btn-danger" value="حذف"/>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                            </tbody>
+                        </table>
+
+                    </div>
             </div>
         </div>
     </div>
