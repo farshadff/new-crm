@@ -29,7 +29,8 @@ class CreateClientsTable extends Migration
             $table->integer('telephone4')->nullable();
             $table->integer('telephone5')->nullable();
             $table->text('client_type')->nullable();
-            $table->text('sellman')->nullable();
+            $table->string( 'sellpercent')->nullable();
+            $table->string( 'agreement')->nullable();
             $table->timestamps();
         });
     }

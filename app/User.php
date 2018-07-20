@@ -32,10 +32,9 @@ class User extends Authenticatable
     public function clients(){
         return $this->belongsToMany('App\Client','client_user');
     }
-    public function sendClientAddedNotification($client)
+    public function sendClientAddedNotification($clientId ,$userId)
     {
-        $this->notify(new ClientAdded($client, $this));
+        $this->notify(new ClientAdded($clientId, $userId));
     }
-
 
 }

@@ -30,6 +30,8 @@ class Client extends Model
             'telephone3',
             'telephone4',
             'telephone5',
+            'sellpercent',
+            'agreement',
         ];
     public function sellmanlist(){
         return $this->belongsToMany('App\User' , 'client_user','client_id');

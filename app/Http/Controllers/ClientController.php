@@ -58,6 +58,10 @@ class ClientController extends Controller
             'description' => 'required',
         ]);
 
+
+            $filename = $request->file('agreement')->store('public/images');
+//            $filename = $request->file('agreement')->hashName();
+
         $client = Client::create([
             'title' => $request->title,
             'description' => $request->description,
@@ -72,7 +76,9 @@ class ClientController extends Controller
             'telephone3'=>$request->telephone3,
             'telephone4'=>$request->telephone4,
             'telephone5'=>$request->telephone5,
-            'client_type'=>$request->client_type
+            'client_type'=>$request->client_type,
+            'sellpercent'=>$request->sellpercent,
+            'agreement'=>$filename,
         ]);
         return redirect('admin/client/'.$client->id);
     }
@@ -131,6 +137,7 @@ class ClientController extends Controller
         $client->telephone4 = $request->telephone4;
         $client->telephone5 = $request->telephone5;
         $client->client_type = $request->client_type;
+        $client->sellpercent = $request->sellpercent;
         $client->save();
         $request->session()->flash('message', 'Successfully modified the task!');
         return redirect('admin/client');
@@ -182,6 +189,7 @@ class ClientController extends Controller
                     $data['telephone5'] = $row['telephone5'];
                     $data['client_type'] = $row['client_type'];
 
+
                     if(!empty($data)) {
                         DB::table('clients')->insert($data);
                     }
@@ -219,7 +227,8 @@ class ClientController extends Controller
         $client_name = $request->input('client');
         $client->sellmanlist()->attach($sellman,['client_id' =>$client_name]);
         $user_notification = Auth::user();
-        $user_notification->sendClientAddedNotification($client);
+        $client->sellmanlist()->sync($sellman);
+        $user_notification->sendClientAddedNotification($client_name, $sellman);
         return view('admin.client.assign',compact('client_list','user'));
     }
     public function myclient(Client $client){
@@ -230,4 +239,5 @@ class ClientController extends Controller
         $user->load('clients'); //lazy-eager loading
         return view('admin.client.myclient',compact('user','client'));
     }
+
 }

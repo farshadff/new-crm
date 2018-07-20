@@ -7,23 +7,24 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use App\User;
+use phplusir\smsir\Smsir;
 
 class ClientAdded extends Notification
 {
     use Queueable;
-    protected $client;
     protected $user;
+    protected $clientId;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($client,$user)
+    public function __construct($clientId, $userId)
     {
-        $this->client = $client;
-        $this->user = $user;
+        $this->clientId = $clientId;
+        $this->userId = $userId;
     }
-
     /**
      * Get the notification's delivery channels.
      *
@@ -58,10 +59,12 @@ class ClientAdded extends Notification
      */
     public function toArray($notifiable)
     {
+//        sms to users
+            Smsir::send([$this->userId.'یک کاربر جدید به شما ارجاع شده لطفا صفحه کاربران من را مشاهده کنید'],['09192244689']);
+
         return [
-            'client_id' => $this->client->title,
-            'user_id' => $this->user->id,
-            'client_name' => 'ASD',
+            'client_id' => $this->clientId,
+            'user_id' => $this->userId,
         ];
     }
 }

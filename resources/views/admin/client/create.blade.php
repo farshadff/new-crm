@@ -27,7 +27,7 @@
             </div>
 
             <div class="panel-body">
-                <form action="/admin/client" method="post">
+                <form action="/admin/client" enctype='multipart/form-data' method="post">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-6">
@@ -44,13 +44,19 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="fax">فکس</label>
                                 <input type="text" class="form-control" id="fax" name="fax">
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="sellpercent">درصد موفقییت فروش</label>
+                                <input type="text" class="form-control" id="sellpercent" name="sellpercent">
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
                             <div class="form-group">
                                 <label>انتخاب مشتری  (اگر گزینه بالقوه انتخاب شود در لیست مخاطبین نمایش داده میشود)</label>
                                 <select class="select-search select2-hidden-accessible" tabindex="-1" aria-hidden="true"
@@ -125,6 +131,12 @@
                                 <label for="telephone5">تلفن پنجم</label>
                                 <input type="text" class="form-control" id="telephone5" name="telephone5">
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-2">تصویر قرار داد</label>
+                        <div class="col-lg-10">
+                            <input type="file" name="agreement" id="agreement" >
                         </div>
                     </div>
 
