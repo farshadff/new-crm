@@ -239,5 +239,15 @@ class ClientController extends Controller
         $user->load('clients'); //lazy-eager loading
         return view('admin.client.myclient',compact('user','client'));
     }
+    public function agreement(Request $request) {
+        $client_id = $request->clientid;
+        $client = Client::all();
+        if ($request->hasFile('agreement')){
+        $image = $request->file('agreement')->store('subfolder', 'public');
+            Client::where(id,$client_id)->update(array('agreement' =>$image));
+        }
+
+        return view('admin.client.agreement',compact('client'));
+    }
 
 }
