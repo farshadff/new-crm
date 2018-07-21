@@ -59,7 +59,7 @@ class ClientController extends Controller
         ]);
 
 
-            $filename = $request->file('agreement')->store('public/images');
+            $filename = $request->file('agreement')->store('subfolder', 'public');
 //            $filename = $request->file('agreement')->hashName();
 
         $client = Client::create([

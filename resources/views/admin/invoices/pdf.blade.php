@@ -27,7 +27,7 @@
     <div class="col-sm-4" style="color: #ccc; margin-right: 200px;">
         تاریخ صدور : <span>{{{new Verta()}}}</span>
     </div>
-    <h4 style="background-color: #004D40; color:#fff; line-height: 30px;">
+    <h4 style="background-color: #004D40; color:#fff;">
         شماره فاکتور {{$invoice_spec->id}}
     </h4>
 </div>

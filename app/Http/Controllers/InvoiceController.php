@@ -142,7 +142,8 @@ class InvoiceController extends Controller
 //        $this->SetLineWidth(0.3);
 //        $fontname = TCPDF_FONTS::addTTFfont('/path-to-font/FreeSerifItalic.ttf', 'TrueTypeUnicode', '', 96);
 //        $fontname = $pdf->addTTFfont('C://wamp/www/projectname/...path to .ttf file', 'TrueTypeUnicode', '', 32);
-        PDF::SetFont('dejavusans', '', 12);
+//        PDF::SetFont('bnazanin', '', 12);
+        PDF::SetFont('bnazanin', '', 12, '', true);
         PDF::setRTL(true);
         PDF::Ln();
         PDF::setLanguageArray($lg);

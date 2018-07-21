@@ -80,7 +80,12 @@
 
                     </tbody>
                 </table>
-
+<div class="col-xs-12">
+    <h4 class="text-center">
+        تصویر قرار داد
+    </h4>
+    <img class="img-responsive" src="{{asset('storage/' . $client->agreement)}}" alt="تصویر قرار داد">
+</div>
             </div>
         </div>
     </div>
