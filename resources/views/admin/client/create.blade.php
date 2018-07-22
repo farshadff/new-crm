@@ -53,7 +53,19 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label for="sellpercent">درصد موفقییت فروش</label>
-                                <input type="text" class="form-control" id="sellpercent" name="sellpercent">
+                                <select class="select-search select2-hidden-accessible" tabindex="-1" aria-hidden="true"
+                                        name="sellpercent" id="sellpercent">
+                                    <option value="10">%10</option>
+                                    <option value="20">%20</option>
+                                    <option value="30">%30</option>
+                                    <option value="40">%40</option>
+                                    <option value="50">%50</option>
+                                    <option value="60">%60</option>
+                                    <option value="70">%70</option>
+                                    <option value="80">%80</option>
+                                    <option value="90">%90</option>
+                                    <option value="100">%100</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-sm-5">

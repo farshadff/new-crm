@@ -59,7 +59,7 @@
                                     <a href="{{ URL::to('admin/phonebook/' . $phonebook->id . '/edit') }}">
                                         <button type="button" class="btn btn-success legitRipple">ویراییش</button>
                                     </a>&nbsp;
-                                    <form class="inline-display"  action="{{url('admin/phonebooks', [$phonebook->id])}}" method="POST">
+                                    <form style="display:inline"  action="{{url('admin/phonebooks', [$phonebook->id])}}" method="POST">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-success legitRipple" value="حذف"/>
@@ -118,7 +118,7 @@
                                     <a href="{{ URL::to('admin/phonebooks/' . $phonebook->id . '/edit') }}">
                                         <button type="button" class="btn btn-success legitRipple">ویراییش</button>
                                     </a>&nbsp;
-                                    <form class="inline-display"  action="{{url('admin/phonebooks', [$phonebook->id])}}" method="POST">
+                                    <form style="display:inline"  action="{{url('admin/phonebooks', [$phonebook->id])}}" method="POST">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-success legitRipple" value="حذف"/>

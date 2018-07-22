@@ -31,7 +31,10 @@ Route::get('downloadExcel/{type}', 'ClientController@downloadExcel');
 // Route for import excel data to database.
 //Route for sell man assign
 Route::get('admin/client/myclient', 'ClientController@myclient');
+//agreement save
 Route::get('admin/client/agreement', 'ClientController@agreement');
+Route::post('admin/client/agreement', 'ClientController@agreementsave');
+//assign sell man
 Route::get('admin/client/assign','ClientController@assignsellman');
 Route::post('admin/client/assign','ClientController@assignsellmanSave');
 Route::get('admin/client/costumers', 'ClientController@showcostumers');
@@ -44,6 +47,19 @@ Route::get('admin/profile', 'ProfileController@index');
 
 Route::resource('admin/invoices','InvoiceController');
 Route::get('admin/invoices/pdf/{id}','InvoiceController@downloadPDF');
+// UAC routes
+Route::resource('admin/uac' , 'UacController');
+// add role routes
+Route::get('admin/addrole' , 'UacController@addrole');
+Route::post('admin/addrole' , 'UacController@addrolesave');
+//add ability routes
+Route::get('admin/addability' , 'UacController@addability');
+Route::post('admin/addability' , 'UacController@addabilitysave');
+Route::get('admin/abilities', 'UacController@abilities');
+// assingning the role to use
+Route::get('admin/assignrole' , 'UacController@assignrole');
+Route::post('admin/assignrole' , 'UacController@assignrolesave');
+
 
 
 

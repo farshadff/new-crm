@@ -15,7 +15,7 @@
         <!-- Horizontal borders -->
         <div class="panel panel-flat">
             <div class="panel-heading">
-                <h5 class="panel-title">مخاطبین</h5>
+                <h5 class="panel-title">ارجاع نقش</h5>
                 <div class="heading-elements">
                     <ul class="icons-list">
                         <li><a data-action="collapse"></a></li>
@@ -26,33 +26,42 @@
             </div>
 
             <div class="panel-body">
-                <form action="/admin/client/agreement" method="post" enctype="multipart/form-data">
+                <form action="/admin/assignrole" method="post">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-xs-4">
                             <div class="form-group">
-                                <label for="client">مشتری</label>
+                                <label for="client">کاربر</label>
                                 <select class="select-search select2-hidden-accessible" tabindex="-1" aria-hidden="true"
-                                        name="clientid">
-                                    @foreach($client as $clients)
-                                        <option value="{{$clients->id}}">{{$clients->title}}</option>
+                                        name="user">
+                                    @foreach($user_list as $user_lists)
+                                        <option value="{{$user_lists->id}}">{{$user_lists->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
                         </div>
                         <div class="col-xs-4 text-center">
-                            <i class="icon-thumbs-up3 mr-3 icon-3x" style="font-size: 130px"></i>
-                            <h4>افزودن تصویر قرار داد</h4>
+                            <i class="icon-user-tie mr-3 icon-3x" style="font-size: 130px"></i>
+                            <h4>دادن نقش</h4>
                         </div>
                         <div class="col-xs-4">
-                                    <div class="form-group row">
-                                        <label class="col-form-label col-lg-12">تصویر قرار داد</label>
-                                        <div class="col-lg-12" style="margin-top: 20px;">
-                                            <input type="file" name="agreementedit" id="agreementedit" >
-                                        </div>
-                                    </div>
+                            <div class="form-group">
+
+
+                                <div class="form-group">
+                                    <label for="sellman">نقش</label>
+                                    <select class="select-search select2-hidden-accessible" tabindex="-1"
+                                            aria-hidden="true" name="role">
+                                        @foreach($roles as $roless)
+                                            <option value="{{$roless->id}}">{{$roless->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
                             </div>
                         </div>
+
+                    </div>
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>

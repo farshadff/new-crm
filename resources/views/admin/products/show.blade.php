@@ -46,7 +46,7 @@
                                     <a href="{{ URL::to('admin/products/' . $product->id . '/edit') }}">
                                         <button type="button" class="btn btn-success legitRipple">ویراییش</button>
                                     </a>&nbsp;
-                                    <form class="inline-display" action="{{url('admin/phonebooks', [$product->id])}}"
+                                    <form style="display:inline" action="{{url('admin/phonebooks', [$product->id])}}"
                                           method="POST">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

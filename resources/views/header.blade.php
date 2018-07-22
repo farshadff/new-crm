@@ -18,6 +18,7 @@
     <link href="{{{url('/')}}}/assets/css/core.css" rel="stylesheet" type="text/css">
     <link href="{{{url('/')}}}/assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="{{{url('/')}}}/assets/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="{{{url('/')}}}/assets/css/custom.css" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -51,7 +52,7 @@
 
 <body>
 <!-- Main navbar -->
-<div class="navbar navbar-default header-highlight">
+<div class="navbar navbar-inverse bg-indigo">
     <div class="navbar-header">
         <a class="navbar-brand" href="index.html"><img src="{{{url('/')}}}/assets/images/logo_light.png" alt=""></a>
 
@@ -60,16 +61,18 @@
             <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
         </ul>
     </div>
+
     <div class="navbar-collapse collapse" id="navbar-mobile">
         <ul class="nav navbar-nav">
-            <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a>
-            </li>
+            <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="icon-puzzle3"></i>
                     <span class="visible-xs-inline-block position-right">Git updates</span>
-                    <span class="status-mark border-pink-300"></span>
+                    <span class="status-mark border-orange-400"></span>
                 </a>
+
                 <div class="dropdown-menu dropdown-content">
                     <div class="dropdown-content-heading">
                         Git updates
@@ -77,12 +80,11 @@
                             <li><a href="#"><i class="icon-sync"></i></a></li>
                         </ul>
                     </div>
+
                     <ul class="media-list dropdown-content-body width-350">
                         <li class="media">
                             <div class="media-left">
-                                <a href="#"
-                                   class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i
-                                            class="icon-git-pull-request"></i></a>
+                                <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
                             </div>
 
                             <div class="media-body">
@@ -93,9 +95,7 @@
 
                         <li class="media">
                             <div class="media-left">
-                                <a href="#"
-                                   class="btn border-warning text-warning btn-flat btn-rounded btn-icon btn-sm"><i
-                                            class="icon-git-commit"></i></a>
+                                <a href="#" class="btn border-warning text-warning btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-commit"></i></a>
                             </div>
 
                             <div class="media-body">
@@ -106,36 +106,29 @@
 
                         <li class="media">
                             <div class="media-left">
-                                <a href="#" class="btn border-info text-info btn-flat btn-rounded btn-icon btn-sm"><i
-                                            class="icon-git-branch"></i></a>
+                                <a href="#" class="btn border-info text-info btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-branch"></i></a>
                             </div>
 
                             <div class="media-body">
-                                <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span>
-                                branch
+                                <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span> branch
                                 <div class="media-annotation">2 hours ago</div>
                             </div>
                         </li>
 
                         <li class="media">
                             <div class="media-left">
-                                <a href="#"
-                                   class="btn border-success text-success btn-flat btn-rounded btn-icon btn-sm"><i
-                                            class="icon-git-merge"></i></a>
+                                <a href="#" class="btn border-success text-success btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-merge"></i></a>
                             </div>
 
                             <div class="media-body">
-                                <a href="#">Eugene Kopyov</a> merged <span class="text-semibold">Master</span> and <span
-                                        class="text-semibold">Dev</span> branches
+                                <a href="#">Eugene Kopyov</a> merged <span class="text-semibold">Master</span> and <span class="text-semibold">Dev</span> branches
                                 <div class="media-annotation">Dec 18, 18:36</div>
                             </div>
                         </li>
 
                         <li class="media">
                             <div class="media-left">
-                                <a href="#"
-                                   class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i
-                                            class="icon-git-pull-request"></i></a>
+                                <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
                             </div>
 
                             <div class="media-body">
@@ -145,35 +138,25 @@
                         </li>
                     </ul>
 
-
                     <div class="dropdown-content-footer">
-                        <a href="#" data-popup="tooltip" title="All activity"><i
-                                    class="icon-menu display-block"></i></a>
+                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
                     </div>
-
                 </div>
             </li>
         </ul>
 
         <div class="navbar-right">
-            <a class="nav-link text-success btn btn-outline-success" href="{{ route('logout') }}"
-               onclick="event.preventDefault();                                                 document.getElementById('logout-form').submit();">
-                خروج از سیستم
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-            </form>
-            <p class="navbar-text">صبح بخیر <span> {{{  isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span></p>
-
-            <p class="navbar-text"><span class="label bg-success">آنلاین</span></p>
+            <p class="navbar-text">Morning, Victoria!</p>
+            <p class="navbar-text"><span class="label bg-success-400">Online</span></p>
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="icon-bell2"></i>
                         <span class="visible-xs-inline-block position-right">Activity</span>
-                        <span class="status-mark border-pink-300"></span>
+                        <span class="status-mark border-orange-400"></span>
                     </a>
+
                     <div class="dropdown-menu dropdown-content">
                         <div class="dropdown-content-heading">
                             Activity
@@ -185,12 +168,10 @@
                         <ul class="media-list dropdown-content-body width-350">
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs"><i
-                                                class="icon-mention"></i></a>
+                                    <a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs"><i class="icon-mention"></i></a>
                                 </div>
 
                                 <div class="media-body">
-
                                     <a href="#">Taylor Swift</a> mentioned you in a post "Angular JS. Tips and tricks"
                                     <div class="media-annotation">4 minutes ago</div>
                                 </div>
@@ -198,8 +179,7 @@
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-xs"><i
-                                                class="icon-paperplane"></i></a>
+                                    <a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-xs"><i class="icon-paperplane"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -210,21 +190,18 @@
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-blue btn-rounded btn-icon btn-xs"><i
-                                                class="icon-plus3"></i></a>
+                                    <a href="#" class="btn bg-blue btn-rounded btn-icon btn-xs"><i class="icon-plus3"></i></a>
                                 </div>
 
                                 <div class="media-body">
-                                    <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span>
-                                    branch in <span class="text-semibold">Limitless</span> repository
+                                    <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span> branch in <span class="text-semibold">Limitless</span> repository
                                     <div class="media-annotation">2 hours ago</div>
                                 </div>
                             </li>
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-purple-300 btn-rounded btn-icon btn-xs"><i
-                                                class="icon-truck"></i></a>
+                                    <a href="#" class="btn bg-purple-300 btn-rounded btn-icon btn-xs"><i class="icon-truck"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -235,8 +212,7 @@
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-warning-400 btn-rounded btn-icon btn-xs"><i
-                                                class="icon-bubble8"></i></a>
+                                    <a href="#" class="btn bg-warning-400 btn-rounded btn-icon btn-xs"><i class="icon-bubble8"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -247,8 +223,7 @@
 
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn bg-teal-400 btn-rounded btn-icon btn-xs"><i
-                                                class="icon-spinner11"></i></a>
+                                    <a href="#" class="btn bg-teal-400 btn-rounded btn-icon btn-xs"><i class="icon-spinner11"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -264,7 +239,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="icon-bubble8"></i>
                         <span class="visible-xs-inline-block position-right">Messages</span>
-                        <span class="status-mark border-pink-300"></span>
+                        <span class="status-mark border-orange-400"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-content width-350">
@@ -278,7 +253,7 @@
                         <ul class="media-list dropdown-content-body">
                             <li class="media">
                                 <div class="media-left">
-                                    <img src="{{{url('/')}}}/assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                    <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
                                     <span class="badge bg-danger-400 media-badge">5</span>
                                 </div>
 
@@ -309,8 +284,7 @@
                             </li>
 
                             <li class="media">
-                                <div class="media-left"><img src="assets/images/placeholder.jpg"
-                                                             class="img-circle img-sm" alt=""></div>
+                                <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
                                 <div class="media-body">
                                     <a href="#" class="media-heading">
                                         <span class="text-semibold">Jeremy Victorino</span>
@@ -322,8 +296,7 @@
                             </li>
 
                             <li class="media">
-                                <div class="media-left"><img src="assets/images/placeholder.jpg"
-                                                             class="img-circle img-sm" alt=""></div>
+                                <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
                                 <div class="media-body">
                                     <a href="#" class="media-heading">
                                         <span class="text-semibold">Beatrix Diaz</span>
@@ -335,8 +308,7 @@
                             </li>
 
                             <li class="media">
-                                <div class="media-left"><img src="assets/images/placeholder.jpg"
-                                                             class="img-circle img-sm" alt=""></div>
+                                <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
                                 <div class="media-body">
                                     <a href="#" class="media-heading">
                                         <span class="text-semibold">Richard Vango</span>
@@ -349,8 +321,7 @@
                         </ul>
 
                         <div class="dropdown-content-footer">
-                            <a href="#" data-popup="tooltip" title="All messages"><i
-                                        class="icon-menu display-block"></i></a>
+                            <a href="#" data-popup="tooltip" title="All messages"><i class="icon-menu display-block"></i></a>
                         </div>
                     </div>
                 </li>

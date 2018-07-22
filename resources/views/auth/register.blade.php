@@ -65,8 +65,12 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('image') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image" value="{{ old('image') }}" required autofocus>
-
+                                <div class="form-group row">
+                                    <label class="col-form-label col-lg-12">تصویر قرار داد</label>
+                                    <div class="col-lg-12" style="margin-top: 20px;">
+                                        <input type="file" name="profile" id="profile" >
+                                    </div>
+                                </div>
                                 @if ($errors->has('image'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('image') }}</strong>

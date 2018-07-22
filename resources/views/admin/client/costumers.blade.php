@@ -59,7 +59,7 @@
                                     <a href="{{ URL::to('admin/client/' . $client->id . '/edit') }}">
                                         <button type="button" class="btn btn-info">ویراییش</button>
                                     </a>&nbsp;
-                                    <form class="inline-display" action="{{url('admin/client', [$client->id])}}" method="POST">
+                                    <form style="display:inline" action="{{url('admin/client', [$client->id])}}" method="POST">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-danger" value="حذف"/>

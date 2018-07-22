@@ -68,7 +68,7 @@
                                         <a href="{{ URL::to('admin/phonebook/' . '/edit') }}">
                                             <button type="button" class="btn btn-primary legitRipple">ویراییش</button>
                                         </a>&nbsp;
-                                        <form class="inline-display" action="{{url('admin/opportunities', [])}}"
+                                        <form style="display:inline" action="{{url('admin/opportunities', [])}}"
                                               method="POST">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">

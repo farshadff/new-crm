@@ -67,7 +67,7 @@
                                                 <a href="{{ URL::to('admin/client/assign/')}}">
                                                     <button type="button" class="btn btn-info">ارجاع</button>
                                                 </a>
-                                                <form class="inline-display" action="{{url('admin/client', [$client->id])}}"
+                                                <form style="display:inline" action="{{url('admin/client', [$client->id])}}"
                                                       method="POST">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">

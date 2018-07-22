@@ -1,5 +1,5 @@
 <!-- Main sidebar -->
-<div class="sidebar sidebar-main">
+<div class="sidebar sidebar-main sidebar-default">
     <div class="sidebar-content">
 
         <!-- User menu -->
@@ -37,13 +37,13 @@
 
                     <!-- Main -->
                     <li class="navigation-header"><span>منوی اصلی</span> <i class="icon-menu" title="Main pages"></i></li>
-                    <li class="active"><a href="index.html"><i class="icon-home4"></i> <span>داشبورد</span></a></li>
+                    <li class="active"><a href="{{{url('/')}}}/admin"><i class="icon-home4"></i> <span>داشبورد</span></a></li>
 
                     <li>
                         <a href="#"><i class="icon-copy"></i> <span>فرصت ها</span></a>
                         <ul>
-                            <li><a href="{{{url('/admin/opportunities')}}}">فرصت ها</a></li>
-                            <li><a href="{{{url('/admin/opportunities/create')}}}">ساخت فرصت</a></li>
+                            <li><a href="{{{url('/admin/phonebook')}}}">فرصت ها</a></li>
+                            <li><a href="{{{url('/admin/phonebook/create')}}}">ساخت فرصت</a></li>
                         </ul>
                     </li>
                     <li>
@@ -53,6 +53,7 @@
                             <li><a href="{{{url('/admin/client/costumers')}}}">مشتریان</a></li>
                             <li><a href="{{{url('/admin/client/create')}}}">اضافه کردن مشتری</a></li>
                             <li><a href="{{{url('/admin/client/assign')}}}">ارجاع مشتری</a></li>
+                            <li><a href="{{{url('/admin/client/agreement')}}}">افزودن قرارداد</a></li>
                             <li><a href="{{{url('/admin/client/import')}}}">درون ریزی</a></li>
                         </ul>
                     </li>
@@ -124,12 +125,15 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="navigation-header"><span>سطح دسترسی</span> <i class="icon-menu" title="Page kits"></i></li>
+
                     <li>
-                        <a href="#"><i class="icon-wrench3"></i> <span>Service pages</span></a>
+                        <a href="#"><i class="icon-wrench3"></i> <span> نقش ها</span></a>
                         <ul>
-                            <li><a href="service_sitemap.html">Sitemap</a></li>
+                            <li><a href="{{{url('/admin/addrole')}}}">نقش ها</a></li>
+                            <li><a href="{{{url('/admin/addrole')}}}">اضافه کردن نقش</a></li>
                             <li>
-                                <a href="#">Invoicing</a>
+
                                 <ul>
                                     <li><a href="invoice_template.html">Invoice template</a></li>
                                     <li><a href="invoice_grid.html">Invoice grid</a></li>
@@ -167,25 +171,24 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="icon-people"></i> <span>User pages</span></a>
+                        <a href="#"><i class="icon-people"></i> <span>قابلیت ها</span></a>
                         <ul>
-                            <li><a href="user_pages_list.html">User list</a></li>
-                            <li><a href="user_pages_cards.html">User cards</a></li>
+                            <li><a href="{{{url('/admin/abilities')}}}">قابلیت ها</a></li>
+                            <li><a href="{{{url('/admin/addability')}}}">اضافه کردن قابلیت</a></li>
                             <li><a href="user_pages_profile.html">Simple profile</a></li>
                             <li><a href="user_pages_profile_tabbed.html">Tabbed profile</a></li>
                             <li><a href="user_pages_profile_cover.html">Profile with cover</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="icon-cube3"></i> <span>Application pages</span></a>
+                        <a href="#"><i class="icon-users4"></i> <span>ارجاع نقش</span></a>
                         <ul>
-                            <li>
-                                <a href="#">Task manager</a>
-                                <ul>
-                                    <li><a href="task_manager_grid.html">Task grid</a></li>
-                                    <li><a href="task_manager_list.html">Task list</a></li>
-                                    <li><a href="task_manager_detailed.html">Task detailed</a></li>
-                                </ul>
+                                    <li>
+
+
+                                        <a href="task_manager_grid.html"><i class="icon-hat"></i> ارجاع نقش</a></li>
+
+                          </ul>
                             </li>
                             <li>
                                 <a href="#">Inbox</a>
