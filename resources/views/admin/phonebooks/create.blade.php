@@ -42,14 +42,14 @@
                             <div class="form-group">
                                 <label for="description">تاریخ یادآوری</label>
                                 <fieldset class="form-group">
-                                    <input type="text" class="form-control" name="rememberdate" id="rememberdate">
+                                    <input type="text" class="form-control" autocomplete="off" name="rememberdate" id="rememberdate">
                                 </fieldset>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="description">زمان تماس</label>
-                                <input type="text" class="form-control" name="calldate" id="finish_time">
+                                <input type="text" class="form-control" autocomplete="off" name="calldate" id="finish_time">
                             </div>
                         </div>
                         <div class="col-sm-4">
@@ -100,10 +100,18 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        $("#finish_time").persianDatepicker();
+        $("#finish_time").persianDatepicker({
+            cellWidth: 48,
+            cellHeight: 30,
+            fontSize: 13,
+        });
     });
     $(function () {
-        $("#rememberdate").persianDatepicker();
+        $("#rememberdate").persianDatepicker({
+            cellWidth: 48,
+            cellHeight: 30,
+            fontSize: 13,
+        });
     });
 </script>
 

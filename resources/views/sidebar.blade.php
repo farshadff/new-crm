@@ -165,54 +165,7 @@
                           </ul>
                             </li>
                     @endif
-                            <li>
-                                <a href="#">Inbox</a>
-                                <ul>
-                                    <li><a href="mail_list.html">Mail list</a></li>
-                                    <li><a href="mail_list_detached.html">Mail list (detached)</a></li>
-                                    <li><a href="mail_read.html">Read mail</a></li>
-                                    <li><a href="mail_write.html">Write mail</a></li>
-                                    <li class="navigation-divider"></li>
-                                    <li><a href="chat_layouts.html">Chat layouts</a></li>
-                                    <li><a href="chat_options.html">Chat options</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Search</a>
-                                <ul>
-                                    <li><a href="search_basic.html">Basic search results</a></li>
-                                    <li><a href="search_users.html">User search results</a></li>
-                                    <li><a href="search_images.html">Image search results</a></li>
-                                    <li><a href="search_videos.html">Video search results</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Job search</a>
-                                <ul>
-                                    <li><a href="job_list_cards.html">Cards view</a></li>
-                                    <li><a href="job_list_panel.html">Panel view</a></li>
-                                    <li><a href="job_detailed.html">Job detailed</a></li>
-                                    <li><a href="job_apply.html">Apply</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Learning</a>
-                                <ul>
-                                    <li><a href="learning_list.html">List view</a></li>
-                                    <li><a href="learning_grid.html">Grid view</a></li>
-                                    <li><a href="learning_detailed.html">Detailed course</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Ecommerce set</a>
-                                <ul>
-                                    <li><a href="ecommerce_product_list.html">Product list</a></li>
-                                    <li><a href="ecommerce_product_grid.html">Product grid</a></li>
-                                    <li><a href="ecommerce_orders_history.html">Orders history</a></li>
-                                    <li><a href="ecommerce_customers.html">Customers</a></li>
-                                    <li><a href="ecommerce_pricing.html">Pricing tables</a></li>
-                                </ul>
-                            </li>
+                           
                         </ul>
                     </li>
                     <!-- /page kits -->
