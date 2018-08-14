@@ -50,7 +50,7 @@
                             <th scope="row">{{$phonebook->title}}</th>
                             <td><a href="/admin/phonebooks/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
                             <td>{{new Verta($phonebook->calldate)}}</td>
-                            <td>{{new Verta($phonebook->remember_date)}}</td>
+                            <td>{{new Verta($phonebook->rememberdate)}}</td>
 
                             <td>{{ $phonebook->client->first()->title ?? 'مشتری وجود ندارد' }}</td>
                             <td>{{ $phonebook->client->first()->client_type ?? 'مشتری وجود ندارد' }}</td>
@@ -109,7 +109,7 @@
                             <th scope="row">{{$phonebook->title}}</th>
                             <td><a href="/admin/phonebooks/{{$phonebook->id}}">{{$phonebook->description}}</a></td>
                             <td>{{new Verta($phonebook->calldate)}}</td>
-                            <td>{{new Verta($phonebook->remember_date)}}</td>
+                            <td>{{new Verta($phonebook->rememberdate)}}</td>
 
                             <td>{{ $phonebook->client->first()->title  ?? 'مشتری وجود ندارد' }}</td>
                             <td>{{ $phonebook->client->first()->client_type ?? 'مشتری وجود ندارد' }}</td>

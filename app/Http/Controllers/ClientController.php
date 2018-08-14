@@ -60,8 +60,9 @@ class ClientController extends Controller
             'description' => 'required',
         ]);
 
-
-        $filename = $request->file('agreement')->store('subfolder', 'public');
+//        if($request->hasfile('agreement')) {
+//        $filename = $request->file('agreement')->store('subfolder', 'public');
+//        }
 //            $filename = $request->file('agreement')->hashName();
 
         $client = Client::create([
@@ -80,7 +81,7 @@ class ClientController extends Controller
             'telephone5' => $request->telephone5,
             'client_type' => $request->client_type,
             'sellpercent' => $request->sellpercent,
-            'agreement' => $filename,
+//            'agreement' => $filename,
         ]);
         return redirect('admin/client/' . $client->id);
     }

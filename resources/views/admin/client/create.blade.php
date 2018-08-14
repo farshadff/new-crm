@@ -145,12 +145,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-form-label col-lg-2">تصویر قرار داد</label>
-                        <div class="col-lg-10">
-                            <input type="file" name="agreement" id="agreement" >
-                        </div>
-                    </div>
+                    {{--<div class="form-group row">--}}
+                        {{--<label class="col-form-label col-lg-2">تصویر قرار داد</label>--}}
+                        {{--<div class="col-lg-10">--}}
+                            {{--<input type="file" name="agreement" id="agreement" >--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
                     <button type="submit" class="btn btn-primary btn-raised legitRipple">ارسال</button>
                     <button type="clear" class="btn btn-danger btn-raised legitRipple">انصراف</button>

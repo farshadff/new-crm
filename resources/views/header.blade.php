@@ -19,9 +19,12 @@
     <link href="{{{url('/')}}}/assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="{{{url('/')}}}/assets/css/colors.css" rel="stylesheet" type="text/css">
     <link href="{{{url('/')}}}/assets/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="{{{url('/')}}}/assets/css/persianDatepicker-default.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
+
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/loaders/pace.min.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/core/libraries/jquery.min.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/core/libraries/bootstrap.min.js"></script>
@@ -38,6 +41,7 @@
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/ui/moment/moment.min.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/pickers/daterangepicker.js"></script>
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/core/app.js"></script>
+    <script type="text/javascript" src="{{{url('/')}}}/assets/js/core/persianDatepicker.min.js"></script>
     {{--SELECT 2--}}
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/core/libraries/jquery_ui/interactions.min.js"></script>
 
@@ -47,7 +51,6 @@
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
     <script type="text/javascript" src="{{{url('/')}}}/js/core/dashboard.js"></script>
-
 </head>
 
 <body>

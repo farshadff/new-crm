@@ -27,7 +27,7 @@
             </div>
 
             <div class="panel-body">
-                <form action="/admin/opportunities" method="post">
+                <form action="/admin/phonebook" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">نام</label>
@@ -37,41 +37,37 @@
                         <label for="title">توضیحات</label>
                         <input type="text" class="form-control" id="description" name="description">
                     </div>
-                  <div class="row">
-                      <div class="col-sm-4">
-                          <div class="form-group">
-                              <label for="description">تاریخ یادآوری</label>
-                              <fieldset class="form-group">
-                                  <input type="datetime-local" class="form-control" name="rememberdate" id="rememberdate"
-                                         value="">
-                              </fieldset>
-                          </div>
-                      </div>
-                      <div class="col-sm-4">
-                          <div class="form-group">
-                              <label for="description">زمان تماس</label>
-                              <fieldset class="form-group">
-                                  <input type="datetime-local" class="form-control" name="calldate" id="calldate"
-                                         value="">
-                              </fieldset>
-                          </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="description">تاریخ یادآوری</label>
+                                <fieldset class="form-group">
+                                    <input type="text" class="form-control" name="rememberdate" id="rememberdate">
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="description">زمان تماس</label>
+                                <input type="text" class="form-control" name="calldate" id="finish_time">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>انتخاب مشتری</label>
+                                <select class="select-search select2-hidden-accessible" tabindex="-1" aria-hidden="true"
+                                        name="client_id">
+                                    @foreach($clients as $client)
+                                        <option value="{{{$client->id}}}">{{{$client->title}}}</option>
+                                    @endforeach
+                                </select>
 
-                      </div>
-                      <div class="col-sm-4">
-                          <div class="form-group">
-                              <label>انتخاب مشتری</label>
-                              <select class="select-search select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="client_id">
-                                  @foreach($clients as $client)
-                                      <option value="{{{$client->id}}}">{{{$client->title}}}</option>
-                                  @endforeach
-                              </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
 
-                          </div>
-                      </div>
-                      <div class="col-sm-12">
-
-                      </div>
-                  </div>
+                        </div>
+                    </div>
 
 
                     <button type="submit" class="btn btn-primary btn-raised legitRipple">ارسال</button>
@@ -102,4 +98,13 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(function () {
+        $("#finish_time").persianDatepicker();
+    });
+    $(function () {
+        $("#rememberdate").persianDatepicker();
+    });
+</script>
+
 @include('footer');

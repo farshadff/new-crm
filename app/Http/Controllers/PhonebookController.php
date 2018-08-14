@@ -59,14 +59,21 @@ class PhonebookController extends Controller
             'description' => 'required',
         ]);
 
+        $divided_date =explode('/',$request->calldate);
+        $converted_date = Verta::getGregorian($divided_date[0],$divided_date[1],$divided_date[2]); // [2015,12,25]
+        $calldate = implode('-',$converted_date);
+        $devided_remember = explode('/',$request->rememberdate);
+        $converted_date_remember = Verta::getGregorian($devided_remember[0],$devided_remember[1],$devided_remember[2]); // [2015,12,25]
+        $rememberdate = implode('-',$converted_date_remember);
+
         $phonebook = Phonebook::create([
             'title' => $request->title,
             'description' => $request->description,
             'client_id' => $request->client_id,
-            'calldate' => $request->calldate,
-            'rememberdate' => $request->rememberdate
+            'calldate' =>  $calldate,
+            'rememberdate' => $rememberdate
         ]);
-        return redirect('admin/opportunities/' . $phonebook->id);
+        return redirect('admin/phonebook/' . $phonebook->id);
     }
 
     /**
@@ -113,7 +120,7 @@ class PhonebookController extends Controller
         $phonebook->rememberdate = $request->rememberdate;
         $phonebook->save();
         $request->session()->flash('message', 'Successfully modified the task!');
-        return redirect('admin/opportunities');
+        return redirect('admin/phonebook');
     }
 
     /**
@@ -125,6 +132,6 @@ class PhonebookController extends Controller
     public function destroy(Phonebook $phonebook)
     {
         $phonebook->delete();
-        return redirect('admin/opportunities/');
+        return redirect('admin/phonebook/');
     }
 }

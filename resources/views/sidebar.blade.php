@@ -23,7 +23,17 @@
                     <li><a href="#"><i class="icon-comment-discussion"></i> <span><span class="badge bg-teal-400 pull-right">58</span> پیام ها</span></a></li>
                     <li class="divider"></li>
                     <li><a href="#"><i class="icon-cog5"></i> <span>تنظیمات</span></a></li>
-                    <li><a href="#"><i class="icon-switch2"></i> <span>خروج</span></a></li>
+                    <li>
+                        <a href="{{ route('logout') }}"
+                           onclick="event.preventDefault();                                                 document.getElementById('logout-form').submit();">
+                            <i class="icon-switch2"></i> <span>خروج</span>
+                        </a>
+                    </li>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+
                 </ul>
             </div>
         </div>
@@ -125,49 +135,13 @@
                             </li>
                         </ul>
                     </li>
+                    @if (Auth::user()->isAn('admin'))
                     <li class="navigation-header"><span>سطح دسترسی</span> <i class="icon-menu" title="Page kits"></i></li>
-
                     <li>
                         <a href="#"><i class="icon-wrench3"></i> <span> نقش ها</span></a>
                         <ul>
                             <li><a href="{{{url('/admin/addrole')}}}">نقش ها</a></li>
                             <li><a href="{{{url('/admin/addrole')}}}">اضافه کردن نقش</a></li>
-                            <li>
-
-                                <ul>
-                                    <li><a href="invoice_template.html">Invoice template</a></li>
-                                    <li><a href="invoice_grid.html">Invoice grid</a></li>
-                                    <li><a href="invoice_archive.html">Invoice archive</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Authentication</a>
-                                <ul>
-                                    <li><a href="login_simple.html">Simple login</a></li>
-                                    <li><a href="login_advanced.html">More login info</a></li>
-                                    <li><a href="login_registration.html">Simple registration</a></li>
-                                    <li><a href="login_registration_advanced.html">More registration info</a></li>
-                                    <li><a href="login_unlock.html">Unlock user</a></li>
-                                    <li><a href="login_password_recover.html">Reset password</a></li>
-                                    <li><a href="login_hide_navbar.html">Hide navbar</a></li>
-                                    <li><a href="login_transparent.html">Transparent box</a></li>
-                                    <li><a href="login_background.html">Background option</a></li>
-                                    <li><a href="login_validation.html">With validation</a></li>
-                                    <li><a href="login_tabbed.html">Tabbed form</a></li>
-                                    <li><a href="login_modals.html">Inside modals</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Error pages</a>
-                                <ul>
-                                    <li><a href="error_403.html">Error 403</a></li>
-                                    <li><a href="error_404.html">Error 404</a></li>
-                                    <li><a href="error_405.html">Error 405</a></li>
-                                    <li><a href="error_500.html">Error 500</a></li>
-                                    <li><a href="error_503.html">Error 503</a></li>
-                                    <li><a href="error_offline.html">Offline page</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -181,15 +155,16 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="icon-users4"></i> <span>ارجاع نقش</span></a>
+                        <a href="{{{url('/admin/assignrole')}}}"><i class="icon-users4"></i> <span>ارجاع نقش</span></a>
                         <ul>
                                     <li>
 
 
-                                        <a href="task_manager_grid.html"><i class="icon-hat"></i> ارجاع نقش</a></li>
+                                        <a href="{{{url('/admin/assignrole')}}}"><i class="icon-hat"></i> ارجاع نقش</a></li>
 
                           </ul>
                             </li>
+                    @endif
                             <li>
                                 <a href="#">Inbox</a>
                                 <ul>
