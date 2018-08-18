@@ -7,8 +7,8 @@
  */
 
 ?>
-@include('header');
-@include('sidebar');
+@include('header')
+@include('sidebar')
 <div class="content-wrapper">
 
     <!-- Content area -->
@@ -48,7 +48,7 @@
                             <td>{{$invoice->title}}</td>
                             <td><a href="/admin/invoices/{{$invoice->id}}">{{$invoice->description}}</a></td>
                             @foreach($clients as $client)
-                                <td>{{ $client->user->title ?? 'No Title' }}</td>
+                                <td>{{ $client->user->title ?? 'کاربر وجود ندارد' }}</td>
                             @endforeach
                             @foreach($invoices->products as $product)
                                 <td>
@@ -81,6 +81,5 @@
 </div>
 
 
-@include('footer');
-
+@include('footer')
 

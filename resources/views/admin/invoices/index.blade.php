@@ -9,8 +9,8 @@
 ?>
 
 
-@include('header');
-@include('sidebar');
+@include('header')
+@include('sidebar')
 <!-- Main content -->
 <div class="content-wrapper">
 
@@ -64,6 +64,6 @@
             </div>
         @endif
     </div>
-    @include('footer');
+    @include('footer')
 
 </div>

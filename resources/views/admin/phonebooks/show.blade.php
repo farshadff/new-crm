@@ -6,8 +6,8 @@
  * Time: 12:27 AM
  */
 ?>
-@include('header');
-@include('sidebar');
+@include('header')
+@include('sidebar')
 <div class="content-wrapper">
 
     <!-- Content area -->
@@ -133,26 +133,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <h1>Showing Task {{ $phonebook->title }}</h1>
-    <div class="jumbotron text-center">
-        <p>
-            <strong>Task Title:</strong> {{ $phonebook->title }}<br>
-            <strong>Description:</strong> {{ $phonebook->description }}<br>
-            <strong>Description:</strong> {{ $phonebook->client_id }}<br>
-            <strong>Description:</strong> {{ $phonebook->calldate }}<br>
-            <strong>Description:</strong> {{ $phonebook->rememberdate }}
-        </p>
-    </div>
-
-
-@include('footer');
+@include('footer')
 
 

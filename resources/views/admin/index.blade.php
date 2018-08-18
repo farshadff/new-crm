@@ -202,9 +202,9 @@
                     <!-- Marketing campaigns -->
                     <div class="panel panel-flat">
                         <div class="panel-heading">
-                            <h6 class="panel-title">Marketing campaigns</h6>
+                            <h6 class="panel-title">ارزش محصولات</h6>
                             <div class="heading-elements">
-                                <span class="label bg-success heading-text">28 active</span>
+                                <span class="label bg-success heading-text">28 محصول</span>
                                 <ul class="icons-list">
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
@@ -241,7 +241,7 @@
                                                     <span class="status-mark border-success"></span>
                                                 </li>
                                                 <li>
-                                                    <span class="text-muted">May 12, 12:30 am</span>
+                                                    <span class="text-muted">22 خرداد , 12:22 ب. ظ</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -263,7 +263,7 @@
                                                     <span class="status-mark border-danger"></span>
                                                 </li>
                                                 <li>
-                                                    <span class="text-muted">Jun 4, 4:00 am</span>
+                                                    <span class="text-muted">22 خرداد , 12:22 ب. ظ</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -271,7 +271,7 @@
 
                                     <td class="text-right col-md-2">
                                         <a href="#" class="btn bg-indigo-300"><i
-                                                class="icon-statistics position-left"></i> View report</a>
+                                                class="icon-statistics position-left"></i> مشاهده گزارش</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -282,17 +282,17 @@
                             <table class="table text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th>Campaign</th>
-                                    <th class="col-md-2">Client</th>
-                                    <th class="col-md-2">Changes</th>
-                                    <th class="col-md-2">Budget</th>
-                                    <th class="col-md-2">Status</th>
+                                    <th>نام محصول</th>
+                                    <th class="col-md-2">فعالییت</th>
+                                    <th class="col-md-2">تغییرات فروش</th>
+                                    <th class="col-md-2">هزینه</th>
+                                    <th class="col-md-2">وضعییت</th>
                                     <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr class="active border-double">
-                                    <td colspan="5">Today</td>
+                                    <td colspan="5">امروز</td>
                                     <td class="text-right">
                                         <span class="progress-meter" id="today-progress" data-progress="30"></span>
                                     </td>
@@ -304,19 +304,19 @@
                                                              class="img-circle img-xs" alt=""></a>
                                         </div>
                                         <div class="media-left">
-                                            <div class=""><a href="#" class="text-default text-semibold">Facebook</a>
+                                            <div class=""><a href="#" class="text-default text-semibold">تبلیغات در فیس بوک</a>
                                             </div>
                                             <div class="text-muted text-size-small">
                                                 <span class="status-mark border-blue position-left"></span>
-                                                02:00 - 03:00
+                                               تبلیغاتی
                                             </div>
                                         </div>
                                     </td>
-                                    <td><span class="text-muted">Mintlime</span></td>
+                                    <td><span class="text-muted">تبلیغات مجازی</span></td>
                                     <td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span>
                                     </td>
-                                    <td><h6 class="text-semibold">$5,489</h6></td>
-                                    <td><span class="label bg-blue">Active</span></td>
+                                    <td><h6 class="text-semibold"> 5,489ریال</h6></td>
+                                    <td><span class="label bg-blue">فعال</span></td>
                                     <td class="text-center">
                                         <ul class="icons-list">
                                             <li class="dropdown">
@@ -343,19 +343,18 @@
                                                              class="img-circle img-xs" alt=""></a>
                                         </div>
                                         <div class="media-left">
-                                            <div class=""><a href="#" class="text-default text-semibold">Youtube
-                                                    videos</a></div>
+                                            <div class=""><a href="#" class="text-default text-semibold">ساخت ویدیو تبلیغاتی</a></div>
                                             <div class="text-muted text-size-small">
                                                 <span class="status-mark border-danger position-left"></span>
-                                                13:00 - 14:00
+                                              چند رسانه ای
                                             </div>
                                         </div>
                                     </td>
-                                    <td><span class="text-muted">CDsoft</span></td>
+                                    <td><span class="text-muted">تیزر تبلیغاتی</span></td>
                                     <td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 3.12%</span>
                                     </td>
-                                    <td><h6 class="text-semibold">$2,592</h6></td>
-                                    <td><span class="label bg-danger">Closed</span></td>
+                                    <td><h6 class="text-semibold"> 664,489ریال</h6></td>
+                                    <td><span class="label bg-danger">بسته شده</span></td>
                                     <td class="text-center">
                                         <ul class="icons-list">
                                             <li class="dropdown">
@@ -382,19 +381,19 @@
                                                              class="img-circle img-xs" alt=""></a>
                                         </div>
                                         <div class="media-left">
-                                            <div class=""><a href="#" class="text-default text-semibold">Spotify ads</a>
+                                            <div class=""><a href="#" class="text-default text-semibold">محصول سوم</a>
                                             </div>
                                             <div class="text-muted text-size-small">
                                                 <span class="status-mark border-grey-400 position-left"></span>
-                                                10:00 - 11:00
+                                                فیزیکی
                                             </div>
                                         </div>
                                     </td>
-                                    <td><span class="text-muted">Diligence</span></td>
+                                    <td><span class="text-muted">محصول فیزیکی</span></td>
                                     <td><span class="text-danger"><i class="icon-stats-decline2 position-left"></i> - 8.02%</span>
                                     </td>
-                                    <td><h6 class="text-semibold">$1,268</h6></td>
-                                    <td><span class="label bg-grey-400">Hold</span></td>
+                                    <td><h6 class="text-semibold"> 88,489ریال</h6></td>
+                                    <td><span class="label bg-grey-400">منتظر تمدید</span></td>
                                     <td class="text-center">
                                         <ul class="icons-list">
                                             <li class="dropdown">
@@ -1380,186 +1379,16 @@
                     <!-- /progress counters -->
 
 
-                    <!-- Daily sales -->
-                    <div class="panel panel-flat">
-                        <div class="panel-heading">
-                            <h6 class="panel-title">Daily sales stats</h6>
-                            <div class="heading-elements">
-                                <span class="heading-text">Balance: <span
-                                        class="text-bold text-danger-600 position-right">$4,378</span></span>
-                                <ul class="icons-list">
-                                    <li class="dropdown text-muted">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                class="icon-cog3"></i> <span class="caret"></span></a>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="#"><i class="icon-sync"></i> Update data</a></li>
-                                            <li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>
-                                            <li><a href="#"><i class="icon-pie5"></i> Statistics</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#"><i class="icon-cross3"></i> Clear list</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="panel-body">
-                            <div class="chart" id="sales-heatmap"></div>
-                        </div>
-
-                        <div class="table-responsive">
-                            <table class="table text-nowrap">
-                                <thead>
-                                <tr>
-                                    <th>Application</th>
-                                    <th>Time</th>
-                                    <th>Price</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="media-left media-middle">
-                                            <a href="#" class="btn bg-primary-400 btn-rounded btn-icon btn-xs">
-                                                <span class="letter-icon"></span>
-                                            </a>
-                                        </div>
-
-                                        <div class="media-body">
-                                            <div class="media-heading">
-                                                <a href="#" class="letter-icon-title">Sigma application</a>
-                                            </div>
-
-                                            <div class="text-muted text-size-small"><i
-                                                    class="icon-checkmark3 text-size-mini position-left"></i> New order
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted text-size-small">06:28 pm</span>
-                                    </td>
-                                    <td>
-                                        <h6 class="text-semibold no-margin">$49.90</h6>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <div class="media-left media-middle">
-                                            <a href="#" class="btn bg-danger-400 btn-rounded btn-icon btn-xs">
-                                                <span class="letter-icon"></span>
-                                            </a>
-                                        </div>
-
-                                        <div class="media-body">
-                                            <div class="media-heading">
-                                                <a href="#" class="letter-icon-title">Alpha application</a>
-                                            </div>
-
-                                            <div class="text-muted text-size-small"><i
-                                                    class="icon-spinner11 text-size-mini position-left"></i> Renewal
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted text-size-small">04:52 pm</span>
-                                    </td>
-                                    <td>
-                                        <h6 class="text-semibold no-margin">$90.50</h6>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <div class="media-left media-middle">
-                                            <a href="#" class="btn bg-indigo-400 btn-rounded btn-icon btn-xs">
-                                                <span class="letter-icon"></span>
-                                            </a>
-                                        </div>
-
-                                        <div class="media-body">
-                                            <div class="media-heading">
-                                                <a href="#" class="letter-icon-title">Delta application</a>
-                                            </div>
-
-                                            <div class="text-muted text-size-small"><i
-                                                    class="icon-lifebuoy text-size-mini position-left"></i> Support
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted text-size-small">01:26 pm</span>
-                                    </td>
-                                    <td>
-                                        <h6 class="text-semibold no-margin">$60.00</h6>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <div class="media-left media-middle">
-                                            <a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs">
-                                                <span class="letter-icon"></span>
-                                            </a>
-                                        </div>
-
-                                        <div class="media-body">
-                                            <div class="media-heading">
-                                                <a href="#" class="letter-icon-title">Omega application</a>
-                                            </div>
-
-                                            <div class="text-muted text-size-small"><i
-                                                    class="icon-lifebuoy text-size-mini position-left"></i> Support
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted text-size-small">11:46 am</span>
-                                    </td>
-                                    <td>
-                                        <h6 class="text-semibold no-margin">$55.00</h6>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <div class="media-left media-middle">
-                                            <a href="#" class="btn bg-danger-400 btn-rounded btn-icon btn-xs">
-                                                <span class="letter-icon"></span>
-                                            </a>
-                                        </div>
-
-                                        <div class="media-body">
-                                            <div class="media-heading">
-                                                <a href="#" class="letter-icon-title">Alpha application</a>
-                                            </div>
-
-                                            <div class="text-muted text-size-small"><i
-                                                    class="icon-spinner11 text-size-mini position-left"></i> Renewal
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted text-size-small">10:29 am</span>
-                                    </td>
-                                    <td>
-                                        <h6 class="text-semibold no-margin">$90.50</h6>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- /daily sales -->
 
 
                     <!-- My messages -->
                     <div class="panel panel-flat">
                         <div class="panel-heading">
-                            <h6 class="panel-title">My messages</h6>
+                            <h6 class="panel-title">پیام های من</h6>
                             <div class="heading-elements">
-                                <span class="heading-text"><i class="icon-history text-warning position-left"></i> Jul 7, 10:30</span>
-                                <span class="label bg-success heading-text">Online</span>
+                                <span class="heading-text"><i class="icon-history text-warning position-left"></i> 21 مرداد 12:45 ب ظ </span>
+                                <span class="label bg-success heading-text">آنلاین</span>
                             </div>
                         </div>
 
@@ -1569,16 +1398,16 @@
                                 <div class="col-md-4">
                                     <div class="content-group">
                                         <h6 class="text-semibold no-margin"><i
-                                                class="icon-clipboard3 position-left text-slate"></i> 2,345</h6>
-                                        <span class="text-muted text-size-small">this week</span>
+                                                class="icon-clipboard3 position-left text-slate"></i> 246</h6>
+                                        <span class="text-muted text-size-small">این هفته</span>
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="content-group">
                                         <h6 class="text-semibold no-margin"><i
-                                                class="icon-calendar3 position-left text-slate"></i> 3,568</h6>
-                                        <span class="text-muted text-size-small">this month</span>
+                                                class="icon-calendar3 position-left text-slate"></i> 600</h6>
+                                        <span class="text-muted text-size-small">در ماه</span>
                                     </div>
                                 </div>
 
@@ -1586,7 +1415,7 @@
                                     <div class="content-group">
                                         <h6 class="text-semibold no-margin"><i
                                                 class="icon-comments position-left text-slate"></i> 32,693</h6>
-                                        <span class="text-muted text-size-small">all messages</span>
+                                        <span class="text-muted text-size-small">تمامی پیام ها</span>
                                     </div>
                                 </div>
                             </div>

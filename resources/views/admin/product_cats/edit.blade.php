@@ -6,8 +6,8 @@
  * Time: 12:27 AM
  */
 ?>
-@include('header');
-@include('sidebar');
+@include('header')
+@include('sidebar')
 <div class="content-wrapper">
 
     <!-- Content area -->
@@ -53,4 +53,4 @@
                 </form>
             </div>
         </div>
-        @include('footer');
+        @include('footer')

@@ -7,8 +7,8 @@
  */
 ?>
 
-@include('header');
-@include('sidebar');
+@include('header')
+@include('sidebar')
 <div class="content-wrapper">
 
     <!-- Content area -->
@@ -199,4 +199,4 @@
 {{-- adding field script--}}
 
 
-@include('footer');
+@include('footer')

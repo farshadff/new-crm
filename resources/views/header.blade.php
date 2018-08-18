@@ -149,8 +149,8 @@
         </ul>
 
         <div class="navbar-right">
-            <p class="navbar-text">Morning, Victoria!</p>
-            <p class="navbar-text"><span class="label bg-success-400">Online</span></p>
+            <p class="navbar-text">وضعییت شما</p>
+            <p class="navbar-text"><span class="label bg-success-400">آنلاین</span></p>
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">

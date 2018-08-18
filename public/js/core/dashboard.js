@@ -3780,8 +3780,8 @@ var Dashboard = function () {
             // Progress charts
             _ProgressPieChart('#today-progress', 20, 20, '#7986CB');
             _ProgressPieChart('#yesterday-progress', 20, 20, '#7986CB');
-            _RoundedProgressChart('#hours-available-progress', 38, 2, '#F06292', 0.68, 'icon-watch text-pink-400', 'Hours available', '64% average');
-            _RoundedProgressChart('#goal-progress', 38, 2, '#5C6BC0', 0.82, 'icon-trophy3 text-indigo-400', 'Productivity goal', '87% average');
+            _RoundedProgressChart('#hours-available-progress', 38, 2, '#F06292', 0.68, 'icon-watch text-pink-400', 'ساعات مفید فعالیت', '64% متوسط');
+            _RoundedProgressChart('#goal-progress', 38, 2, '#5C6BC0', 0.82, 'icon-trophy3 text-indigo-400', 'جذب مشتری ماهانه', '87% متوسط');
 
             // Donut charts
             _MarketingCampaignsDonutChart('#campaigns-donut', 42);

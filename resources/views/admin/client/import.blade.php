@@ -8,8 +8,8 @@
 ?>
 
 
-@include('header');
-@include('sidebar');
+@include('header')
+@include('sidebar')
 
 
 <div class="content-wrapper">
@@ -66,6 +66,6 @@
             </div>
         </div>
     </div>
-    @include('footer');
+
 </div>
-@include('footer');
+@include('footer')
