@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/admin',function () {
+    if (Auth::user()) {
    return view('admin.index');
+    } else
+        return view('welcome');
 });
 
 Auth::routes();

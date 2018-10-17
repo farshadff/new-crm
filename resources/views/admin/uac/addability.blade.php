@@ -56,7 +56,7 @@
         <!-- Horizontal borders -->
         <div class="panel panel-flat">
             <div class="panel-heading">
-                <h5 class="panel-title">اضافه کردن محصول</h5>
+                <h5 class="panel-title">اضافه کردن قابلیت</h5>
                 <div class="heading-elements">
                     <ul class="icons-list">
                         <li><a data-action="collapse"></a></li>
@@ -73,13 +73,13 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="name">نام نقش</label>
+                                <label for="name">نام قابلیت</label>
                                 <input type="text" class="form-control" id="abilityname" name="abilityname">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="description">نام نمایشی نقش</label>
+                                <label for="description">نام نمایشی قابلیت</label>
                                 <input type="text" class="form-control" id="abilitytitle" name="abilitytitle">
                             </div>
                         </div>

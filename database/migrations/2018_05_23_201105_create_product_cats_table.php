@@ -16,7 +16,7 @@ class CreateProductCatsTable extends Migration
         Schema::create('product_cats', function (Blueprint $table) {
             $table->increments('id');
             $table->text('title');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

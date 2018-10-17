@@ -30,7 +30,7 @@
                 <form action="/admin/phonebook" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label for="title">نام</label>
+                        <label for="title">نام فرصت</label>
                         <input type="text" class="form-control" id="title" name="title">
                     </div>
                     <div class="form-group">

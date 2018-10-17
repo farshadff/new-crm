@@ -52,8 +52,9 @@
                     <li>
                         <a href="#"><i class="icon-copy"></i> <span>فرصت ها</span></a>
                         <ul>
-                            <li><a href="{{{url('/admin/phonebook')}}}">فرصت ها</a></li>
                             <li><a href="{{{url('/admin/phonebook/create')}}}">ساخت فرصت</a></li>
+
+                            <li><a href="{{{url('/admin/phonebook')}}}">فرصت ها</a></li>
                         </ul>
                     </li>
                     <li>
@@ -99,40 +100,6 @@
                         <a href="{{{url('/sms-admin/')}}}"><i class="icon-grid6"></i><span>پیامک ها</span> </a>
                         <ul>
                             <li><a href="{{{url('/sms-admin/')}}}"><span>پیامک ها</span></a></li>
-                            <li><a href="general_widgets_content.html">Content widgets</a></li>
-                            <li><a href="general_widgets_stats.html">Statistics widgets</a></li>
-                            <li><a href="general_embeds.html">Embeds</a></li>
-                            <li><a href="general_faq.html">FAQ page</a></li>
-                            <li><a href="general_knowledgebase.html">Knowledgebase</a></li>
-                            <li>
-                                <a href="#">Blog</a>
-                                <ul>
-                                    <li><a href="blog_classic_v.html">Classic vertical</a></li>
-                                    <li><a href="blog_classic_h.html">Classic horizontal</a></li>
-                                    <li><a href="blog_grid.html">Grid</a></li>
-                                    <li><a href="blog_single.html">Single post</a></li>
-                                    <li class="navigation-divider"></li>
-                                    <li><a href="blog_sidebar_left.html">Left sidebar</a></li>
-                                    <li><a href="blog_sidebar_right.html">Right sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Timelines</a>
-                                <ul>
-                                    <li><a href="timelines_left.html">Left timeline</a></li>
-                                    <li><a href="timelines_right.html">Right timeline</a></li>
-                                    <li><a href="timelines_center.html">Centered timeline</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Gallery</a>
-                                <ul>
-                                    <li><a href="gallery_grid.html">Media grid</a></li>
-                                    <li><a href="gallery_titles.html">Media with titles</a></li>
-                                    <li><a href="gallery_description.html">Media with description</a></li>
-                                    <li><a href="gallery_library.html">Media library</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </li>
                     @if (Auth::user()->isAn('admin'))
@@ -149,9 +116,7 @@
                         <ul>
                             <li><a href="{{{url('/admin/abilities')}}}">قابلیت ها</a></li>
                             <li><a href="{{{url('/admin/addability')}}}">اضافه کردن قابلیت</a></li>
-                            <li><a href="user_pages_profile.html">Simple profile</a></li>
-                            <li><a href="user_pages_profile_tabbed.html">Tabbed profile</a></li>
-                            <li><a href="user_pages_profile_cover.html">Profile with cover</a></li>
+                           
                         </ul>
                     </li>
                     <li>

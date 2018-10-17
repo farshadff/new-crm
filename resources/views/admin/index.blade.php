@@ -57,6 +57,7 @@
         <!-- Main charts -->
 
         <div class="row">
+            @if(Auth::user())
             @if (Auth::user()->isAn('admin'))
             <div class="col-lg-7">
                 <!-- Traffic sources -->
@@ -192,6 +193,11 @@
                 </div>
             </div>
             @endif
+            @else
+                @php(
+                dd('asd')
+                )
+                @endif
             <!-- /main charts -->
 
 

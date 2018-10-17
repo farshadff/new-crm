@@ -56,9 +56,10 @@ class ClientController extends Controller
     {
         //Validate
         $request->validate([
-            'title' => 'required|min:3',
-            'description' => 'required',
+            'telephone1' => 'iran_mobile	',
         ]);
+
+
 
 //        if($request->hasfile('agreement')) {
 //        $filename = $request->file('agreement')->store('subfolder', 'public');

@@ -149,6 +149,8 @@ return [
         Elibyy\TCPDF\ServiceProvider::class,
         phplusir\smsir\SmsirServiceProvider::class,
         Silber\Bouncer\BouncerServiceProvider::class,
+        Anetwork\Validation\PersianValidationServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -217,8 +219,6 @@ return [
         'PDF' => Elibyy\TCPDF\Facades\TCPDF::class,
         'Smsir' => phplusir\smsir\SmsirFacade::class,
         'Bouncer' => Silber\Bouncer\BouncerFacade::class,
-
-
     ],
 
 ];

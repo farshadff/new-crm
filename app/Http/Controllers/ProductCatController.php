@@ -40,7 +40,6 @@ class ProductCatController extends Controller
         //Validate
         $request->validate([
             'title' => 'required|min:3',
-            'description' => 'required',
         ]);
 
         $product_cats = ProductCat::create([
