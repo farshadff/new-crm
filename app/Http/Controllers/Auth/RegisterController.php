@@ -62,14 +62,13 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data,Request $request)
+    protected function create(array $data)
     {
-        $filename = $request->file('profile')->store('subfolder', 'public');
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'image' => $filename,
             'mobile' => $data['mobile'],
             'melicode' => $data['melicode'],
             'personeli' => $data['personeli'],
