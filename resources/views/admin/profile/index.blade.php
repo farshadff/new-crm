@@ -65,9 +65,11 @@
 
                                 <td>
                                     <div class="btn-group inline-display" role="group">
-                                        <a href="{{ URL::to('admin/phonebook/' . '/edit') }}">
+                                        {{--{{{url('admin/profile/'. Auth::user)}}}--}}
+
+                                        <a href=" {{ URL::to('admin/profile/' . Auth::user()->id ) }}">
                                             <button type="button" class="btn btn-primary legitRipple">ویراییش</button>
-                                        </a>&nbsp;
+                                        </a>
                                         <form style="display:inline" action="{{url('admin/opportunities', [])}}"
                                               method="POST">
                                             <input type="hidden" name="_method" value="DELETE">
@@ -87,7 +89,26 @@
             <div class="col-sm-3">
                 <div class="panel panel-flat">
                     <div class="panel-heading">
-                        <h5 class="panel-title">ویراییش عکس</h5>
+                        <h5 class="panel-title">شماره همراه</h5>
+
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                                <li><a data-action="close"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+                        <h4 class="text-center">   {{{ Auth::user()->mobile }}} <i class="icon-mobile
+"></i></h4>
+
+                    </div>
+                </div>
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">تصویر کاربر</h5>
 
                         <div class="heading-elements">
                             <ul class="icons-list">
@@ -102,33 +123,10 @@
                         <div class="sidebar-user-material-content">
                             <a href="#" class="legitRipple"><img src="http://localhost:8000/assets/images/user-image.jpg" class="img-circle img-responsive" alt=""></a>
                         </div>
-                        <h4 class="text-center">
-                            <button type="button" class="btn btn-success btn-labeled btn-labeled-left btn-sm legitRipple"><b><i class="icon-pencil4 mr-3"></i></b>ویراییش</button>
-                        </h4>
-                    </div>
-                </div>
-                <div class="panel panel-flat">
-                    <div class="panel-heading">
-                        <h5 class="panel-title">ویراییش شماه همراه</h5>
 
-                        <div class="heading-elements">
-                            <ul class="icons-list">
-                                <li><a data-action="collapse"></a></li>
-                                <li><a data-action="reload"></a></li>
-                                <li><a data-action="close"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="panel-body">
-                        <h4 class="text-center">{{{ Auth::user()->mobile }}}</h4>
-                        <h4 class="text-center">
-                            <button type="button" class="btn btn-success btn-labeled btn-labeled-left btn-sm legitRipple"><b><i class="icon-pencil4 mr-3"></i></b>ویراییش</button>
-                        </h4>
                     </div>
                 </div>
             </div>
-        </div>
 
     </div>
 </div>

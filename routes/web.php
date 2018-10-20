@@ -47,6 +47,13 @@ Route::resource('admin/client', 'ClientController');
 //Route::get('admin/invoices/pdf', 'InvoicesController@pdfview')->name('generate-pdf');
 //profile route
 Route::get('admin/profile', 'ProfileController@index');
+Route::get('admin/profile/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
+Route::patch('admin/profile/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+//Route::get('admin/profile/edit', 'userController@index');
+//Route::get('admin/profile/update', 'userController@update');
+//Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+
+
 
 Route::resource('admin/invoices','InvoiceController');
 Route::get('admin/invoices/pdf/{id}','InvoiceController@downloadPDF');
