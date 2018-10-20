@@ -69,6 +69,11 @@ Route::get('admin/abilities', 'UacController@abilities');
 // assingning the role to use
 Route::get('admin/assignrole' , 'UacController@assignrole');
 Route::post('admin/assignrole' , 'UacController@assignrolesave');
+// Message system routes
+Route::get('admin/message/read', 'MessageController@read');
+Route::get('admin/message/write', 'MessageController@write');
+Route::resource('admin/message', 'MessageController');
+
 
 
 
