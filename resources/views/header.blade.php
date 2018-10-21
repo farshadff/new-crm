@@ -51,6 +51,9 @@
     <script type="text/javascript" src="{{{url('/')}}}/assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
     <script type="text/javascript" src="{{{url('/')}}}/js/core/dashboard.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+
 </head>
 
 <body>

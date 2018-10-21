@@ -160,7 +160,7 @@ a.badge,
   .sidebar {
     display: table-cell;
     vertical-align: top;
-    width: 260px;
+    width: 200px;
   }
 }
 .sidebar-main {
@@ -18091,7 +18091,7 @@ thead .htCollapseButton:after {
 *
 *  # Responsive extension
 *
-*  Optimise the table's layout for different screen sizes through the dynamic 
+*  Optimise the table's layout for different screen sizes through the dynamic
 *  insertion and removal of columns from the table
 *
 *  Version: 1.0

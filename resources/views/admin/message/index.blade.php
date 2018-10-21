@@ -254,14 +254,14 @@
             <div class="page-header">
                 <div class="page-header-content">
                     <div class="page-title">
-                        <h4><i class="icon-arrow-right6 position-left"></i> <span class="text-semibold">Mailbox</span> - List</h4>
+                        <h4><i class="icon-arrow-right6 position-left"></i> <span class="text-semibold">بازگشت به خانه</span></h4>
                     </div>
 
                     <div class="heading-elements">
                         <form class="heading-form" action="#">
                             <div class="form-group">
                                 <div class="has-feedback">
-                                    <input type="search" class="form-control" placeholder="Search messages">
+                                    <input type="search" class="form-control" placeholder="جستجو پیام">
                                     <div class="form-control-feedback">
                                         <i class="icon-search4 text-size-small text-muted"></i>
                                     </div>
@@ -273,9 +273,9 @@
 
                 <div class="breadcrumb-line breadcrumb-line-component">
                     <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
-                        <li><a href="mail_list.html">Mailbox</a></li>
-                        <li class="active">List</li>
+                        <li><a href="index.html"><i class="icon-home2 position-left"></i> خانه</a></li>
+                        <li><a href="mail_list.html">مرکز پیام</a></li>
+                        <li class="active">صندوق دریافت</li>
                     </ul>
 
                     <ul class="breadcrumb-elements">
@@ -307,10 +307,10 @@
                 <!-- Single line -->
                 <div class="panel panel-white">
                     <div class="panel-heading">
-                        <h6 class="panel-title">My Inbox (single line)</h6>
+                        <h6 class="panel-title">صندوق دریافت</h6>
 
                         <div class="heading-elements not-collapsible">
-                            <span class="label bg-blue heading-text">259 new today</span>
+                            <span class="label bg-blue heading-text">19 پیام جدید امروز</span>
                         </div>
                     </div>
 
@@ -335,18 +335,18 @@
                                     </button>
 
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Select all</a></li>
-                                        <li><a href="#">Select read</a></li>
-                                        <li><a href="#">Select unread</a></li>
+                                        <li><a href="#">انتخاب همه</a></li>
+                                        <li><a href="#">انتخاب خوانده شده ها</a></li>
+                                        <li><a href="#">انتخاب خوانده نشده ها</a></li>
                                         <li class="divider"></li>
-                                        <li><a href="#">Clear selection</a></li>
+                                        <li><a href="#">پاک کردن انتخاب ها</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="btn-group navbar-btn">
-                                    <button type="button" class="btn btn-default"><i class="icon-pencil7"></i> <span class="hidden-xs position-right">Compose</span></button>
-                                    <button type="button" class="btn btn-default"><i class="icon-bin"></i> <span class="hidden-xs position-right">Delete</span></button>
-                                    <button type="button" class="btn btn-default"><i class="icon-spam"></i> <span class="hidden-xs position-right">Spam</span></button>
+                                    <button type="button" class="btn btn-default"><i class="icon-pencil7"></i> <span class="hidden-xs position-right">ارسال</span></button>
+                                    <button type="button" class="btn btn-default"><i class="icon-bin"></i> <span class="hidden-xs position-right">حذف</span></button>
+                                    <button type="button" class="btn btn-default"><i class="icon-spam"></i> <span class="hidden-xs position-right">اسپم</span></button>
                                 </div>
 
                                 <div class="navbar-right">
@@ -378,6 +378,7 @@
                     <div class="table-responsive">
                         <table class="table table-inbox">
                             <tbody data-link="row" class="rowlink">
+                            @foreach($message as $messages)
                             <tr class="unread">
                                 <td class="table-inbox-checkbox rowlink-skip">
                                     <input type="checkbox" class="styled">
@@ -388,26 +389,34 @@
                                     </a>
                                 </td>
                                 <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/brands/spotify.png" class="img-circle img-xs" alt="">
+                                  @if($messages->status === 1)
+                                        <span class="label bg-danger position-left">  انجام نشده</span>
+                                      @elseif($messages->status === 0)
+                                        <span class="label bg-warning position-left">  درحال انجام</span>
+                                      @else
+                                        <span class="label bg-success position-left">تمام شده</span>
+                                    @endif
                                 </td>
                                 <td class="table-inbox-name">
                                     <a href="#">
-                                        <div class="letter-icon-title text-default">Spotify</div>
+
+
+                                        <div class="letter-icon-title text-default"> {{{$messages->title}}}</div>
+
                                     </a>
                                 </td>
                                 <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">On Tower-hill, as you go down &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">To the London docks, you may have seen a crippled beggar (or KEDGER, as the sailors say) holding a painted board before him, representing the tragic scene in which he lost his leg</span>
+
+                                    <span class="table-inbox-preview">{{{$messages->body}}}</span>
                                 </td>
                                 <td class="table-inbox-attachment">
                                     <i class="icon-attachment text-muted"></i>
                                 </td>
                                 <td class="table-inbox-time">
-                                    11:09 pm
+                                    {{{$messages->created_at->format('h:m')}}}
                                 </td>
                             </tr>
-
-                            <tr class="unread">
+                            <tr class="">
                                 <td class="table-inbox-checkbox rowlink-skip">
                                     <input type="checkbox" class="styled">
                                 </td>
@@ -437,7 +446,6 @@
                                     10:21 pm
                                 </td>
                             </tr>
-
                             <tr class="unread">
                                 <td class="table-inbox-checkbox rowlink-skip">
                                     <input type="checkbox" class="styled">
@@ -465,347 +473,7 @@
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-full2 text-warning-300"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-											<span class="btn bg-indigo-400 btn-rounded btn-icon btn-xs">
-												<span class="letter-icon"></span>
-											</span>
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Margo Baker</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">Throughout the Pacific, and also in Nantucket, and New Bedford &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">and Sag Harbor, you will come across lively sketches of whales and whaling-scenes, graven by the fishermen themselves on Sperm Whale-teeth, or ladies' busks wrought out of the Right Whale-bone</span>
-                                </td>
-                                <td class="table-inbox-attachment"></td>
-                                <td class="table-inbox-time">
-                                    4:28 am
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/brands/dribbble.png" class="img-circle img-xs" alt="">
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Dribbble</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">The whalemen call the numerous little ingenious contrivances &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">They elaborately carve out of the rough material, in their hours of ocean leisure. Some of them have little boxes of dentistical-looking implements</span>
-                                </td>
-                                <td class="table-inbox-attachment"></td>
-                                <td class="table-inbox-time">
-                                    Dec 5
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-											<span class="btn bg-brown-400 btn-rounded btn-icon btn-xs">
-												<span class="letter-icon"></span>
-											</span>
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Hanna Dorman</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">Some of them have little boxes of dentistical-looking implements &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">Specially intended for the skrimshandering business. But, in general, they toil with their jack-knives alone; and, with that almost omnipotent tool of the sailor</span>
-                                </td>
-                                <td class="table-inbox-attachment">
-                                    <i class="icon-attachment text-muted"></i>
-                                </td>
-                                <td class="table-inbox-time">
-                                    Dec 5
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/brands/twitter.png" class="img-circle img-xs" alt="">
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Twitter</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject"><span class="label bg-indigo-400 position-left">Order</span> Long exile from Christendom &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">And civilization inevitably restores a man to that condition in which God placed him, i.e. what is called savagery</span>
-                                </td>
-                                <td class="table-inbox-attachment"></td>
-                                <td class="table-inbox-time">
-                                    Dec 4
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-full2 text-warning-300"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-											<span class="btn bg-pink-400 btn-rounded btn-icon btn-xs">
-												<span class="letter-icon"></span>
-											</span>
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Vanessa Aurelius</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">Your true whale-hunter is as much a savage as an Iroquois &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">I myself am a savage, owning no allegiance but to the King of the Cannibals; and ready at any moment to rebel against him. Now, one of the peculiar characteristics of the savage in his domestic hours</span>
-                                </td>
-                                <td class="table-inbox-attachment">
-                                    <i class="icon-attachment text-muted"></i>
-                                </td>
-                                <td class="table-inbox-time">
-                                    Dec 4
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-xs" alt="">
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">William Brenson</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">An ancient Hawaiian war-club or spear-paddle &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">In its full multiplicity and elaboration of carving, is as great a trophy of human perseverance as a Latin lexicon. For, with but a bit of broken sea-shell or a shark's tooth</span>
-                                </td>
-                                <td class="table-inbox-attachment">
-                                    <i class="icon-attachment text-muted"></i>
-                                </td>
-                                <td class="table-inbox-time">
-                                    Dec 4
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/brands/facebook.png" class="img-circle img-xs" alt="">
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Facebook</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">As with the Hawaiian savage, so with the white sailor-savage &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">With the same marvellous patience, and with the same single shark's tooth, of his one poor jack-knife, he will carve you a bit of bone sculpture, not quite as workmanlike</span>
-                                </td>
-                                <td class="table-inbox-attachment"></td>
-                                <td class="table-inbox-time">
-                                    Dec 3
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-full2 text-warning-300"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-xs" alt="">
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Vicky Barna</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject"><span class="label bg-pink-400 position-left">Track</span> Achilles's shield &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">Wooden whales, or whales cut in profile out of the small dark slabs of the noble South Sea war-wood, are frequently met with in the forecastles of American whalers. Some of them are done with much accuracy</span>
-                                </td>
-                                <td class="table-inbox-attachment"></td>
-                                <td class="table-inbox-time">
-                                    Dec 2
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/brands/youtube.png" class="img-circle img-xs" alt="">
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Youtube</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">At some old gable-roofed country houses &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">You will see brass whales hung by the tail for knockers to the road-side door. When the porter is sleepy, the anvil-headed whale would be best. But these knocking whales are seldom remarkable as faithful essays</span>
-                                </td>
-                                <td class="table-inbox-attachment">
-                                    <i class="icon-attachment text-muted"></i>
-                                </td>
-                                <td class="table-inbox-time">
-                                    Nov 30
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-xs" alt="">
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Tony Gurrano</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">On the spires of some old-fashioned churches &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">You will see sheet-iron whales placed there for weather-cocks; but they are so elevated, and besides that are to all intents and purposes so labelled with "HANDS OFF!" you cannot examine them</span>
-                                </td>
-                                <td class="table-inbox-attachment"></td>
-                                <td class="table-inbox-time">
-                                    Nov 28
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-											<span class="btn bg-danger-400 btn-rounded btn-icon btn-xs">
-												<span class="letter-icon"></span>
-											</span>
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Barbara Walden</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">In bony, ribby regions of the earth &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">Where at the base of high broken cliffs masses of rock lie strewn in fantastic groupings upon the plain, you will often discover images as of the petrified forms</span>
-                                </td>
-                                <td class="table-inbox-attachment"></td>
-                                <td class="table-inbox-time">
-                                    Nov 28
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table-inbox-checkbox rowlink-skip">
-                                    <input type="checkbox" class="styled">
-                                </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-full2 text-warning-300"></i>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-image">
-                                    <img src="../../../../global_assets/images/brands/amazon.png" class="img-circle img-xs" alt="">
-                                </td>
-                                <td class="table-inbox-name">
-                                    <a href="#">
-                                        <div class="letter-icon-title text-default">Amazon</div>
-                                    </a>
-                                </td>
-                                <td class="table-inbox-message">
-                                    <span class="table-inbox-subject">Here and there from some lucky point of view &nbsp;-&nbsp;</span>
-                                    <span class="table-inbox-preview">You will catch passing glimpses of the profiles of whales defined along the undulating ridges. But you must be a thorough whaleman, to see these sights; and not only that, but if you wish to return to such a sight again</span>
-                                </td>
-                                <td class="table-inbox-attachment">
-                                    <i class="icon-attachment text-muted"></i>
-                                </td>
-                                <td class="table-inbox-time">
-                                    Nov 27
-                                </td>
-                            </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
