@@ -72,6 +72,8 @@ Route::post('admin/assignrole' , 'UacController@assignrolesave');
 // Message system routes
 Route::get('admin/message/read', 'MessageController@read');
 Route::get('admin/message/write', 'MessageController@write');
+//summernote store route
+Route::post('/admin/message/store','MessageController@store');
 Route::resource('admin/message', 'MessageController');
 
 
