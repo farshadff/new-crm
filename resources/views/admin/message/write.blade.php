@@ -341,10 +341,9 @@
                                     <div class="form-group">
                                         <select class="select select2-hidden-accessible" name="receiver_id" tabindex="-1" aria-hidden="true">
                                             <optgroup label="لطفا مخاطب مورد نظر خود را انتخاب کنید">
-                                                <option value="0">Connecticut</option>
-                                                <option value="1">Florida</option>
-                                                <option value="2">Massachusetts</option>
-                                                <option value="3">West Virginia</option>
+                                              @foreach($user as $users)
+                                                <option value="{{{$users->id}}}">{{$users->name}}</option>
+                                                  @endforeach
                                             </optgroup>
                                         </select>
                                     </div></td>

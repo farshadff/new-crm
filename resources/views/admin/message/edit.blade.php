@@ -18,8 +18,6 @@
     <div class="page-content">
 
 
-
-
         <!-- Secondary sidebar -->
         <div class="sidebar sidebar-secondary sidebar-default">
             <div class="sidebar-content">
@@ -52,18 +50,24 @@
                     <div class="category-content no-padding">
                         <ul class="navigation navigation-alt navigation-accordion no-padding-bottom">
                             <li class="navigation-header">Folders</li>
-                            <li class="active"><a href="#"><i class="icon-drawer-in"></i> Inbox <span class="badge badge-success">32</span></a></li>
+                            <li class="active"><a href="#"><i class="icon-drawer-in"></i> Inbox <span
+                                            class="badge badge-success">32</span></a></li>
                             <li><a href="#"><i class="icon-drawer3"></i> Drafts</a></li>
                             <li><a href="#"><i class="icon-drawer-out"></i> Sent mail</a></li>
                             <li><a href="#"><i class="icon-stars"></i> Starred</a></li>
                             <li class="navigation-divider"></li>
-                            <li><a href="#"><i class="icon-spam"></i> Spam <span class="badge badge-danger">99+</span></a></li>
+                            <li><a href="#"><i class="icon-spam"></i> Spam <span
+                                            class="badge badge-danger">99+</span></a></li>
                             <li><a href="#"><i class="icon-bin"></i> Trash</a></li>
                             <li class="navigation-header">Labels</li>
-                            <li><a href="#"><span class="status-mark border-primary position-left"></span> Facebook</a></li>
-                            <li><a href="#"><span class="status-mark border-success position-left"></span> Spotify</a></li>
-                            <li><a href="#"><span class="status-mark border-indigo position-left"></span> Twitter</a></li>
-                            <li><a href="#"><span class="status-mark border-danger position-left"></span> Dribbble</a></li>
+                            <li><a href="#"><span class="status-mark border-primary position-left"></span> Facebook</a>
+                            </li>
+                            <li><a href="#"><span class="status-mark border-success position-left"></span> Spotify</a>
+                            </li>
+                            <li><a href="#"><span class="status-mark border-indigo position-left"></span> Twitter</a>
+                            </li>
+                            <li><a href="#"><span class="status-mark border-danger position-left"></span> Dribbble</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -83,7 +87,9 @@
                         <ul class="media-list media-list-linked">
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">James Alexander</span>
                                         <span class="text-size-small text-muted display-block">UI/UX expert</span>
@@ -96,7 +102,9 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Jeremy Victorino</span>
                                         <span class="text-size-small text-muted display-block">Senior designer</span>
@@ -109,9 +117,12 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
-                                        <div class="media-heading"><span class="text-semibold">Jordana Mills</span></div>
+                                        <div class="media-heading"><span class="text-semibold">Jordana Mills</span>
+                                        </div>
                                         <span class="text-muted">Sales consultant</span>
                                     </div>
                                     <div class="media-right media-middle">
@@ -122,9 +133,12 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
-                                        <div class="media-heading"><span class="text-semibold">William Miles</span></div>
+                                        <div class="media-heading"><span class="text-semibold">William Miles</span>
+                                        </div>
                                         <span class="text-muted">SEO expert</span>
                                     </div>
                                     <div class="media-right media-middle">
@@ -135,7 +149,9 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Margo Baker</span>
                                         <span class="text-size-small text-muted display-block">Google</span>
@@ -148,7 +164,9 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Beatrix Diaz</span>
                                         <span class="text-size-small text-muted display-block">Facebook</span>
@@ -161,7 +179,9 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Richard Vango</span>
                                         <span class="text-size-small text-muted display-block">Microsoft</span>
@@ -190,7 +210,9 @@
                         <ul class="media-list media-list-linked">
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Will Samuel</span>
                                         <span class="text-muted">And he looked over at the alarm clock, ticking..</span>
@@ -200,7 +222,9 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Margo Baker</span>
                                         <span class="text-muted">However hard he threw himself onto..</span>
@@ -210,7 +234,9 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Monica Smith</span>
                                         <span class="text-muted">Yes, but was it spanossible to quietly sleep through..</span>
@@ -220,7 +246,9 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Jordana Mills</span>
                                         <span class="text-muted">What should he do now? The next train went at..</span>
@@ -230,7 +258,9 @@
 
                             <li class="media">
                                 <a href="#" class="media-link">
-                                    <div class="media-left"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-md" alt=""></div>
+                                    <div class="media-left"><img
+                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                class="img-circle img-md" alt=""></div>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">John Craving</span>
                                         <span class="text-muted">Gregor then turned to look out the window..</span>
@@ -259,7 +289,8 @@
                         <div class="navbar navbar-default">
                             <ul class="nav navbar-nav visible-xs-block no-border">
                                 <li>
-                                    <a class="text-center collapsed" data-toggle="collapse" data-target="#inbox-toolbar-toggle-single">
+                                    <a class="text-center collapsed" data-toggle="collapse"
+                                       data-target="#inbox-toolbar-toggle-single">
                                         <i class="icon-circle-down2"></i>
                                     </a>
                                 </li>
@@ -267,13 +298,18 @@
 
                             <div class="navbar-collapse collapse" id="inbox-toolbar-toggle-single">
                                 <div class="btn-group navbar-btn">
-                                    <a href="mail_write.html" class="btn btn-default"><i class="icon-reply"></i> <span class="hidden-xs position-right">Reply</span></a>
-                                    <a href="mail_write.html" class="btn btn-default"><i class="icon-reply-all"></i> <span class="hidden-xs position-right">Reply to all</span></a>
-                                    <a href="mail_write.html" class="btn btn-default"><i class="icon-forward"></i> <span class="hidden-xs position-right">Forward</span></a>
-                                    <a href="#" class="btn btn-default"><i class="icon-bin"></i> <span class="hidden-xs position-right">Delete</span></a>
+                                    <a href="mail_write.html" class="btn btn-default"><i class="icon-reply"></i> <span
+                                                class="hidden-xs position-right">Reply</span></a>
+                                    <a href="mail_write.html" class="btn btn-default"><i class="icon-reply-all"></i>
+                                        <span class="hidden-xs position-right">Reply to all</span></a>
+                                    <a href="mail_write.html" class="btn btn-default"><i class="icon-forward"></i> <span
+                                                class="hidden-xs position-right">Forward</span></a>
+                                    <a href="#" class="btn btn-default"><i class="icon-bin"></i> <span
+                                                class="hidden-xs position-right">Delete</span></a>
 
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        <button type="button" class="btn btn-default dropdown-toggle"
+                                                data-toggle="dropdown">
                                             <i class="icon-menu7"></i>
                                             <span class="caret"></span>
                                         </button>
@@ -290,8 +326,10 @@
                                 <div class="pull-right-lg">
                                     <p class="navbar-text">12:49 pm</p>
                                     <div class="btn-group navbar-btn">
-                                        <a href="#" class="btn btn-default"><i class="icon-printer"></i> <span class="hidden-xs position-right">Print</span></a>
-                                        <a href="#" class="btn btn-default"><i class="icon-new-tab2"></i> <span class="hidden-xs position-right">Share</span></a>
+                                        <a href="#" class="btn btn-default"><i class="icon-printer"></i> <span
+                                                    class="hidden-xs position-right">Print</span></a>
+                                        <a href="#" class="btn btn-default"><i class="icon-new-tab2"></i> <span
+                                                    class="hidden-xs position-right">Share</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -310,14 +348,18 @@
 
                         <div class="media-body">
                             <h6 class="media-heading">{{$message->title}}</h6>
-                            <div class="letter-icon-title text-semibold">Amanda Smith <a href="#">&lt;jira@diakultd.atlassian.net&gt;</a></div>
+                            <div class="letter-icon-title text-semibold">Amanda Smith <a href="#">&lt;jira@diakultd.atlassian.net&gt;</a>
+                            </div>
                         </div>
 
                         <div class="media-right media-middle text-nowrap">
                             <ul class="list-inline list-inline-condensed no-margin">
-                                <li><a href="#"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-xs" alt=""></a></li>
-                                <li><a href="#"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-xs" alt=""></a></li>
-                                <li><a href="#"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="img-circle img-xs" alt=""></a></li>
+                                <li><a href="#"><img src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                     class="img-circle img-xs" alt=""></a></li>
+                                <li><a href="#"><img src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                     class="img-circle img-xs" alt=""></a></li>
+                                <li><a href="#"><img src="../../../../global_assets/images/placeholders/placeholder.jpg"
+                                                     class="img-circle img-xs" alt=""></a></li>
                                 <li><span class="btn bg-teal-400 btn-xs">+26</span></li>
                             </ul>
                         </div>
@@ -336,8 +378,10 @@
                                     <!-- Hero -->
                                     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
                                         <tr>
-                                            <td align="center" bgcolor="#f67b7c" style="background-image: url('http://demo.interface.club/limitless/assets/images/bg.png'); background-repeat: repeat;">
-                                                <table width="640" border="0" cellpadding="0" cellspacing="0" align="center">
+                                            <td align="center" bgcolor="#f67b7c"
+                                                style="background-image: url('http://demo.interface.club/limitless/assets/images/bg.png'); background-repeat: repeat;">
+                                                <table width="640" border="0" cellpadding="0" cellspacing="0"
+                                                       align="center">
                                                     <tr>
                                                         <td width="100%" height="15"></td>
                                                     </tr>
@@ -345,20 +389,24 @@
                                                         <td align="center">
 
                                                             <!-- Nav -->
-                                                            <table width="600" border="0" cellpadding="0" cellspacing="0">
+                                                            <table width="600" border="0" cellpadding="0"
+                                                                   cellspacing="0">
                                                                 <tr>
                                                                     <td width="100%" valign="middle">
 
                                                                         <!-- Logo -->
-                                                                        <table width="280" border="0" cellpadding="0" cellspacing="0" align="left">
+                                                                        <table width="280" border="0" cellpadding="0"
+                                                                               cellspacing="0" align="left">
                                                                             <tr>
-                                                                                <td height="60" valign="middle" width="100%" align="left">
-                                                                                    <a href="#"><img width="125" src="../../../../global_assets/images/logo_light.png" alt=""></a>
+                                                                                <td height="60" valign="middle"
+                                                                                    width="100%" align="left">
+                                                                                    <a href="#"><img width="125"
+                                                                                                     src="../../../../global_assets/images/logo_light.png"
+                                                                                                     alt=""></a>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
                                                                         <!-- /logo -->
-
 
 
                                                                     </td>
@@ -371,9 +419,11 @@
 
 
                                                             <!-- Title -->
-                                                            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <table width="600" border="0" cellpadding="0"
+                                                                   cellspacing="0" align="center">
                                                                 <tr>
-                                                                    <td valign="middle" align="center" style="font-size: 40px; color: #ffffff; line-height: 50px; font-weight: 300;">
+                                                                    <td valign="middle" align="center"
+                                                                        style="font-size: 40px; color: #ffffff; line-height: 50px; font-weight: 300;">
 
                                                                     </td>
                                                                 </tr>
@@ -382,16 +432,19 @@
 
 
                                                             <!-- Subtitle -->
-                                                            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                            <table width="600" border="0" cellpadding="0"
+                                                                   cellspacing="0" align="center">
                                                                 <tr>
                                                                     <td width="100%" height="30"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td valign="middle" width="100%">
-                                                                        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                                        <table width="600" border="0" cellpadding="0"
+                                                                               cellspacing="0" align="center">
                                                                             <tr>
                                                                                 <td width="30"></td>
-                                                                                <td width="540" align="center" style="font-size: 14px; color: #ffffff; line-height: 24px;">
+                                                                                <td width="540" align="center"
+                                                                                    style="font-size: 14px; color: #ffffff; line-height: 24px;">
                                                                                     {!!html_entity_decode($message->body)!!}
                                                                                 </td>
                                                                                 <td width="30"></td>
@@ -401,8 +454,6 @@
                                                                 </tr>
                                                             </table>
                                                             <!-- /subtitle -->
-
-
 
 
                                                         </td>
@@ -417,22 +468,55 @@
                                     <!-- /hero -->
 
 
-
-
-
                                     <!-- Footer -->
                                     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
                                         <tr>
                                             <td align="center" width="100%" valign="top" bgcolor="#344b61">
 
                                                 <!-- Wrapper -->
-                                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+                                                <table width="600" border="0" cellpadding="0" cellspacing="0"
+                                                       align="center">
                                                     <tr>
-                                                        <td width="100%" height="40" align="center" valign="middle" style="font-size: 12px; color: #aebecd;">
+                                                        <td width="100%" height="40" align="center" valign="middle"
+                                                            style="font-size: 12px; color: #aebecd;">
 
 
 
-                                                            <a href="{{ URL::to('admin/message/' . $message->id . '/edit') }}" style="color: #ffffff;">تغییر وضعییت</a>
+                                                            <form action="{{url('/admin/message', [$message->id])}}" method="POST">
+                                                                <input type="hidden" name="_method" value="PUT">
+                                                                {{ csrf_field() }}
+                                                                <div class="row">
+                                                                    <div class="col-xs-4" style="margin-top: 20px;">
+
+                                                                           <span style="color: #ffffff;"> تغییر وضعییت به</span>
+                                                                    </div>
+                                                                    <div class="col-xs-4">
+                                                                        <div class="form-group">
+                                                                            <select style="color: #ffffff" class="select" name="status"
+                                                                                    tabindex="-1" aria-hidden="true">
+
+                                                                                <option value="0">انجام نشده</option>
+                                                                                <option value="1">در حال انجام</option>
+                                                                                <option value="2">تمام شده</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    @if ($errors->any())
+                                                                        <div class="alert alert-danger">
+                                                                            <ul>
+                                                                                @foreach ($errors->all() as $error)
+                                                                                    <li>{{ $error }}</li>
+                                                                                @endforeach
+                                                                            </ul>
+                                                                        </div>
+                                                                    @endif
+                                                                   <div class="col-xs-4">
+                                                                       <button type="submit" class="btn btn-primary">
+                                                                           تایید
+                                                                       </button>
+                                                                   </div>
+                                                                </div>
+                                                            </form>
                                                         </td>
                                                     </tr>
                                                 </table>

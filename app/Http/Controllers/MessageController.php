@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Message;
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
 
 class MessageController extends Controller
 {
@@ -23,7 +24,8 @@ class MessageController extends Controller
         return view('admin.message.read');
     }
     public function write() {
-        return view('admin.message.write');
+        $user = User::all();
+        return view('admin.message.write',compact('user'));
     }
 
     /**
@@ -89,7 +91,7 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
-        //
+        return view('admin.message.read',compact('message'));
     }
 
     /**
@@ -100,7 +102,8 @@ class MessageController extends Controller
      */
     public function edit(Message $message)
     {
-        //
+        return view('admin.message.edit',compact('message'));
+
     }
 
     /**
@@ -112,7 +115,14 @@ class MessageController extends Controller
      */
     public function update(Request $request, Message $message)
     {
-        //
+        //Validate
+        $request->validate([
+            'status' => 'required',
+        ]);
+        $message->status = $request->status;
+        $message->save();
+        $request->session()->flash('message', 'تغییر وضعیت با موفقیت انجام شد');
+        return redirect('admin/message');
     }
 
     /**

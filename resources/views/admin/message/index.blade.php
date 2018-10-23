@@ -381,22 +381,17 @@
                                 <td class="table-inbox-checkbox rowlink-skip">
                                     <input type="checkbox" class="styled">
                                 </td>
-                                <td class="table-inbox-star rowlink-skip">
-                                    <a href="mail_read.html">
-                                        <i class="icon-star-empty3 text-muted"></i>
-                                    </a>
-                                </td>
                                 <td class="table-inbox-image">
-                                  @if($messages->status === 1)
+                                  @if($messages->status === 0)
                                         <span class="label bg-danger position-left">  انجام نشده</span>
-                                      @elseif($messages->status === 0)
+                                      @elseif($messages->status === 1)
                                         <span class="label bg-warning position-left">  درحال انجام</span>
                                       @else
                                         <span class="label bg-success position-left">تمام شده</span>
                                     @endif
                                 </td>
                                 <td class="table-inbox-name">
-                                    <a href="#">
+                                    <a href="/admin/message/{{$messages->id}}">
 
 
                                         <div class="letter-icon-title text-default"> {!!html_entity_decode($messages->title)!!}</div>
@@ -404,8 +399,9 @@
                                     </a>
                                 </td>
                                 <td class="table-inbox-message">
-
-                                    <span class="table-inbox-preview">{!!html_entity_decode($messages->body)!!}</span>
+                                    <span class="table-inbox-preview">
+                                    {!!str_limit(html_entity_decode($messages->body),20)!!}
+                                    </span>
                                 </td>
                                 <td class="table-inbox-attachment">
                                     <i class="icon-attachment text-muted"></i>
