@@ -10,6 +10,8 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use App\Message;
+use DB;
+use Auth;
 
 class MessageUpdated
 {
@@ -22,7 +24,17 @@ class MessageUpdated
      */
     public function __construct(Message $message)
     {
-print('asdasd');
+        $changer_id = Auth::user()->id;
+
+        DB::table('message_notification')->insert([
+            [
+             'title' =>'شما یک نوتیفیکشن جدید دارید',
+             'status' =>  $message->status,
+             'notification_status' => 0,
+             'changer_id' => $changer_id,
+             'created_at' => DB::raw('now()')
+            ]
+        ]);
     }
 
     /**
