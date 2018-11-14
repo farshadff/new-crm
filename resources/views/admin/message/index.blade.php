@@ -48,7 +48,7 @@
                     <div class="category-content no-padding">
                         <ul class="navigation navigation-alt navigation-accordion no-padding-bottom">
                             <li class="navigation-header">صندوق ها</li>
-                            <li class="active"><a href="message"><i class="icon-drawer-in"></i> صندوق دریافت <span class="badge badge-success">32</span></a></li>
+                            <li class="active"><a href="/admin/message/"><i class="icon-drawer-in"></i> صندوق دریافت <span class="badge badge-success">32</span></a></li>
                             <li><a href="#"><i class="icon-drawer-out"></i>ارسال شده ها</a></li>
                             <li><a href="#"><i class="icon-bin"></i>سطل زباله</a></li>
                         </ul>

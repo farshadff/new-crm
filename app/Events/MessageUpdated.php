@@ -26,7 +26,7 @@ class MessageUpdated
     {
         $changer_id = Auth::user()->id;
 
-        DB::table('message_notification')->insert([
+        DB::table('message_notifications')->insert([
             [
              'title' =>'شما یک نوتیفیکشن جدید دارید',
              'status' =>  $message->status,

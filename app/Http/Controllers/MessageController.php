@@ -91,7 +91,10 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
-        return view('admin.message.read',compact('message'));
+
+        $sender_name = Message::with('users')->where('sender_id', $message->sender_id)->first();
+//         Message::with('users')->get();
+        return view('admin.message.read',compact('message','sender_name'));
     }
 
     /**

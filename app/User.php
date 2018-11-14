@@ -36,5 +36,8 @@ class User extends Authenticatable
     {
         $this->notify(new ClientAdded($clientId, $userId));
     }
+    public function messages() {
+        $this->hasOne('App\Message','id','sender_id');
+    }
 
 }

@@ -10,4 +10,7 @@ class Message extends Model
     protected $dispatchesEvents = [
         "updated" => MessageUpdated::class
     ];
+    public function users() {
+        return $this->belongsTo('App\User','sender_id','id');
+    }
 }

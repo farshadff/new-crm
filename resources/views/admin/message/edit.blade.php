@@ -25,14 +25,14 @@
                 <!-- Actions -->
                 <div class="sidebar-category">
                     <div class="category-title">
-                        <span>Actions</span>
+                        <span></span>
                         <ul class="icons-list">
                             <li><a href="#" data-action="collapse"></a></li>
                         </ul>
                     </div>
 
                     <div class="category-content">
-                        <a href="#" class="btn bg-indigo-400 btn-block">Compose mail</a>
+                        <a href="message/write" class="btn bg-indigo-400 btn-block">ارسال ایمیل</a>
                     </div>
                 </div>
                 <!-- /actions -->
@@ -41,7 +41,7 @@
                 <!-- Sub navigation -->
                 <div class="sidebar-category">
                     <div class="category-title">
-                        <span>Navigation</span>
+                        <span></span>
                         <ul class="icons-list">
                             <li><a href="#" data-action="collapse"></a></li>
                         </ul>
@@ -49,229 +49,14 @@
 
                     <div class="category-content no-padding">
                         <ul class="navigation navigation-alt navigation-accordion no-padding-bottom">
-                            <li class="navigation-header">Folders</li>
-                            <li class="active"><a href="#"><i class="icon-drawer-in"></i> Inbox <span
-                                            class="badge badge-success">32</span></a></li>
-                            <li><a href="#"><i class="icon-drawer3"></i> Drafts</a></li>
-                            <li><a href="#"><i class="icon-drawer-out"></i> Sent mail</a></li>
-                            <li><a href="#"><i class="icon-stars"></i> Starred</a></li>
-                            <li class="navigation-divider"></li>
-                            <li><a href="#"><i class="icon-spam"></i> Spam <span
-                                            class="badge badge-danger">99+</span></a></li>
-                            <li><a href="#"><i class="icon-bin"></i> Trash</a></li>
-                            <li class="navigation-header">Labels</li>
-                            <li><a href="#"><span class="status-mark border-primary position-left"></span> Facebook</a>
-                            </li>
-                            <li><a href="#"><span class="status-mark border-success position-left"></span> Spotify</a>
-                            </li>
-                            <li><a href="#"><span class="status-mark border-indigo position-left"></span> Twitter</a>
-                            </li>
-                            <li><a href="#"><span class="status-mark border-danger position-left"></span> Dribbble</a>
-                            </li>
+                            <li class="navigation-header">صندوق ها</li>
+                            <li class="active"><a href="message"><i class="icon-drawer-in"></i> صندوق دریافت <span class="badge badge-success">32</span></a></li>
+                            <li><a href="#"><i class="icon-drawer-out"></i>ارسال شده ها</a></li>
+                            <li><a href="#"><i class="icon-bin"></i>سطل زباله</a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- /sub navigation -->
-
-
-                <!-- Online users -->
-                <div class="sidebar-category">
-                    <div class="category-title">
-                        <span>Chat</span>
-                        <ul class="icons-list">
-                            <li><a href="#" data-action="collapse"></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="category-content no-padding">
-                        <ul class="media-list media-list-linked">
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">James Alexander</span>
-                                        <span class="text-size-small text-muted display-block">UI/UX expert</span>
-                                    </div>
-                                    <div class="media-right media-middle">
-                                        <span class="status-mark bg-success"></span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">Jeremy Victorino</span>
-                                        <span class="text-size-small text-muted display-block">Senior designer</span>
-                                    </div>
-                                    <div class="media-right media-middle">
-                                        <span class="status-mark bg-danger"></span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <div class="media-heading"><span class="text-semibold">Jordana Mills</span>
-                                        </div>
-                                        <span class="text-muted">Sales consultant</span>
-                                    </div>
-                                    <div class="media-right media-middle">
-                                        <span class="status-mark bg-grey-300"></span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <div class="media-heading"><span class="text-semibold">William Miles</span>
-                                        </div>
-                                        <span class="text-muted">SEO expert</span>
-                                    </div>
-                                    <div class="media-right media-middle">
-                                        <span class="status-mark bg-success"></span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">Margo Baker</span>
-                                        <span class="text-size-small text-muted display-block">Google</span>
-                                    </div>
-                                    <div class="media-right media-middle">
-                                        <span class="status-mark bg-success"></span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">Beatrix Diaz</span>
-                                        <span class="text-size-small text-muted display-block">Facebook</span>
-                                    </div>
-                                    <div class="media-right media-middle">
-                                        <span class="status-mark bg-warning-400"></span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">Richard Vango</span>
-                                        <span class="text-size-small text-muted display-block">Microsoft</span>
-                                    </div>
-                                    <div class="media-right media-middle">
-                                        <span class="status-mark bg-grey-300"></span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /online users -->
-
-
-                <!-- Latest messages -->
-                <div class="sidebar-category">
-                    <div class="category-title">
-                        <span>Latest messages</span>
-                        <ul class="icons-list">
-                            <li><a href="#" data-action="collapse"></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="category-content no-padding">
-                        <ul class="media-list media-list-linked">
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">Will Samuel</span>
-                                        <span class="text-muted">And he looked over at the alarm clock, ticking..</span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">Margo Baker</span>
-                                        <span class="text-muted">However hard he threw himself onto..</span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">Monica Smith</span>
-                                        <span class="text-muted">Yes, but was it spanossible to quietly sleep through..</span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">Jordana Mills</span>
-                                        <span class="text-muted">What should he do now? The next train went at..</span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="media">
-                                <a href="#" class="media-link">
-                                    <div class="media-left"><img
-                                                src="../../../../global_assets/images/placeholders/placeholder.jpg"
-                                                class="img-circle img-md" alt=""></div>
-                                    <div class="media-body">
-                                        <span class="media-heading text-semibold">John Craving</span>
-                                        <span class="text-muted">Gregor then turned to look out the window..</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /latest messages -->
-
             </div>
         </div>
         <!-- /secondary sidebar -->
