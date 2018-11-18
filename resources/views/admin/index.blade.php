@@ -15,11 +15,11 @@
             <div class="heading-elements">
                 <div class="heading-btn-group">
                     <a href="#" class="btn btn-link btn-float text-size-small has-text"><i
-                            class="icon-bars-alt text-primary"></i><span>آمار</span></a>
+                                class="icon-bars-alt text-primary"></i><span>آمار</span></a>
                     <a href="#" class="btn btn-link btn-float text-size-small has-text"><i
-                            class="icon-calculator text-primary"></i> <span>فاکتور ها</span></a>
+                                class="icon-calculator text-primary"></i> <span>فاکتور ها</span></a>
                     <a href="#" class="btn btn-link btn-float text-size-small has-text"><i
-                            class="icon-calendar5 text-primary"></i> <span>قرار ها</span></a>
+                                class="icon-calendar5 text-primary"></i> <span>قرار ها</span></a>
                 </div>
             </div>
         </div>
@@ -58,147 +58,151 @@
 
         <div class="row">
             @if(Auth::user())
-            @if (Auth::user()->isAn('admin'))
-            <div class="col-lg-7">
-                <!-- Traffic sources -->
-                    <div class="panel panel-flat">
-                        <div class="panel-heading">
-                            <h6 class="panel-title">مشخصات سیستم</h6>
-                            <div class="heading-elements">
-                                <form class="heading-form" action="#">
-                                    <div
-                                        class="form-check form-check-right form-check-switchery form-check-switchery-sm">
-                                        <label class="form-check-label">
-                                            به روز رسانی لحظه ای :
-                                            <input type="checkbox" class="form-input-switchery" checked data-fouc>
-                                        </label>
-                                    </div>
-                                </form>
+                @if (Auth::user()->isAn('admin'))
+                    <div class="col-lg-7">
+                        <!-- Traffic sources -->
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h6 class="panel-title">مشخصات سیستم</h6>
+                                <div class="heading-elements">
+                                    <form class="heading-form" action="#">
+                                        <div
+                                                class="form-check form-check-right form-check-switchery form-check-switchery-sm">
+                                            <label class="form-check-label">
+                                                به روز رسانی لحظه ای :
+                                                <input type="checkbox" class="form-input-switchery" checked data-fouc>
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <ul class="list-inline text-center">
+                                            <li>
+                                                <a href="#"
+                                                   class="btn border-teal text-teal btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i
+                                                            class="icon-plus3"></i></a>
+                                            </li>
+                                            <li class="text-left">
+                                                <div class="text-semibold">بازدید کننده جدید</div>
+                                                <div class="text-muted">3 نفر میانگین</div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="col-lg-10 col-lg-offset-1">
+                                            <div class="chart content-group" id="new-visitors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <ul class="list-inline text-center">
+                                            <li>
+                                                <a href="#"
+                                                   class="btn border-warning-400 text-warning-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i
+                                                            class="icon-watch2"></i></a>
+                                            </li>
+                                            <li class="text-left">
+                                                <div class="text-semibold">زمان استفاده</div>
+                                                <div class="text-muted">10 دقیقه میانگین</div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="col-lg-10 col-lg-offset-1">
+                                            <div class="chart content-group" id="new-sessions"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <ul class="list-inline text-center">
+                                            <li>
+                                                <a href="#"
+                                                   class="btn border-indigo-400 text-indigo-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i
+                                                            class="icon-people"></i></a>
+                                            </li>
+                                            <li class="text-left">
+                                                <div class="text-semibold">افراد آنلاین</div>
+                                                <div class="text-muted"><span
+                                                            class="status-mark border-success position-left"></span> 3
+                                                    نفر
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="col-lg-10 col-lg-offset-1">
+                                            <div class="chart content-group" id="total-online"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart position-relative" id="traffic-sources"></div>
                         </div>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <ul class="list-inline text-center">
-                                        <li>
-                                            <a href="#"
-                                               class="btn border-teal text-teal btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i
-                                                    class="icon-plus3"></i></a>
-                                        </li>
-                                        <li class="text-left">
-                                            <div class="text-semibold">بازدید کننده جدید</div>
-                                            <div class="text-muted">3 نفر میانگین</div>
-                                        </li>
-                                    </ul>
+                        <!-- /traffic sources -->
 
-                                    <div class="col-lg-10 col-lg-offset-1">
-                                        <div class="chart content-group" id="new-visitors"></div>
+                    </div>
+                    <div class="col-lg-5">
+
+                        <!-- Sales stats -->
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h6 class="panel-title">آمار مشتریان</h6>
+                                <div class="header-elements">
+                                    <div class="multiselect-native-select"><select class="form-control" id="select_date"
+                                                                                   data-fouc="">
+                                            <option value="val1">22 تیر 97</option>
+                                            <option value="val2">22 تیر</option>
+                                            <option value="val3" selected="">22 تیر</option>
+                                            <option value="val4">22 تیر</option>
+                                        </select>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4">
-                                    <ul class="list-inline text-center">
-                                        <li>
-                                            <a href="#"
-                                               class="btn border-warning-400 text-warning-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i
-                                                    class="icon-watch2"></i></a>
-                                        </li>
-                                        <li class="text-left">
-                                            <div class="text-semibold">زمان استفاده</div>
-                                            <div class="text-muted">10 دقیقه میانگین</div>
-                                        </li>
-                                    </ul>
-
-                                    <div class="col-lg-10 col-lg-offset-1">
-                                        <div class="chart content-group" id="new-sessions"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <ul class="list-inline text-center">
-                                        <li>
-                                            <a href="#"
-                                               class="btn border-indigo-400 text-indigo-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i
-                                                    class="icon-people"></i></a>
-                                        </li>
-                                        <li class="text-left">
-                                            <div class="text-semibold">افراد آنلاین</div>
-                                            <div class="text-muted"><span
-                                                    class="status-mark border-success position-left"></span> 3 نفر
+                                <div class="container-fluid">
+                                    <div class="row text-center">
+                                        <div class="col-md-4">
+                                            <div class="content-group">
+                                                <h5 class="text-semibold no-margin"><i
+                                                            class="icon-calendar5 position-left text-slate"></i> 500
+                                                </h5>
+                                                <span class="text-muted text-size-small">قرارداد ها در هفته</span>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
 
-                                    <div class="col-lg-10 col-lg-offset-1">
-                                        <div class="chart content-group" id="total-online"></div>
+                                        <div class="col-md-4">
+                                            <div class="content-group">
+                                                <h5 class="text-semibold no-margin"><i
+                                                            class="icon-calendar52 position-left text-slate"></i> 568
+                                                </h5>
+                                                <span class="text-muted text-size-small">مشتریان در ماه</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="content-group">
+                                                <h5 class="text-semibold no-margin"><i
+                                                            class="icon-cash3 position-left text-slate"></i> 2000 تومان
+                                                </h5>
+                                                <span class="text-muted text-size-small">میانگین فروش</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="chart content-group-sm" id="app_sales"></div>
+                                <div class="chart" id="monthly-sales-stats"></div>
                             </div>
+                            <!-- /sales stats -->
+
                         </div>
-                        <div class="chart position-relative" id="traffic-sources"></div>
                     </div>
-                    <!-- /traffic sources -->
-
-            </div>
-            <div class="col-lg-5">
-
-                <!-- Sales stats -->
-                <div class="panel panel-flat">
-                    <div class="panel-heading">
-                        <h6 class="panel-title">آمار مشتریان</h6>
-                        <div class="header-elements">
-                            <div class="multiselect-native-select"><select class="form-control" id="select_date"
-                                                                           data-fouc="">
-                                    <option value="val1">22 تیر 97</option>
-                                    <option value="val2">22 تیر</option>
-                                    <option value="val3" selected="">22 تیر</option>
-                                    <option value="val4">22 تیر</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="container-fluid">
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <div class="content-group">
-                                        <h5 class="text-semibold no-margin"><i
-                                                class="icon-calendar5 position-left text-slate"></i> 500</h5>
-                                        <span class="text-muted text-size-small">قرارداد ها در هفته</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="content-group">
-                                        <h5 class="text-semibold no-margin"><i
-                                                class="icon-calendar52 position-left text-slate"></i> 568</h5>
-                                        <span class="text-muted text-size-small">مشتریان در ماه</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="content-group">
-                                        <h5 class="text-semibold no-margin"><i
-                                                class="icon-cash3 position-left text-slate"></i> 2000 تومان</h5>
-                                        <span class="text-muted text-size-small">میانگین فروش</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="chart content-group-sm" id="app_sales"></div>
-                        <div class="chart" id="monthly-sales-stats"></div>
-                    </div>
-                    <!-- /sales stats -->
-
-                </div>
-            </div>
             @endif
-            @else
-                @php(
-                dd('asd')
-                )
-                @endif
-            <!-- /main charts -->
+        @else
+            @php(
+            dd('asd')
+            )
+        @endif
+        <!-- /main charts -->
 
 
             <!-- Dashboard content -->
@@ -214,7 +218,7 @@
                                 <ul class="icons-list">
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                class="icon-menu7"></i> <span class="caret"></span></a>
+                                                    class="icon-menu7"></i> <span class="caret"></span></a>
                                         <ul class="dropdown-menu dropdown-menu-right">
                                             <li><a href="#"><i class="icon-sync"></i> Update data</a></li>
                                             <li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>
@@ -239,7 +243,7 @@
                                         <div class="media-left">
                                             <h5 class="text-semibold no-margin">38,289
                                                 <small class="text-success text-size-base"><i
-                                                        class="icon-arrow-up12"></i> (+16.2%)
+                                                            class="icon-arrow-up12"></i> (+16.2%)
                                                 </small>
                                             </h5>
                                             <ul class="list-inline list-inline-condensed no-margin">
@@ -261,7 +265,7 @@
                                         <div class="media-left">
                                             <h5 class="text-semibold no-margin">2,458
                                                 <small class="text-danger text-size-base"><i
-                                                        class="icon-arrow-down12"></i> (- 4.9%)
+                                                            class="icon-arrow-down12"></i> (- 4.9%)
                                                 </small>
                                             </h5>
                                             <ul class="list-inline list-inline-condensed no-margin">
@@ -277,7 +281,7 @@
 
                                     <td class="text-right col-md-2">
                                         <a href="#" class="btn bg-indigo-300"><i
-                                                class="icon-statistics position-left"></i> مشاهده گزارش</a>
+                                                    class="icon-statistics position-left"></i> مشاهده گزارش</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -310,11 +314,12 @@
                                                              class="img-circle img-xs" alt=""></a>
                                         </div>
                                         <div class="media-left">
-                                            <div class=""><a href="#" class="text-default text-semibold">تبلیغات در فیس بوک</a>
+                                            <div class=""><a href="#" class="text-default text-semibold">تبلیغات در فیس
+                                                    بوک</a>
                                             </div>
                                             <div class="text-muted text-size-small">
                                                 <span class="status-mark border-blue position-left"></span>
-                                               تبلیغاتی
+                                                تبلیغاتی
                                             </div>
                                         </div>
                                     </td>
@@ -327,7 +332,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-file-stats"></i> View statement</a>
                                                     </li>
@@ -349,10 +354,11 @@
                                                              class="img-circle img-xs" alt=""></a>
                                         </div>
                                         <div class="media-left">
-                                            <div class=""><a href="#" class="text-default text-semibold">ساخت ویدیو تبلیغاتی</a></div>
+                                            <div class=""><a href="#" class="text-default text-semibold">ساخت ویدیو
+                                                    تبلیغاتی</a></div>
                                             <div class="text-muted text-size-small">
                                                 <span class="status-mark border-danger position-left"></span>
-                                              چند رسانه ای
+                                                چند رسانه ای
                                             </div>
                                         </div>
                                     </td>
@@ -365,7 +371,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-file-stats"></i> View statement</a>
                                                     </li>
@@ -404,7 +410,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-file-stats"></i> View statement</a>
                                                     </li>
@@ -443,7 +449,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-file-stats"></i> View statement</a>
                                                     </li>
@@ -489,7 +495,7 @@
                                         <ul class="icons-list">
                                             <li class="dropup">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-file-stats"></i> View statement</a>
                                                     </li>
@@ -528,7 +534,7 @@
                                         <ul class="icons-list">
                                             <li class="dropup">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-file-stats"></i> View statement</a>
                                                     </li>
@@ -567,7 +573,7 @@
                                         <ul class="icons-list">
                                             <li class="dropup">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-file-stats"></i> View statement</a>
                                                     </li>
@@ -622,7 +628,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-cog3"></i> <span class="caret"></span></a>
+                                                            class="icon-cog3"></i> <span class="caret"></span></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-sync"></i> Update data</a></li>
                                                     <li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a>
@@ -693,11 +699,11 @@
                                         <div class="media-left">
                                             <h5 class="text-semibold no-margin">14,327
                                                 <small class="text-success text-size-base"><i
-                                                        class="icon-arrow-up12"></i> (+2.9%)
+                                                            class="icon-arrow-up12"></i> (+2.9%)
                                                 </small>
                                             </h5>
                                             <span class="text-muted"><span
-                                                    class="status-mark border-success position-left"></span> Jun 16, 10:00 am</span>
+                                                        class="status-mark border-success position-left"></span> Jun 16, 10:00 am</span>
                                         </div>
                                     </td>
 
@@ -705,7 +711,7 @@
                                         <div class="media-left media-middle">
                                             <a href="#"
                                                class="btn border-indigo-400 text-indigo-400 btn-flat btn-rounded btn-xs btn-icon"><i
-                                                    class="icon-alarm-add"></i></a>
+                                                        class="icon-alarm-add"></i></a>
                                         </div>
 
                                         <div class="media-left">
@@ -720,7 +726,7 @@
                                         <div class="media-left media-middle">
                                             <a href="#"
                                                class="btn border-indigo-400 text-indigo-400 btn-flat btn-rounded btn-xs btn-icon"><i
-                                                    class="icon-spinner11"></i></a>
+                                                        class="icon-spinner11"></i></a>
                                         </div>
 
                                         <div class="media-left">
@@ -733,7 +739,7 @@
 
                                     <td class="text-right col-md-2">
                                         <a href="#" class="btn bg-teal-400"><i
-                                                class="icon-statistics position-left"></i> Report</a>
+                                                    class="icon-statistics position-left"></i> Report</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -776,14 +782,14 @@
                                                class="display-inline-block text-default text-semibold letter-icon-title">Annabelle
                                                 Doney</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-blue position-left"></span> Active
+                                                        class="status-mark border-blue position-left"></span> Active
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <a href="#" class="text-default display-inline-block">
                                             <span
-                                                class="text-semibold">[#1183] Workaround for OS X selects printing bug</span>
+                                                    class="text-semibold">[#1183] Workaround for OS X selects printing bug</span>
                                             <span class="display-block text-muted">Chrome fixed the bug several versions ago, thus rendering this...</span>
                                         </a>
                                     </td>
@@ -791,7 +797,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -823,14 +829,14 @@
                                                class="display-inline-block text-default text-semibold letter-icon-title">Chris
                                                 Macintyre</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-blue position-left"></span> Active
+                                                        class="status-mark border-blue position-left"></span> Active
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <a href="#" class="text-default display-inline-block">
                                             <span
-                                                class="text-semibold">[#1249] Vertically center carousel controls</span>
+                                                    class="text-semibold">[#1249] Vertically center carousel controls</span>
                                             <span class="display-block text-muted">Try any carousel control and reduce the screen width below...</span>
                                         </a>
                                     </td>
@@ -838,7 +844,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -871,14 +877,14 @@
                                                class="display-inline-block text-default text-semibold letter-icon-title">Robert
                                                 Hauber</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-blue position-left"></span> Active
+                                                        class="status-mark border-blue position-left"></span> Active
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <a href="#" class="text-default display-inline-block">
                                             <span
-                                                class="text-semibold">[#1254] Inaccurate small pagination height</span>
+                                                    class="text-semibold">[#1254] Inaccurate small pagination height</span>
                                             <span class="display-block text-muted">The height of pagination elements is not consistent with...</span>
                                         </a>
                                     </td>
@@ -886,7 +892,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -919,14 +925,14 @@
                                                class="display-inline-block text-default text-semibold letter-icon-title">Dex
                                                 Sponheim</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-blue position-left"></span> Active
+                                                        class="status-mark border-blue position-left"></span> Active
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <a href="#" class="text-default display-inline-block">
                                             <span
-                                                class="text-semibold">[#1184] Round grid column gutter operations</span>
+                                                    class="text-semibold">[#1184] Round grid column gutter operations</span>
                                             <span class="display-block text-muted">Left rounds up, right rounds down. should keep everything...</span>
                                         </a>
                                     </td>
@@ -934,7 +940,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -971,7 +977,8 @@
                                             <a href="#" class="display-inline-block text-default letter-icon-title">Alan
                                                 Macedo</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-success position-left"></span> Resolved
+                                                        class="status-mark border-success position-left"></span>
+                                                Resolved
                                             </div>
                                         </div>
                                     </td>
@@ -985,7 +992,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -1015,7 +1022,8 @@
                                             <a href="#" class="display-inline-block text-default letter-icon-title">Brett
                                                 Castellano</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-success position-left"></span> Resolved
+                                                        class="status-mark border-success position-left"></span>
+                                                Resolved
                                             </div>
                                         </div>
                                     </td>
@@ -1029,7 +1037,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -1057,7 +1065,8 @@
                                         <div class="media-body">
                                             <a href="#" class="display-inline-block text-default">Roxanne Forbes</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-success position-left"></span> Resolved
+                                                        class="status-mark border-success position-left"></span>
+                                                Resolved
                                             </div>
                                         </div>
                                     </td>
@@ -1071,7 +1080,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -1106,7 +1115,7 @@
                                         <div class="media-body">
                                             <a href="#" class="display-inline-block text-default">Mitchell Sitkin</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-danger position-left"></span> Closed
+                                                        class="status-mark border-danger position-left"></span> Closed
                                             </div>
                                         </div>
                                     </td>
@@ -1120,7 +1129,7 @@
                                         <ul class="icons-list">
                                             <li class="dropup">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -1150,7 +1159,7 @@
                                             <a href="#" class="display-inline-block text-default letter-icon-title">Katleen
                                                 Jensen</a>
                                             <div class="text-muted text-size-small"><span
-                                                    class="status-mark border-danger position-left"></span> Closed
+                                                        class="status-mark border-danger position-left"></span> Closed
                                             </div>
                                         </div>
                                     </td>
@@ -1164,7 +1173,7 @@
                                         <ul class="icons-list">
                                             <li class="dropup">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-menu7"></i></a>
+                                                            class="icon-menu7"></i></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-undo"></i> Quick reply</a></li>
                                                     <li><a href="#"><i class="icon-history"></i> Full history</a></li>
@@ -1318,7 +1327,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown text-muted">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-cog3"></i> <span class="caret"></span></a>
+                                                            class="icon-cog3"></i> <span class="caret"></span></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-sync"></i> Update data</a></li>
                                                     <li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a>
@@ -1355,7 +1364,7 @@
                                         <ul class="icons-list">
                                             <li class="dropdown text-muted">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                                        class="icon-cog3"></i> <span class="caret"></span></a>
+                                                            class="icon-cog3"></i> <span class="caret"></span></a>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li><a href="#"><i class="icon-sync"></i> Update data</a></li>
                                                     <li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a>
@@ -1385,9 +1394,6 @@
                     <!-- /progress counters -->
 
 
-
-
-
                     <!-- My messages -->
                     <div class="panel panel-flat">
                         <div class="panel-heading">
@@ -1404,7 +1410,7 @@
                                 <div class="col-md-4">
                                     <div class="content-group">
                                         <h6 class="text-semibold no-margin"><i
-                                                class="icon-clipboard3 position-left text-slate"></i> 246</h6>
+                                                    class="icon-clipboard3 position-left text-slate"></i> 246</h6>
                                         <span class="text-muted text-size-small">این هفته</span>
                                     </div>
                                 </div>
@@ -1412,7 +1418,7 @@
                                 <div class="col-md-4">
                                     <div class="content-group">
                                         <h6 class="text-semibold no-margin"><i
-                                                class="icon-calendar3 position-left text-slate"></i> 600</h6>
+                                                    class="icon-calendar3 position-left text-slate"></i> 600</h6>
                                         <span class="text-muted text-size-small">در ماه</span>
                                     </div>
                                 </div>
@@ -1420,7 +1426,7 @@
                                 <div class="col-md-4">
                                     <div class="content-group">
                                         <h6 class="text-semibold no-margin"><i
-                                                class="icon-comments position-left text-slate"></i> 32,693</h6>
+                                                    class="icon-comments position-left text-slate"></i> 32,693</h6>
                                         <span class="text-muted text-size-small">تمامی پیام ها</span>
                                     </div>
                                 </div>
@@ -1712,7 +1718,7 @@
                                 <form class="heading-form" action="#">
                                     <div class="form-group">
                                         <label
-                                            class="checkbox checkbox-inline checkbox-switchery checkbox-right switchery-xs">
+                                                class="checkbox checkbox-inline checkbox-switchery checkbox-right switchery-xs">
                                             <input type="checkbox" class="switcher" id="realtime" checked="checked">
                                             Realtime
                                         </label>
@@ -1730,7 +1736,7 @@
                                     <div class="media-left">
                                         <a href="#"
                                            class="btn border-pink text-pink btn-flat btn-rounded btn-icon btn-xs"><i
-                                                class="icon-statistics"></i></a>
+                                                    class="icon-statistics"></i></a>
                                     </div>
 
                                     <div class="media-body">
@@ -1751,7 +1757,7 @@
                                     <div class="media-left">
                                         <a href="#"
                                            class="btn border-success text-success btn-flat btn-rounded btn-icon btn-xs"><i
-                                                class="icon-checkmark3"></i></a>
+                                                    class="icon-checkmark3"></i></a>
                                     </div>
 
                                     <div class="media-body">
@@ -1772,7 +1778,7 @@
                                     <div class="media-left">
                                         <a href="#"
                                            class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-xs"><i
-                                                class="icon-alignment-unalign"></i></a>
+                                                    class="icon-alignment-unalign"></i></a>
                                     </div>
 
                                     <div class="media-body">
@@ -1793,7 +1799,7 @@
                                     <div class="media-left">
                                         <a href="#"
                                            class="btn border-warning-400 text-warning-400 btn-flat btn-rounded btn-icon btn-xs"><i
-                                                class="icon-spinner11"></i></a>
+                                                    class="icon-spinner11"></i></a>
                                     </div>
 
                                     <div class="media-body">
@@ -1814,7 +1820,7 @@
                                     <div class="media-left">
                                         <a href="#"
                                            class="btn border-teal-400 text-teal btn-flat btn-rounded btn-icon btn-xs"><i
-                                                class="icon-redo2"></i></a>
+                                                    class="icon-redo2"></i></a>
                                     </div>
 
                                     <div class="media-body">
@@ -1854,5 +1860,3 @@
     <!-- /main content -->
 
     @include('footer');
-
-
