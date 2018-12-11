@@ -150,6 +150,7 @@ return [
         phplusir\smsir\SmsirServiceProvider::class,
         Silber\Bouncer\BouncerServiceProvider::class,
         Anetwork\Validation\PersianValidationServiceProvider::class,
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
 
         /*
          * Package Service Providers...

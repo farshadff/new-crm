@@ -16,16 +16,25 @@
 
     <!-- Styles -->
     <style>
+        .form-control {
+            background-color: #fff !important;
+        }
      .mg-tp-100 {
-         padding-top: 220px;
+         padding-top: 120px;
+         padding-bottom: 200px;
      }
+        .trans-back {
+            background-color: rgba(255,255,255,0.2);
+            padding: 90px;
+            border-radius: 12px;
+        }
     </style>
 </head>
 <body class="handshake">
 <div class="container">
-    <div class="row ">
-        <div class="col-md-10">
-            <div class="card">
+    <div class="row">
+        <div class="col-md-10 mg-tp-100">
+            <div class="card trans-back">
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -60,7 +69,7 @@
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> به خاطر بسپار
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}><span style="margin-left: 20px;"> به خاطر بسپار </span>
                                     </label>
                                 </div>
                             </div>

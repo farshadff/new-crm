@@ -6,8 +6,6 @@
  * Time: 12:26 AM
  */
 ?>
-
-
 @include('header')
 @include('sidebar')
 <div class="content-wrapper">
@@ -26,11 +24,8 @@
                     </ul>
                 </div>
             </div>
-
             <div class="panel-body">
-
             </div>
-
             <div class="table-responsive">
                 <table class="table">
                     <thead>

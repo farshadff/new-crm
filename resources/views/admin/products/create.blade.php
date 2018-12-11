@@ -10,7 +10,6 @@
 @include('header')
 @include('sidebar')
 <div class="content-wrapper">
-
     <!-- Content area -->
     <div class="content">
         <!-- Horizontal borders -->
@@ -25,9 +24,7 @@
                     </ul>
                 </div>
             </div>
-
             <div class="panel-body">
-
                 <form action="/admin/products" method="post">
                     {{ csrf_field() }}
                     <div class="row">
@@ -59,7 +56,6 @@
                                     <option value="{{{$product_cat->id}}}">{{{$product_cat->title}}}</option>
                                 @endforeach
                             </select>
-
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -74,7 +70,6 @@
                             </label>
                         </fieldset>
                     </div>
-
             <button type="submit" class="btn btn-primary">ارسال</button>
             </form>
         </div>
@@ -103,6 +98,4 @@
     </div>
 </div>
 </div>
-
-
 @include('footer')
