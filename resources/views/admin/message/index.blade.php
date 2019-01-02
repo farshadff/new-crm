@@ -89,20 +89,20 @@
                     </ul>
 
                     <ul class="breadcrumb-elements">
-                        <li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
+                        <li><a href="#"><i class="icon-comment-discussion position-left"></i> پشتیبانی</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="icon-gear position-left"></i>
-                                Settings
+                                تنظیمات
                                 <span class="caret"></span>
                             </a>
 
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
-                                <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
-                                <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+                            <ul class="dropdown-menu dropdown-menu-right" style="z-index: 222">
+                                <li><a href="#"><i class="icon-user-lock"></i> تنظیمات حساب کاربری</a></li>
+                                <li><a href="#"><i class="icon-statistics"></i> آنالیز ها</a></li>
+                                <li><a href="#"><i class="icon-accessibility"></i> سطح دسترسی</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+                                <li><a href="#"><i class="icon-gear"></i>تمامی تنظیمات</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -220,11 +220,7 @@
                     </div>
                 </div>
                 <!-- /single line -->
-                <!-- Footer -->
-                <div class="footer text-muted">
-                    &copy; 2015. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
-                </div>
-                <!-- /footer -->
+
 
             </div>
             <!-- /content area -->

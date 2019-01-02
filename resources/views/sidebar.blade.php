@@ -20,7 +20,7 @@
                 <ul class="navigation">
                     <li><a href="{{{url('/')}}}/admin/profile"><i class="icon-user-plus"></i> <span>پروفایل من</span></a></li>
                     <li><a href="{{{url('/')}}}/admin/client/myclient"><i class="icon-coins"></i> <span>مشتریان من</span></a></li>
-                    <li><a href="#"><i class="icon-comment-discussion"></i> <span><span class="badge bg-teal-400 pull-right">58</span> پیام ها</span></a></li>
+                    <li><a href="{{{url('/')}}}/admin/message"><i class="icon-comment-discussion"></i> <span><span class="badge bg-teal-400 pull-right">58</span> پیام ها</span></a></li>
                     <li class="divider"></li>
                     <li><a href="#"><i class="icon-cog5"></i> <span>تنظیمات</span></a></li>
                     <li>
